@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "hydrogenreporter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ActuallyTaylor/HydrogenReporter",
+      "state" : {
+        "branch" : "main",
+        "revision" : "23cfaf88a4de05898fef91f8ce6ea271601b1d49"
+      }
+    },
+    {
+      "identity" : "runestone",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/simonbs/Runestone.git",
+      "state" : {
+        "revision" : "1d0e79051a18d79f12882e9fad0b130e47d4a06b",
+        "version" : "0.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}

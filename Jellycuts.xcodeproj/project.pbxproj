@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D72A147AAC003964CC /* JellycutsApp.swift */; };
+		DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D92A147AAC003964CC /* JellycutsDocument.swift */; };
+		DB4680DC2A147AAC003964CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680DB2A147AAC003964CC /* ContentView.swift */; };
+		DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680DD2A147AAD003964CC /* Assets.xcassets */; };
+		DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680E22A147AAD003964CC /* Preview Assets.xcassets */; };
+		DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */; };
+		DB4680F22A1480E5003964CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680F12A1480E5003964CC /* HomeView.swift */; };
+		DB4681142A148131003964CC /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681132A148131003964CC /* Persistance.swift */; };
+		DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681152A14835E003964CC /* ErrorHandler.swift */; };
+		DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */ = {isa = PBXBuildFile; productRef = DB4681192A1483D6003964CC /* HydrogenReporter */; };
+		DB46811E2A149456003964CC /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB46811D2A149456003964CC /* Runestone */; };
+		DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681202A149591003964CC /* RunestoneEditor.swift */; };
+		DB7C38F42A1971B00037093F /* TreeSitterJelly in Frameworks */ = {isa = PBXBuildFile; productRef = DB7C38F32A1971B00037093F /* TreeSitterJelly */; };
+		DB7C38F62A1971B00037093F /* TreeSitterJellyQueries in Frameworks */ = {isa = PBXBuildFile; productRef = DB7C38F52A1971B00037093F /* TreeSitterJellyQueries */; };
+		DB7C38F82A1971B00037093F /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB7C38F72A1971B00037093F /* TreeSitterJellyRunestone */; };
+		DB8EE3272A16FD9100D718B9 /* PasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8EE3262A16FD9100D718B9 /* PasteView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB21C9732A1961510018A1A0 /* Jellycuts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jellycuts-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB4680D42A147AAC003964CC /* Jellycuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jellycuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4680D72A147AAC003964CC /* JellycutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsApp.swift; sourceTree = "<group>"; };
+		DB4680D92A147AAC003964CC /* JellycutsDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsDocument.swift; sourceTree = "<group>"; };
+		DB4680DB2A147AAC003964CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB4680DD2A147AAD003964CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB4680DF2A147AAD003964CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB4680E02A147AAD003964CC /* Jellycuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jellycuts.entitlements; sourceTree = "<group>"; };
+		DB4680E22A147AAD003964CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB4680EF2A147FB7003964CC /* Jellycuts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jellycuts.xcdatamodel; sourceTree = "<group>"; };
+		DB4680F12A1480E5003964CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DB4681132A148131003964CC /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		DB4681152A14835E003964CC /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		DB4681202A149591003964CC /* RunestoneEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditor.swift; sourceTree = "<group>"; };
+		DB7C38F22A1971960037093F /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "../../../Developer/GitHub/tree-sitter-jelly"; sourceTree = "<group>"; };
+		DB8EE3262A16FD9100D718B9 /* PasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB4680D12A147AAC003964CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7C38F82A1971B00037093F /* TreeSitterJellyRunestone in Frameworks */,
+				DB46811E2A149456003964CC /* Runestone in Frameworks */,
+				DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */,
+				DB7C38F42A1971B00037093F /* TreeSitterJelly in Frameworks */,
+				DB7C38F62A1971B00037093F /* TreeSitterJellyQueries in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB4680CB2A147AAC003964CC = {
+			isa = PBXGroup;
+			children = (
+				DB4680D62A147AAC003964CC /* Jellycuts */,
+				DB4680E92A147AC9003964CC /* Packages */,
+				DB4680D52A147AAC003964CC /* Products */,
+				DB4680EB2A147AD6003964CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB4680D52A147AAC003964CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB4680D42A147AAC003964CC /* Jellycuts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB4680D62A147AAC003964CC /* Jellycuts */ = {
+			isa = PBXGroup;
+			children = (
+				DB46811B2A1483ED003964CC /* Data */,
+				DB4681172A148368003964CC /* Protocols */,
+				DB46811F2A14955F003964CC /* Views */,
+				DB4680D72A147AAC003964CC /* JellycutsApp.swift */,
+				DB4680F12A1480E5003964CC /* HomeView.swift */,
+				DB8EE3262A16FD9100D718B9 /* PasteView.swift */,
+				DB4680DB2A147AAC003964CC /* ContentView.swift */,
+				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
+				DB4680DF2A147AAD003964CC /* Info.plist */,
+				DB4680E02A147AAD003964CC /* Jellycuts.entitlements */,
+				DB4680E12A147AAD003964CC /* Preview Content */,
+				DB21C9732A1961510018A1A0 /* Jellycuts-Bridging-Header.h */,
+			);
+			path = Jellycuts;
+			sourceTree = "<group>";
+		};
+		DB4680E12A147AAD003964CC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DB4680E22A147AAD003964CC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB4680E92A147AC9003964CC /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DB7C38F22A1971960037093F /* tree-sitter-jelly */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		DB4680EB2A147AD6003964CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB4681172A148368003964CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DB4681152A14835E003964CC /* ErrorHandler.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DB46811B2A1483ED003964CC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */,
+				DB4681132A148131003964CC /* Persistance.swift */,
+				DB4680D92A147AAC003964CC /* JellycutsDocument.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DB46811F2A14955F003964CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB4681202A149591003964CC /* RunestoneEditor.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB4680D32A147AAC003964CC /* Jellycuts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4680E62A147AAD003964CC /* Build configuration list for PBXNativeTarget "Jellycuts" */;
+			buildPhases = (
+				DB4680D02A147AAC003964CC /* Sources */,
+				DB4680D12A147AAC003964CC /* Frameworks */,
+				DB4680D22A147AAC003964CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jellycuts;
+			packageProductDependencies = (
+				DB4681192A1483D6003964CC /* HydrogenReporter */,
+				DB46811D2A149456003964CC /* Runestone */,
+				DB7C38F32A1971B00037093F /* TreeSitterJelly */,
+				DB7C38F52A1971B00037093F /* TreeSitterJellyQueries */,
+				DB7C38F72A1971B00037093F /* TreeSitterJellyRunestone */,
+			);
+			productName = Jellycuts;
+			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB4680CC2A147AAC003964CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DB4680D32A147AAC003964CC = {
+						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
+					};
+				};
+			};
+			buildConfigurationList = DB4680CF2A147AAC003964CC /* Build configuration list for PBXProject "Jellycuts" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB4680CB2A147AAC003964CC;
+			packageReferences = (
+				DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */,
+				DB46811C2A149456003964CC /* XCRemoteSwiftPackageReference "Runestone" */,
+			);
+			productRefGroup = DB4680D52A147AAC003964CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB4680D32A147AAC003964CC /* Jellycuts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB4680D22A147AAC003964CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */,
+				DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB4680D02A147AAC003964CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
+				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
+				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
+				DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */,
+				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
+				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
+				DB8EE3272A16FD9100D718B9 /* PasteView.swift in Sources */,
+				DB4680DC2A147AAC003964CC /* ContentView.swift in Sources */,
+				DB4681142A148131003964CC /* Persistance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB4680E42A147AAD003964CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB4680E52A147AAD003964CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DB4680E72A147AAD003964CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Preview Content\"";
+				DEVELOPMENT_TEAM = TK7Y3X86W7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jellycuts/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphonesimulator*]" = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lineman.Jellycuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Jellycuts/Jellycuts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB4680E82A147AAD003964CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Preview Content\"";
+				DEVELOPMENT_TEAM = TK7Y3X86W7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jellycuts/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphonesimulator*]" = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lineman.Jellycuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Jellycuts/Jellycuts-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB4680CF2A147AAC003964CC /* Build configuration list for PBXProject "Jellycuts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4680E42A147AAD003964CC /* Debug */,
+				DB4680E52A147AAD003964CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB4680E62A147AAD003964CC /* Build configuration list for PBXNativeTarget "Jellycuts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4680E72A147AAD003964CC /* Debug */,
+				DB4680E82A147AAD003964CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ActuallyTaylor/HydrogenReporter";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		DB46811C2A149456003964CC /* XCRemoteSwiftPackageReference "Runestone" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simonbs/Runestone.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB4681192A1483D6003964CC /* HydrogenReporter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */;
+			productName = HydrogenReporter;
+		};
+		DB46811D2A149456003964CC /* Runestone */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB46811C2A149456003964CC /* XCRemoteSwiftPackageReference "Runestone" */;
+			productName = Runestone;
+		};
+		DB7C38F32A1971B00037093F /* TreeSitterJelly */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TreeSitterJelly;
+		};
+		DB7C38F52A1971B00037093F /* TreeSitterJellyQueries */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TreeSitterJellyQueries;
+		};
+		DB7C38F72A1971B00037093F /* TreeSitterJellyRunestone */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TreeSitterJellyRunestone;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB4680EF2A147FB7003964CC /* Jellycuts.xcdatamodel */,
+			);
+			currentVersion = DB4680EF2A147FB7003964CC /* Jellycuts.xcdatamodel */;
+			path = Jellycuts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DB4680CC2A147AAC003964CC /* Project object */;
+}
