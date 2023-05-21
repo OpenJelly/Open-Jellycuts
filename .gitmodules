@@ -4,3 +4,6 @@
 [submodule "Packages/tree-sitter-jelly"]
 	path = Packages/tree-sitter-jelly
 	url = https://github.com/ActuallyTaylor/tree-sitter-jelly
+[submodule "Packages/Open-Jellycore"]
+	path = Packages/Open-Jellycore
+	url = https://github.com/ActuallyTaylor/Open-Jellycore
