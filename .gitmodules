@@ -1,6 +1,3 @@
-[submodule "Packages/Open-Jellycore"]
-	path = Packages/Open-Jellycore
-	url = https://github.com/ActuallyTaylor/Open-Jellycore.git
 [submodule "Packages/Runestone"]
 	path = Packages/Runestone
 	url = https://github.com/ActuallyTaylor/Runestone
