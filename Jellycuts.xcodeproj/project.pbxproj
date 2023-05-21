@@ -36,6 +36,8 @@
 		DB4681132A148131003964CC /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		DB4681152A14835E003964CC /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		DB4681202A149591003964CC /* RunestoneEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditor.swift; sourceTree = "<group>"; };
+		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
+		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB8EE3262A16FD9100D718B9 /* PasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 		DB4680CB2A147AAC003964CC = {
 			isa = PBXGroup;
 			children = (
+				DB4EAFBC2A19AA8700B44F4D /* Packages */,
 				DB4680D62A147AAC003964CC /* Jellycuts */,
 				DB4680D52A147AAC003964CC /* Products */,
 				DB4680EB2A147AD6003964CC /* Frameworks */,
@@ -126,6 +129,15 @@
 				DB4681202A149591003964CC /* RunestoneEditor.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB4EAFBC2A19AA8700B44F4D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
+				DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
