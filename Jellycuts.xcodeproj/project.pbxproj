@@ -17,11 +17,10 @@
 		DB4681142A148131003964CC /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681132A148131003964CC /* Persistance.swift */; };
 		DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681152A14835E003964CC /* ErrorHandler.swift */; };
 		DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */ = {isa = PBXBuildFile; productRef = DB4681192A1483D6003964CC /* HydrogenReporter */; };
-		DB46811E2A149456003964CC /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB46811D2A149456003964CC /* Runestone */; };
 		DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681202A149591003964CC /* RunestoneEditor.swift */; };
-		DB7C38F42A1971B00037093F /* TreeSitterJelly in Frameworks */ = {isa = PBXBuildFile; productRef = DB7C38F32A1971B00037093F /* TreeSitterJelly */; };
-		DB7C38F62A1971B00037093F /* TreeSitterJellyQueries in Frameworks */ = {isa = PBXBuildFile; productRef = DB7C38F52A1971B00037093F /* TreeSitterJellyQueries */; };
-		DB7C38F82A1971B00037093F /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB7C38F72A1971B00037093F /* TreeSitterJellyRunestone */; };
+		DB4EAFAB2A1999C000B44F4D /* TreeSitterJelly in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFAA2A1999C000B44F4D /* TreeSitterJelly */; };
+		DB4EAFAD2A1999C200B44F4D /* TreeSitterJellyQueries in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFAC2A1999C200B44F4D /* TreeSitterJellyQueries */; };
+		DB4EAFAF2A1999C700B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFAE2A1999C700B44F4D /* TreeSitterJellyRunestone */; };
 		DB8EE3272A16FD9100D718B9 /* PasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8EE3262A16FD9100D718B9 /* PasteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +39,7 @@
 		DB4681132A148131003964CC /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		DB4681152A14835E003964CC /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		DB4681202A149591003964CC /* RunestoneEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditor.swift; sourceTree = "<group>"; };
+		DB4EAFB32A199C6800B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = ../../../Developer/GitHub/Runestone; sourceTree = "<group>"; };
 		DB7C38F22A1971960037093F /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "../../../Developer/GitHub/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB8EE3262A16FD9100D718B9 /* PasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,11 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7C38F82A1971B00037093F /* TreeSitterJellyRunestone in Frameworks */,
-				DB46811E2A149456003964CC /* Runestone in Frameworks */,
+				DB4EAFAF2A1999C700B44F4D /* TreeSitterJellyRunestone in Frameworks */,
 				DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */,
-				DB7C38F42A1971B00037093F /* TreeSitterJelly in Frameworks */,
-				DB7C38F62A1971B00037093F /* TreeSitterJellyQueries in Frameworks */,
+				DB4EAFAB2A1999C000B44F4D /* TreeSitterJelly in Frameworks */,
+				DB4EAFAD2A1999C200B44F4D /* TreeSitterJellyQueries in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +90,8 @@
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
 				DB4680DF2A147AAD003964CC /* Info.plist */,
 				DB4680E02A147AAD003964CC /* Jellycuts.entitlements */,
-				DB4680E12A147AAD003964CC /* Preview Content */,
 				DB21C9732A1961510018A1A0 /* Jellycuts-Bridging-Header.h */,
+				DB4680E12A147AAD003964CC /* Preview Content */,
 			);
 			path = Jellycuts;
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				DB7C38F22A1971960037093F /* tree-sitter-jelly */,
+				DB4EAFB32A199C6800B44F4D /* Runestone */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -164,10 +164,9 @@
 			name = Jellycuts;
 			packageProductDependencies = (
 				DB4681192A1483D6003964CC /* HydrogenReporter */,
-				DB46811D2A149456003964CC /* Runestone */,
-				DB7C38F32A1971B00037093F /* TreeSitterJelly */,
-				DB7C38F52A1971B00037093F /* TreeSitterJellyQueries */,
-				DB7C38F72A1971B00037093F /* TreeSitterJellyRunestone */,
+				DB4EAFAA2A1999C000B44F4D /* TreeSitterJelly */,
+				DB4EAFAC2A1999C200B44F4D /* TreeSitterJellyQueries */,
+				DB4EAFAE2A1999C700B44F4D /* TreeSitterJellyRunestone */,
 			);
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
@@ -200,7 +199,7 @@
 			mainGroup = DB4680CB2A147AAC003964CC;
 			packageReferences = (
 				DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */,
-				DB46811C2A149456003964CC /* XCRemoteSwiftPackageReference "Runestone" */,
+				DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */,
 			);
 			productRefGroup = DB4680D52A147AAC003964CC /* Products */;
 			projectDirPath = "";
@@ -471,12 +470,12 @@
 				kind = branch;
 			};
 		};
-		DB46811C2A149456003964CC /* XCRemoteSwiftPackageReference "Runestone" */ = {
+		DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/simonbs/Runestone.git";
+			repositoryURL = "https://github.com/ActuallyTaylor/tree-sitter-spm";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -487,20 +486,15 @@
 			package = DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */;
 			productName = HydrogenReporter;
 		};
-		DB46811D2A149456003964CC /* Runestone */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DB46811C2A149456003964CC /* XCRemoteSwiftPackageReference "Runestone" */;
-			productName = Runestone;
-		};
-		DB7C38F32A1971B00037093F /* TreeSitterJelly */ = {
+		DB4EAFAA2A1999C000B44F4D /* TreeSitterJelly */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TreeSitterJelly;
 		};
-		DB7C38F52A1971B00037093F /* TreeSitterJellyQueries */ = {
+		DB4EAFAC2A1999C200B44F4D /* TreeSitterJellyQueries */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TreeSitterJellyQueries;
 		};
-		DB7C38F72A1971B00037093F /* TreeSitterJellyRunestone */ = {
+		DB4EAFAE2A1999C700B44F4D /* TreeSitterJellyRunestone */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TreeSitterJellyRunestone;
 		};
