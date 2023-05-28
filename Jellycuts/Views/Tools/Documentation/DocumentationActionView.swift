@@ -52,44 +52,14 @@ struct DocumentationActionView: View {
                     Text("Syntax")
                         .font(.title2)
                         .fontWeight(.semibold)
-                    Menu {
-                        Button {
-                            UIPasteboard.general.setValue(action.syntax, forPasteboardType: UTType.plainText.identifier)
-                        } label: {
-                            Label(.copy)
-                        }
-                    } label: {
-                        Text(action.syntax)
-                            .multilineTextAlignment(.leading)
-                            .fontDesign(.monospaced)
-                            .foregroundColor(.primary)
-                            .padding(10)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(Color(uiColor: .secondarySystemBackground))
-                            .cornerRadius(10)
-                    }
+                    CodeBlock(text: action.syntax)
                 }
 
                 VStack(alignment: .leading) {
                     Text("Example")
                         .font(.title2)
                         .fontWeight(.semibold)
-                    Menu {
-                        Button {
-                            UIPasteboard.general.setValue(action.example, forPasteboardType: UTType.plainText.identifier)
-                        } label: {
-                            Label(.copy)
-                        }
-                    } label: {
-                        Text(action.example)
-                            .multilineTextAlignment(.leading)
-                            .fontDesign(.monospaced)
-                            .foregroundColor(.primary)
-                            .padding(10)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(Color(uiColor: .secondarySystemBackground))
-                            .cornerRadius(10)
-                    }
+                    CodeBlock(text: action.example)
                 }
 
             }

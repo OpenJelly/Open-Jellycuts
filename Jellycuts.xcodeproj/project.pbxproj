@@ -21,6 +21,8 @@
 		DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */; };
 		DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC22A19AB9300B44F4D /* Runestone */; };
 		DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */; };
+		DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */; };
+		DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */; };
 		DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED217F2A23E65D00464286 /* LabelConfiguration.swift */; };
 		DBED21862A23E7BF00464286 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21852A23E7BF00464286 /* ToolView.swift */; };
 		DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21872A23EC3900464286 /* SheetDelegator.swift */; };
@@ -47,6 +49,8 @@
 		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
+		DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Hex.swift"; sourceTree = "<group>"; };
+		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
 		DBED21852A23E7BF00464286 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
 		DBED21872A23EC3900464286 /* SheetDelegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDelegator.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				DB4681172A148368003964CC /* Protocols */,
 				DB46811B2A1483ED003964CC /* Data */,
 				DBED217D2A23E63100464286 /* Views */,
+				DBB32C3F2A2413CB003FDD90 /* Extensions */,
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
 				DB4680DF2A147AAD003964CC /* Info.plist */,
 				DB4680E02A147AAD003964CC /* Jellycuts.entitlements */,
@@ -155,6 +160,14 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		DBB32C3F2A2413CB003FDD90 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DBED217D2A23E63100464286 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 			children = (
 				DBED21872A23EC3900464286 /* SheetDelegator.swift */,
 				DBED217F2A23E65D00464286 /* LabelConfiguration.swift */,
+				DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -293,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */,
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
 				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
@@ -306,6 +321,7 @@
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
 				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
+				DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */,
 				DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */,
 				DB4681142A148131003964CC /* Persistance.swift in Sources */,
 			);
