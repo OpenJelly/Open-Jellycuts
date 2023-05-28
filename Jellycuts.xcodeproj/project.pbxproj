@@ -21,7 +21,6 @@
 		DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */; };
 		DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC22A19AB9300B44F4D /* Runestone */; };
 		DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */; };
-		DB8EE3272A16FD9100D718B9 /* PasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8EE3262A16FD9100D718B9 /* PasteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
-		DB8EE3262A16FD9100D718B9 /* PasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +83,6 @@
 				DB46811F2A14955F003964CC /* Views */,
 				DB4680D72A147AAC003964CC /* JellycutsApp.swift */,
 				DB4680F12A1480E5003964CC /* HomeView.swift */,
-				DB8EE3262A16FD9100D718B9 /* PasteView.swift */,
 				DB4680DB2A147AAC003964CC /* ContentView.swift */,
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
 				DB4680DF2A147AAD003964CC /* Info.plist */,
@@ -139,9 +136,9 @@
 		DB4EAFBC2A19AA8700B44F4D /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
-				DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */,
 				DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */,
+				DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */,
+				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -233,7 +230,6 @@
 				DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */,
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
-				DB8EE3272A16FD9100D718B9 /* PasteView.swift in Sources */,
 				DB4680DC2A147AAC003964CC /* ContentView.swift in Sources */,
 				DB4681142A148131003964CC /* Persistance.swift in Sources */,
 			);
