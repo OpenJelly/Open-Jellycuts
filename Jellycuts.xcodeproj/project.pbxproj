@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D72A147AAC003964CC /* JellycutsApp.swift */; };
 		DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D92A147AAC003964CC /* JellycutsDocument.swift */; };
-		DB4680DC2A147AAC003964CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680DB2A147AAC003964CC /* ContentView.swift */; };
+		DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680DB2A147AAC003964CC /* DocumentView.swift */; };
 		DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680DD2A147AAD003964CC /* Assets.xcassets */; };
 		DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680E22A147AAD003964CC /* Preview Assets.xcassets */; };
 		DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */; };
@@ -21,13 +21,20 @@
 		DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */; };
 		DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC22A19AB9300B44F4D /* Runestone */; };
 		DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */; };
+		DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED217F2A23E65D00464286 /* LabelConfiguration.swift */; };
+		DBED21862A23E7BF00464286 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21852A23E7BF00464286 /* ToolView.swift */; };
+		DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21872A23EC3900464286 /* SheetDelegator.swift */; };
+		DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED218D2A23F7E700464286 /* DocumentationHomeView.swift */; };
+		DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */; };
+		DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21912A23FBF100464286 /* DocumentationActionView.swift */; };
+		DBED21962A2412F800464286 /* IconCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21952A2412F800464286 /* IconCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB4680D42A147AAC003964CC /* Jellycuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jellycuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4680D72A147AAC003964CC /* JellycutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsApp.swift; sourceTree = "<group>"; };
 		DB4680D92A147AAC003964CC /* JellycutsDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsDocument.swift; sourceTree = "<group>"; };
-		DB4680DB2A147AAC003964CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB4680DB2A147AAC003964CC /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		DB4680DD2A147AAD003964CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4680DF2A147AAD003964CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB4680E02A147AAD003964CC /* Jellycuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jellycuts.entitlements; sourceTree = "<group>"; };
@@ -40,6 +47,13 @@
 		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
+		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
+		DBED21852A23E7BF00464286 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
+		DBED21872A23EC3900464286 /* SheetDelegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDelegator.swift; sourceTree = "<group>"; };
+		DBED218D2A23F7E700464286 /* DocumentationHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationHomeView.swift; sourceTree = "<group>"; };
+		DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationLibraryView.swift; sourceTree = "<group>"; };
+		DBED21912A23FBF100464286 /* DocumentationActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationActionView.swift; sourceTree = "<group>"; };
+		DBED21952A2412F800464286 /* IconCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCreator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +92,10 @@
 		DB4680D62A147AAC003964CC /* Jellycuts */ = {
 			isa = PBXGroup;
 			children = (
-				DB46811B2A1483ED003964CC /* Data */,
-				DB4681172A148368003964CC /* Protocols */,
-				DB46811F2A14955F003964CC /* Views */,
 				DB4680D72A147AAC003964CC /* JellycutsApp.swift */,
-				DB4680F12A1480E5003964CC /* HomeView.swift */,
-				DB4680DB2A147AAC003964CC /* ContentView.swift */,
+				DB4681172A148368003964CC /* Protocols */,
+				DB46811B2A1483ED003964CC /* Data */,
+				DBED217D2A23E63100464286 /* Views */,
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
 				DB4680DF2A147AAD003964CC /* Info.plist */,
 				DB4680E02A147AAD003964CC /* Jellycuts.entitlements */,
@@ -125,12 +137,12 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		DB46811F2A14955F003964CC /* Views */ = {
+		DB46811F2A14955F003964CC /* Representable */ = {
 			isa = PBXGroup;
 			children = (
 				DB4681202A149591003964CC /* RunestoneEditor.swift */,
 			);
-			path = Views;
+			path = Representable;
 			sourceTree = "<group>";
 		};
 		DB4EAFBC2A19AA8700B44F4D /* Packages */ = {
@@ -141,6 +153,63 @@
 				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		DBED217D2A23E63100464286 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBED217E2A23E64D00464286 /* Helpers */,
+				DB46811F2A14955F003964CC /* Representable */,
+				DBED21822A23E77A00464286 /* Main Views */,
+				DBED218C2A23F7D200464286 /* Tools */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBED217E2A23E64D00464286 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBED21872A23EC3900464286 /* SheetDelegator.swift */,
+				DBED217F2A23E65D00464286 /* LabelConfiguration.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DBED21822A23E77A00464286 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB4680F12A1480E5003964CC /* HomeView.swift */,
+				DB4680DB2A147AAC003964CC /* DocumentView.swift */,
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		DBED218C2A23F7D200464286 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				DBED21852A23E7BF00464286 /* ToolView.swift */,
+				DBED21932A2407C000464286 /* Documentation */,
+				DBED21942A240CB100464286 /* Icon Creator */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		DBED21932A2407C000464286 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				DBED218D2A23F7E700464286 /* DocumentationHomeView.swift */,
+				DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */,
+				DBED21912A23FBF100464286 /* DocumentationActionView.swift */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		DBED21942A240CB100464286 /* Icon Creator */ = {
+			isa = PBXGroup;
+			children = (
+				DBED21952A2412F800464286 /* IconCreator.swift */,
+			);
+			path = "Icon Creator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,11 +295,18 @@
 			files = (
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
+				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
+				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,
+				DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */,
+				DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */,
+				DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */,
 				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
+				DBED21962A2412F800464286 /* IconCreator.swift in Sources */,
 				DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */,
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
+				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
-				DB4680DC2A147AAC003964CC /* ContentView.swift in Sources */,
+				DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */,
 				DB4681142A148131003964CC /* Persistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
