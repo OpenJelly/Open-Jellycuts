@@ -68,8 +68,14 @@ struct IconCreator: View {
                                     Color(hex: color.gradient.bottom)],
                                                startPoint: .top, endPoint: .bottom)
                             )
+                            .overlay {
+                                if selectedColor.id == color.id {
+                                    Circle()
+                                        .stroke(Color.accentColor, lineWidth: 2)
+                                }
+                            }
                             .frame(width: 30, height: 30)
-                            .cornerRadius(45 / 6)
+                            .padding(1)
                             .onTapGesture {
                                 selectedColor = color
                             }
