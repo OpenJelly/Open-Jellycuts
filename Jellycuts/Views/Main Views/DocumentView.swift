@@ -35,7 +35,7 @@ struct DocumentView: View {
         }
         .withToolsSheet(isPresented: $presentSheetView)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button {
                     
                 } label: {

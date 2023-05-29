@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "KeychainSwift",
+        "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "d108a1fa6189e661f91560548ef48651ed8d93b9",
+          "version": "20.0.0"
+        }
+      },
+      {
         "package": "TreeSitter",
         "repositoryURL": "https://github.com/ActuallyTaylor/tree-sitter-spm",
         "state": {

@@ -21,6 +21,7 @@ enum LabelConfiguration {
     
     // MARK: Common
     case copy
+    case create
     
     
     var icon: String {
@@ -41,6 +42,8 @@ enum LabelConfiguration {
             return "desktopcomputer"
         case .copy:
             return "doc.on.doc"
+        case .create:
+            return "plus"
         }
     }
     
@@ -62,6 +65,8 @@ enum LabelConfiguration {
             return "Jellycuts Bridge"
         case .copy:
             return "Copy"
+        case .create:
+            return "Create"
         }
     }
 }

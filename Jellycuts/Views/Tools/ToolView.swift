@@ -22,7 +22,7 @@ struct ToolView: View {
                     Label(.thirdPartyObjectStorage)
                 }
                 NavigationLink {
-                    Text("Dictionary Builder")
+                    DictionaryBuilderView()
                 } label: {
                     Label(.dictionaryBuilder)
                 }

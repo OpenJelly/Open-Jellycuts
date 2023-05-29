@@ -12,7 +12,7 @@ extension View {
         return self
             .sheet(isPresented: isPresented) {
                 ToolView()
-                    .presentationDetents([.medium, .large])
+                    .presentationDetents([.large, .medium])
             }
     }
 }

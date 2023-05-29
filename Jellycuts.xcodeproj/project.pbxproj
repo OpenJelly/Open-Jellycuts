@@ -30,6 +30,13 @@
 		DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */; };
 		DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21912A23FBF100464286 /* DocumentationActionView.swift */; };
 		DBED21962A2412F800464286 /* IconCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21952A2412F800464286 /* IconCreator.swift */; };
+		DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310F72A253F7A0003606E /* DictionaryBuilderView.swift */; };
+		DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310F92A2540050003606E /* DictionaryHandler.swift */; };
+		DBF310FC2A2540AF0003606E /* SharedDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */; };
+		DBF310FF2A2540C10003606E /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBF310FE2A2540C10003606E /* KeychainSwift */; };
+		DBF311012A2540DA0003606E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311002A2540DA0003606E /* Constants.swift */; };
+		DBF311032A2546F00003606E /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311022A2546F00003606E /* DictionaryView.swift */; };
+		DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,12 @@
 		DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationLibraryView.swift; sourceTree = "<group>"; };
 		DBED21912A23FBF100464286 /* DocumentationActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationActionView.swift; sourceTree = "<group>"; };
 		DBED21952A2412F800464286 /* IconCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCreator.swift; sourceTree = "<group>"; };
+		DBF310F72A253F7A0003606E /* DictionaryBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryBuilderView.swift; sourceTree = "<group>"; };
+		DBF310F92A2540050003606E /* DictionaryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHandler.swift; sourceTree = "<group>"; };
+		DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataStorageManager.swift; sourceTree = "<group>"; };
+		DBF311002A2540DA0003606E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DBF311022A2546F00003606E /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAddValueSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +80,7 @@
 			files = (
 				DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */,
 				DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */,
+				DBF310FF2A2540C10003606E /* KeychainSwift in Frameworks */,
 				DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */,
 				DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */,
 			);
@@ -138,6 +152,9 @@
 				DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */,
 				DB4681132A148131003964CC /* Persistance.swift */,
 				DB4680D92A147AAC003964CC /* JellycutsDocument.swift */,
+				DBF310F92A2540050003606E /* DictionaryHandler.swift */,
+				DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */,
+				DBF311002A2540DA0003606E /* Constants.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -202,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				DBED21852A23E7BF00464286 /* ToolView.swift */,
+				DBF310F42A253F580003606E /* Dictionary Builder */,
 				DBED21932A2407C000464286 /* Documentation */,
 				DBED21942A240CB100464286 /* Icon Creator */,
 			);
@@ -226,6 +244,16 @@
 			path = "Icon Creator";
 			sourceTree = "<group>";
 		};
+		DBF310F42A253F580003606E /* Dictionary Builder */ = {
+			isa = PBXGroup;
+			children = (
+				DBF310F72A253F7A0003606E /* DictionaryBuilderView.swift */,
+				DBF311022A2546F00003606E /* DictionaryView.swift */,
+				DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */,
+			);
+			path = "Dictionary Builder";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +275,7 @@
 				DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */,
 				DB4EAFC22A19AB9300B44F4D /* Runestone */,
 				DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */,
+				DBF310FE2A2540C10003606E /* KeychainSwift */,
 			);
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
@@ -280,6 +309,7 @@
 			packageReferences = (
 				DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */,
 				DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */,
+				DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = DB4680D52A147AAC003964CC /* Products */;
 			projectDirPath = "";
@@ -311,14 +341,20 @@
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
 				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
+				DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */,
+				DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */,
 				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,
 				DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */,
+				DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */,
+				DBF311032A2546F00003606E /* DictionaryView.swift in Sources */,
 				DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */,
 				DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */,
 				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
+				DBF311012A2540DA0003606E /* Constants.swift in Sources */,
 				DBED21962A2412F800464286 /* IconCreator.swift in Sources */,
 				DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */,
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
+				DBF310FC2A2540AF0003606E /* SharedDataStorageManager.swift in Sources */,
 				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
 				DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */,
@@ -570,6 +606,14 @@
 				kind = branch;
 			};
 		};
+		DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -589,6 +633,11 @@
 		DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TreeSitterJellyRunestone;
+		};
+		DBF310FE2A2540C10003606E /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

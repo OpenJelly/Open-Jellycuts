@@ -18,11 +18,12 @@ struct HomeView: View, ErrorHandler {
     
     @State internal var lastError: Error?
     @State internal var presentErrorView: Bool = false
-    @State internal var shouldPresentView: Bool = false
+    @State internal var shouldPresentView: Bool = true
     
     @State var newJellycutName: String = ""
     @State var presentCreateJellycut: Bool = false
     @State var presentCreationConfirmation: Bool = false
+    @State var presentToolsSheet: Bool = false
 
     var body: some View {
         NavigationView {
@@ -38,7 +39,13 @@ struct HomeView: View, ErrorHandler {
             }
             .navigationTitle("Home")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        presentToolsSheet.toggle()
+                    } label: {
+                        Label(.tools)
+                            .labelStyle(.iconOnly)
+                    }
                     Button {
                         presentCreationConfirmation.toggle()
                     } label: {
@@ -46,6 +53,7 @@ struct HomeView: View, ErrorHandler {
                     }
                 }
             }
+            .withToolsSheet(isPresented: $presentToolsSheet)
             .confirmationDialog("Create a new Jellycut", isPresented: $presentCreationConfirmation, actions: {
                 Button("Create Jellycut") {
                     presentCreateJellycut.toggle()
@@ -62,7 +70,7 @@ struct HomeView: View, ErrorHandler {
             }, message: {
                 Text("Select an option to create a new Jellycut 🪼")
             })
-            .alert("Create a new list", isPresented: $presentCreateJellycut, actions: {
+            .alert("Create a new Jellycut", isPresented: $presentCreateJellycut, actions: {
                 TextField("Name", text: $newJellycutName)
 
                 Button("Create", action: {
@@ -70,7 +78,7 @@ struct HomeView: View, ErrorHandler {
                 })
                 Button("Cancel", role: .cancel, action: {})
             }, message: {
-                Text("Please enter the name of the list.")
+                Text("Please enter the name of the Jellycut.")
             })
             .alert("An Error Occurred", isPresented: $presentErrorView) {
                 errorMessageButtons()
