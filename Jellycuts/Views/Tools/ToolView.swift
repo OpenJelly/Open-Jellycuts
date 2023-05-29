@@ -17,22 +17,22 @@ struct ToolView: View {
                     Label(.documentation)
                 }
                 NavigationLink {
-                    
+                    Text("Third Party Object Storage")
                 } label: {
                     Label(.thirdPartyObjectStorage)
                 }
                 NavigationLink {
-                    
+                    Text("Dictionary Builder")
                 } label: {
                     Label(.dictionaryBuilder)
                 }
                 NavigationLink {
-                    
+                    IconCreator()
                 } label: {
                     Label(.iconCreator)
                 }
                 NavigationLink {
-                    
+                    Text("Jellycuts Bridge")
                 } label: {
                     Label(.jellycutsBridge)
                 }
