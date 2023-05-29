@@ -39,10 +39,6 @@ class DictionaryHandler: ObservableObject {
             self.dictionary = dictionary
         }
         
-        func set(key: String, value: Value) throws {
-            self.dictionary[key] = value
-        }
-        
         class Value: Codable, Identifiable {
             enum ValueType: String, CaseIterable, Codable {
                 case boolean = "Boolean"
@@ -76,9 +72,9 @@ class DictionaryHandler: ObservableObject {
             var string: String?
             var number: Double?
             var array: [Value]?
-            var dictionary: [String: Value]?
+            var dictionary: JellycutsDictionary?
             
-            init(type: ValueType, boolean: Bool? = nil, string: String? = nil, number: Double? = nil, array: [Value]? = nil, dictionary: [String : Value]? = nil) {
+            init(type: ValueType, boolean: Bool? = nil, string: String? = nil, number: Double? = nil, array: [Value]? = nil, dictionary: JellycutsDictionary? = nil) {
                 self.type = type
                 self.boolean = boolean
                 self.string = string
@@ -128,16 +124,7 @@ extension DictionaryHandler {
         dictionaries.append(JellycutsDictionary(name: name, dictionary: [:]))
         try saveDictionaries()
     }
-    
-//    func editDictionary(named name: String, newDictionary: JellycutsDictionary) throws {
-//        if !dictionaries.contains(where: { nameMatches(dictionary: $0, name: name) }) {
-//            throw DictionaryError.dictionaryDoesNotExist
-//        }
-//
-//        dictionaries.append(newDictionary)
-//        try saveDictionaries()
-//    }
-    
+
     func deleteDictionary(named name: String) throws {
         if !dictionaries.contains(where: { nameMatches(dictionary: $0, name: name) }) {
             throw DictionaryError.dictionaryDoesNotExist

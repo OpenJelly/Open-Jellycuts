@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct DictionaryView: View {
-    @EnvironmentObject var dictionaryBuilder: DictionaryHandler
+    struct EditingStructure: Identifiable {
+        var id: UUID {
+            return UUID()
+        }
+        
+        let key: String
+        let value: DictionaryHandler.JellycutsDictionary.Value
+    }
+    
+    @EnvironmentObject var dictionaryHandler: DictionaryHandler
     @State var dictionary: DictionaryHandler.JellycutsDictionary
     @State var presentAddItem: Bool = false
     @State var presentEditItem: Bool = false
     @State var updateNothing: Bool = false
-    @State var editingItem: (key: String, value: DictionaryHandler.JellycutsDictionary.Value)? = nil
+    @State var editingItem: EditingStructure? = nil
     
     var body: some View {
         List {
@@ -21,14 +30,33 @@ struct DictionaryView: View {
                 switch item.value.type {
                 case .boolean, .string, .number:
                     Button {
-                        editingItem = item
-                        presentEditItem.toggle()
+                        editingItem = EditingStructure(key: item.key, value: item.value)
                     } label: {
                         valueCell(item: item)
                     }
-                case .dictionary, .array:
+                case .dictionary:
                     // TODO: Implement Editing Dictionaries and Arrays
-                    Text(item.key)
+                    if let dictionary = item.value.dictionary {
+                        NavigationLink {
+                            DictionaryView(dictionary: dictionary)
+                                .environmentObject(dictionaryHandler)
+                        } label: {
+                            valueCell(item: item)
+                        }
+                    } else {
+                        Text("Invalid Dictionary: \(item.key)")
+                    }
+                case .array:
+                    if let array = item.value.array {
+                        NavigationLink {
+                            ArrayView(dictionary: $dictionary, key: item.key, valueArray: array)
+                                .environmentObject(dictionaryHandler)
+                        } label: {
+                            valueCell(item: item)
+                        }
+                    } else {
+                        Text("Invalid Array: \(item.key)")
+                    }
                 }
             }
         }
@@ -50,20 +78,16 @@ struct DictionaryView: View {
                 }
             }
         }
-        .sheet(isPresented: $presentEditItem, onDismiss: {
+        .sheet(item: $editingItem, onDismiss: {
             updateNothing.toggle()
             editingItem = nil
-        }) {
-            if let item = editingItem {
-                DictionaryAddValueSheet(dictionary: $dictionary, key: item.key, valueType: item.value.type, booleanValue: item.value.boolean ?? false, stringValue: item.value.string ?? "", numberValue: item.value.number ?? 0.0)
-            } else {
-                DictionaryAddValueSheet(dictionary: $dictionary)
-            }
+        }) { item in
+            DictionaryAddValueSheet(dictionary: $dictionary, array: .constant([]), key: item.key, valueType: item.value.type, booleanValue: item.value.boolean ?? false, stringValue: item.value.string ?? "", numberValue: item.value.number ?? 0.0)
         }
         .sheet(isPresented: $presentAddItem, onDismiss: {
             updateNothing.toggle()
         }) {
-            DictionaryAddValueSheet(dictionary: $dictionary)
+            DictionaryAddValueSheet(dictionary: $dictionary, array: .constant([]))
         }
     }
     

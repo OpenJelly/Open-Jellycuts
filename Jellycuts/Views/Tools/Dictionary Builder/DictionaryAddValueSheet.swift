@@ -12,11 +12,14 @@ struct DictionaryAddValueSheet: View, ErrorHandler {
 
     @EnvironmentObject var dictionaryHandler: DictionaryHandler
     @Binding var dictionary: DictionaryHandler.JellycutsDictionary
-    
+    @Binding var array: [DictionaryHandler.JellycutsDictionary.Value]
+
     @State internal var lastError: Error?
     @State internal var presentErrorView: Bool = false
     @State internal var shouldPresentView: Bool = true
     
+    @State var editingInArray: Bool = false
+    @State var hasParentKey: Bool = false
     @State var key: String = ""
     @State var valueType: DictionaryHandler.JellycutsDictionary.Value.ValueType = .boolean
     @State var booleanValue: Bool = false
@@ -45,7 +48,9 @@ struct DictionaryAddValueSheet: View, ErrorHandler {
                             }
                         }
                     }
-                    TextField("Key", text: $key)
+                    if !editingInArray {
+                        TextField("Key", text: $key)
+                    }
                 }
                 switch valueType {
                 case .boolean:
@@ -100,11 +105,26 @@ struct DictionaryAddValueSheet: View, ErrorHandler {
             value.string = stringValue
         case .number:
             value.number = numberValue
-        default:
-            break
+        case .dictionary:
+            value.dictionary = .init(name: key, dictionary: [:])
+        case .array:
+            value.array = []
         }
         do {
-            try dictionary.set(key: key, value: value)
+            if hasParentKey {
+                #warning("Need to implement nested arrays in arrays")
+            } else if editingInArray {
+                var array = dictionary.dictionary[key]?.array ?? []
+                array.append(value)
+                
+                let arrayValue = DictionaryHandler.JellycutsDictionary.Value(type: .array)
+                arrayValue.array = array
+
+                dictionary.dictionary[key] = arrayValue
+            } else {
+                dictionary.dictionary[key] = value
+            }
+
             try dictionaryHandler.saveDictionaries()
             
             dismiss()
@@ -117,7 +137,7 @@ struct DictionaryAddValueSheet: View, ErrorHandler {
 struct DictionaryAddValueSheet_Previews: PreviewProvider {
     static var previews: some View {
         if let dictionary = DictionaryHandler().dictionaries.first {
-            DictionaryAddValueSheet(dictionary: .constant(dictionary))
+            DictionaryAddValueSheet(dictionary: .constant(dictionary), array: .constant([]))
                 .environmentObject(DictionaryHandler())
         } else {
             Text("No Dictionaries")

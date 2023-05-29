@@ -37,6 +37,7 @@
 		DBF311012A2540DA0003606E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311002A2540DA0003606E /* Constants.swift */; };
 		DBF311032A2546F00003606E /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311022A2546F00003606E /* DictionaryView.swift */; };
 		DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */; };
+		DBF311072A255B540003606E /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311062A255B540003606E /* ArrayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		DBF311002A2540DA0003606E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DBF311022A2546F00003606E /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAddValueSheet.swift; sourceTree = "<group>"; };
+		DBF311062A255B540003606E /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			children = (
 				DBF310F72A253F7A0003606E /* DictionaryBuilderView.swift */,
 				DBF311022A2546F00003606E /* DictionaryView.swift */,
+				DBF311062A255B540003606E /* ArrayView.swift */,
 				DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */,
 			);
 			path = "Dictionary Builder";
@@ -341,6 +344,7 @@
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
 				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
+				DBF311072A255B540003606E /* ArrayView.swift in Sources */,
 				DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */,
 				DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */,
 				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,
