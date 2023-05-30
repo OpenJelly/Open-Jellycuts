@@ -57,6 +57,7 @@
 		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
+		DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Jellycuts-Release.xcconfig"; sourceTree = "<group>"; };
 		DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Hex.swift"; sourceTree = "<group>"; };
 		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
@@ -117,8 +118,8 @@
 				DB46811B2A1483ED003964CC /* Data */,
 				DBED217D2A23E63100464286 /* Views */,
 				DBB32C3F2A2413CB003FDD90 /* Extensions */,
-				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
 				DB4680DF2A147AAD003964CC /* Info.plist */,
+				DB7739692A25B3EF00F883F0 /* Resources */,
 				DB4680E02A147AAD003964CC /* Jellycuts.entitlements */,
 				DB4680E12A147AAD003964CC /* Preview Content */,
 			);
@@ -177,6 +178,15 @@
 				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		DB7739692A25B3EF00F883F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
+				DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DBB32C3F2A2413CB003FDD90 /* Extensions */ = {
