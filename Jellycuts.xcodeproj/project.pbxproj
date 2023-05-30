@@ -21,6 +21,9 @@
 		DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */; };
 		DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC22A19AB9300B44F4D /* Runestone */; };
 		DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */; };
+		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
+		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
+		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
 		DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */; };
 		DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */; };
 		DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED217F2A23E65D00464286 /* LabelConfiguration.swift */; };
@@ -58,6 +61,9 @@
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
 		DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Jellycuts-Release.xcconfig"; sourceTree = "<group>"; };
+		DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSigner.swift; sourceTree = "<group>"; };
+		DB77396E2A25B63900F883F0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DB7739702A25B8B600F883F0 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Hex.swift"; sourceTree = "<group>"; };
 		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
@@ -114,24 +120,16 @@
 			isa = PBXGroup;
 			children = (
 				DB4680D72A147AAC003964CC /* JellycutsApp.swift */,
+				DB77396B2A25B5EE00F883F0 /* Signing */,
 				DB4681172A148368003964CC /* Protocols */,
 				DB46811B2A1483ED003964CC /* Data */,
 				DBED217D2A23E63100464286 /* Views */,
 				DBB32C3F2A2413CB003FDD90 /* Extensions */,
-				DB4680DF2A147AAD003964CC /* Info.plist */,
 				DB7739692A25B3EF00F883F0 /* Resources */,
+				DB4680DF2A147AAD003964CC /* Info.plist */,
 				DB4680E02A147AAD003964CC /* Jellycuts.entitlements */,
-				DB4680E12A147AAD003964CC /* Preview Content */,
 			);
 			path = Jellycuts;
-			sourceTree = "<group>";
-		};
-		DB4680E12A147AAD003964CC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				DB4680E22A147AAD003964CC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		DB4680EB2A147AD6003964CC /* Frameworks */ = {
@@ -184,9 +182,20 @@
 			isa = PBXGroup;
 			children = (
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
+				DB4680E22A147AAD003964CC /* Preview Assets.xcassets */,
 				DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB77396B2A25B5EE00F883F0 /* Signing */ = {
+			isa = PBXGroup;
+			children = (
+				DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */,
+				DB77396E2A25B63900F883F0 /* Reachability.swift */,
+				DB7739702A25B8B600F883F0 /* Dispatch.swift */,
+			);
+			path = Signing;
 			sourceTree = "<group>";
 		};
 		DBB32C3F2A2413CB003FDD90 /* Extensions */ = {
@@ -350,8 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */,
 				DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */,
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
+				DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
 				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
 				DBF311072A255B540003606E /* ArrayView.swift in Sources */,
@@ -361,6 +372,7 @@
 				DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */,
 				DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */,
 				DBF311032A2546F00003606E /* DictionaryView.swift in Sources */,
+				DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */,
 				DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */,
 				DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */,
 				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
@@ -498,7 +510,7 @@
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Resources\"";
 				DEVELOPMENT_TEAM = TK7Y3X86W7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -544,7 +556,7 @@
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Resources\"";
 				DEVELOPMENT_TEAM = TK7Y3X86W7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
