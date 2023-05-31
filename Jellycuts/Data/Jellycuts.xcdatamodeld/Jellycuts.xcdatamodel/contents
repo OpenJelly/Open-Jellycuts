@@ -3,5 +3,6 @@
     <entity name="Project" representedClassName="Project" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="url" attributeType="String" defaultValueString=""/>
+        <attribute name="urlType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
 </model>

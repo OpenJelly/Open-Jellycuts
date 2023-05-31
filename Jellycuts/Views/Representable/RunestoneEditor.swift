@@ -19,9 +19,24 @@ struct RunestoneEditor: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> TextView {
+        setState(text: text)
+        setCustomization()
+        textView.editorDelegate = context.coordinator
+        return textView
+    }
+    
+    func updateUIView(_ uiView: TextView, context: Context) {
+        if text != textView.text {
+            setState(text: text)
+        }
+    }
+    
+    private func setState(text: String) {
         let state = TextViewState(text: text, language: .jelly)
         textView.setState(state)
-
+    }
+    
+    private func setCustomization() {
         textView.backgroundColor = .systemBackground
         textView.textContainerInset = UIEdgeInsets(top: 8, left: 5, bottom: 8, right: 5)
         textView.showLineNumbers = true
@@ -39,29 +54,22 @@ struct RunestoneEditor: UIViewRepresentable {
         textView.autocapitalizationType = .none
         textView.smartQuotesType = .no
         textView.smartDashesType = .no
-        
-        return textView
-    }
-    
-    func updateUIView(_ uiView: TextView, context: Context) {
-
+        textView.isEditable = true
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(textView, self)
+        Coordinator(self)
     }
 
     final class Coordinator: TextViewDelegate {
         let parent: RunestoneEditor
-        private let view: TextView
 
-        init(_ view: TextView, _ parent: RunestoneEditor) {
-            self.view = view
+        init(_ parent: RunestoneEditor) {
             self.parent = parent
         }
         
         func textViewDidChange(_ textView: TextView) {
-            DispatchQueue.main.async {
+            DispatchQueue.main {
                 self.parent.text = textView.text
             }
         }

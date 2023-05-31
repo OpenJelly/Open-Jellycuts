@@ -7,6 +7,11 @@
 
 import CoreData
 
+enum StoreURLType: Int16 {
+    case iCloud = 0
+    case local = 1
+}
+
 struct PersistenceController {
     static let shared = PersistenceController()
 

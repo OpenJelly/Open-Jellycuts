@@ -33,6 +33,14 @@
 		DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */; };
 		DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21912A23FBF100464286 /* DocumentationActionView.swift */; };
 		DBED21962A2412F800464286 /* IconCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21952A2412F800464286 /* IconCreator.swift */; };
+		DBF216882A27B8F50089B889 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF216872A27B8F50089B889 /* Intents.framework */; };
+		DBF2168F2A27B8F50089B889 /* Shortcuts.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DBF216862A27B8F50089B889 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBF216A62A27B9BA0089B889 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311002A2540DA0003606E /* Constants.swift */; };
+		DBF216A72A27B9C40089B889 /* SharedDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */; };
+		DBF216A92A27BAE90089B889 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBF216A82A27BAE90089B889 /* KeychainSwift */; };
+		DBF216AB2A27BAF30089B889 /* HydrogenReporter in Frameworks */ = {isa = PBXBuildFile; productRef = DBF216AA2A27BAF30089B889 /* HydrogenReporter */; };
+		DBF216AD2A27BD190089B889 /* GrabJellycut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF216AC2A27BD190089B889 /* GrabJellycut.swift */; };
+		DBF216B52A27C7EE0089B889 /* DocumentHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF216B42A27C7EE0089B889 /* DocumentHandling.swift */; };
 		DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310F72A253F7A0003606E /* DictionaryBuilderView.swift */; };
 		DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310F92A2540050003606E /* DictionaryHandler.swift */; };
 		DBF310FC2A2540AF0003606E /* SharedDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */; };
@@ -42,6 +50,40 @@
 		DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311042A254F230003606E /* DictionaryAddValueSheet.swift */; };
 		DBF311072A255B540003606E /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311062A255B540003606E /* ArrayView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBF2168D2A27B8F50089B889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB4680CC2A147AAC003964CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBF216852A27B8F50089B889;
+			remoteInfo = Shortcuts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB966A362A27B8A200DD6042 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBF216932A27B8F50089B889 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBF2168F2A27B8F50089B889 /* Shortcuts.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DB4680D42A147AAC003964CC /* Jellycuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jellycuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +115,11 @@
 		DBED218F2A23F99200464286 /* DocumentationLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationLibraryView.swift; sourceTree = "<group>"; };
 		DBED21912A23FBF100464286 /* DocumentationActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationActionView.swift; sourceTree = "<group>"; };
 		DBED21952A2412F800464286 /* IconCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCreator.swift; sourceTree = "<group>"; };
+		DBF216862A27B8F50089B889 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF216872A27B8F50089B889 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		DBF2168C2A27B8F50089B889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF216AC2A27BD190089B889 /* GrabJellycut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabJellycut.swift; sourceTree = "<group>"; };
+		DBF216B42A27C7EE0089B889 /* DocumentHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentHandling.swift; sourceTree = "<group>"; };
 		DBF310F72A253F7A0003606E /* DictionaryBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryBuilderView.swift; sourceTree = "<group>"; };
 		DBF310F92A2540050003606E /* DictionaryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHandler.swift; sourceTree = "<group>"; };
 		DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataStorageManager.swift; sourceTree = "<group>"; };
@@ -95,14 +142,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBF216832A27B8F50089B889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBF216A92A27BAE90089B889 /* KeychainSwift in Frameworks */,
+				DBF216882A27B8F50089B889 /* Intents.framework in Frameworks */,
+				DBF216AB2A27BAF30089B889 /* HydrogenReporter in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DB4680CB2A147AAC003964CC = {
 			isa = PBXGroup;
 			children = (
+				DBF216A52A27B9B10089B889 /* Shared */,
 				DB4680D62A147AAC003964CC /* Jellycuts */,
 				DB4EAFBC2A19AA8700B44F4D /* Packages */,
+				DBF216892A27B8F50089B889 /* Shortcuts */,
 				DB4680D52A147AAC003964CC /* Products */,
 				DB4680EB2A147AD6003964CC /* Frameworks */,
 			);
@@ -112,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				DB4680D42A147AAC003964CC /* Jellycuts.app */,
+				DBF216862A27B8F50089B889 /* Shortcuts.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +195,7 @@
 		DB4680EB2A147AD6003964CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBF216872A27B8F50089B889 /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,8 +215,7 @@
 				DB4681132A148131003964CC /* Persistance.swift */,
 				DB4680D92A147AAC003964CC /* JellycutsDocument.swift */,
 				DBF310F92A2540050003606E /* DictionaryHandler.swift */,
-				DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */,
-				DBF311002A2540DA0003606E /* Constants.swift */,
+				DBF216B42A27C7EE0089B889 /* DocumentHandling.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -265,6 +325,24 @@
 			path = "Icon Creator";
 			sourceTree = "<group>";
 		};
+		DBF216892A27B8F50089B889 /* Shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				DBF216AC2A27BD190089B889 /* GrabJellycut.swift */,
+				DBF2168C2A27B8F50089B889 /* Info.plist */,
+			);
+			path = Shortcuts;
+			sourceTree = "<group>";
+		};
+		DBF216A52A27B9B10089B889 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DBF311002A2540DA0003606E /* Constants.swift */,
+				DBF310FB2A2540AF0003606E /* SharedDataStorageManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		DBF310F42A253F580003606E /* Dictionary Builder */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,10 +364,13 @@
 				DB4680D02A147AAC003964CC /* Sources */,
 				DB4680D12A147AAC003964CC /* Frameworks */,
 				DB4680D22A147AAC003964CC /* Resources */,
+				DB966A362A27B8A200DD6042 /* Embed ExtensionKit Extensions */,
+				DBF216932A27B8F50089B889 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBF2168E2A27B8F50089B889 /* PBXTargetDependency */,
 			);
 			name = Jellycuts;
 			packageProductDependencies = (
@@ -302,6 +383,27 @@
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DBF216852A27B8F50089B889 /* Shortcuts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBF216902A27B8F50089B889 /* Build configuration list for PBXNativeTarget "Shortcuts" */;
+			buildPhases = (
+				DBF216822A27B8F50089B889 /* Sources */,
+				DBF216832A27B8F50089B889 /* Frameworks */,
+				DBF216842A27B8F50089B889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shortcuts;
+			packageProductDependencies = (
+				DBF216A82A27BAE90089B889 /* KeychainSwift */,
+				DBF216AA2A27BAF30089B889 /* HydrogenReporter */,
+			);
+			productName = Shortcuts;
+			productReference = DBF216862A27B8F50089B889 /* Shortcuts.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -316,6 +418,9 @@
 					DB4680D32A147AAC003964CC = {
 						CreatedOnToolsVersion = 14.3;
 						LastSwiftMigration = 1430;
+					};
+					DBF216852A27B8F50089B889 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -338,6 +443,7 @@
 			projectRoot = "";
 			targets = (
 				DB4680D32A147AAC003964CC /* Jellycuts */,
+				DBF216852A27B8F50089B889 /* Shortcuts */,
 			);
 		};
 /* End PBXProject section */
@@ -349,6 +455,13 @@
 			files = (
 				DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */,
 				DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBF216842A27B8F50089B889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,12 +497,31 @@
 				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
 				DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */,
+				DBF216B52A27C7EE0089B889 /* DocumentHandling.swift in Sources */,
 				DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */,
 				DB4681142A148131003964CC /* Persistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBF216822A27B8F50089B889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBF216A62A27B9BA0089B889 /* Constants.swift in Sources */,
+				DBF216A72A27B9C40089B889 /* SharedDataStorageManager.swift in Sources */,
+				DBF216AD2A27BD190089B889 /* GrabJellycut.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBF2168E2A27B8F50089B889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBF216852A27B8F50089B889 /* Shortcuts */;
+			targetProxy = DBF2168D2A27B8F50089B889 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DB4680E42A147AAD003964CC /* Debug */ = {
@@ -504,6 +636,7 @@
 		DB4680E72A147AAD003964CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -516,6 +649,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jellycuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Jellycuts;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -528,7 +663,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphonesimulator*]" = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -550,6 +685,7 @@
 		DB4680E82A147AAD003964CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -562,6 +698,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jellycuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Jellycuts;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -574,7 +712,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphonesimulator*]" = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -589,6 +727,61 @@
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBF216912A27B8F50089B889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TK7Y3X86W7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shortcuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shortcuts;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lineman.Jellycuts.Shortcuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBF216922A27B8F50089B889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TK7Y3X86W7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shortcuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shortcuts;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lineman.Jellycuts.Shortcuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -609,6 +802,15 @@
 			buildConfigurations = (
 				DB4680E72A147AAD003964CC /* Debug */,
 				DB4680E82A147AAD003964CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBF216902A27B8F50089B889 /* Build configuration list for PBXNativeTarget "Shortcuts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBF216912A27B8F50089B889 /* Debug */,
+				DBF216922A27B8F50089B889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -659,6 +861,16 @@
 		DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TreeSitterJellyRunestone;
+		};
+		DBF216A82A27BAE90089B889 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		DBF216AA2A27BAF30089B889 /* HydrogenReporter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */;
+			productName = HydrogenReporter;
 		};
 		DBF310FE2A2540C10003606E /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;

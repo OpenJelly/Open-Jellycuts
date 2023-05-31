@@ -91,16 +91,8 @@ struct HomeView: View, ErrorHandler {
     private func addItem(name: String) {
         newJellycutName = ""
         withAnimation {
-            let text = "import Shortcuts\n#Color: red, #Icon: shortcuts\n"
-            let url = getDocumentsURL().appendingPathComponent(name, conformingTo: .jellycut)
-            
-            let newItem = Project(context: viewContext)
-            newItem.name = name
-            newItem.url = url.absoluteString
-            
             do {
-                try text.write(to: url, atomically: false, encoding: .utf8)
-                try viewContext.save()
+                try DocumentHandling.createJellyDocument(name: name, viewContext: viewContext)
             } catch {
                 handle(error: error)
             }
@@ -110,30 +102,11 @@ struct HomeView: View, ErrorHandler {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             do {
-                try offsets.map { projects[$0] }.forEach { project in
-                    let url = project.url
-                    let fileManager = FileManager.default
-                    try fileManager.removeItem(at: URL(string: url!)!)
-                    
-                    viewContext.delete(project)
-                }
-
-                try viewContext.save()
+                try DocumentHandling.deleteProjects(offsets: offsets, viewContext: viewContext, projects: projects)
             } catch {
                 handle(error: error)
             }
         }
-    }
-    
-    private func getDocumentsURL() -> URL {
-        let icloudURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents")
-        if let icloudURL {
-            return icloudURL
-        }
-        
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
     }
 }
 

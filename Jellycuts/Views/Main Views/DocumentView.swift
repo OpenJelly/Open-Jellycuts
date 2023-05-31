@@ -9,23 +9,26 @@ import SwiftUI
 import HydrogenReporter
 import Runestone
 
-struct DocumentView: View {
-    var project: Project
-    @State var text: String = ""
+struct DocumentView: View, ErrorHandler {
+    @State internal var lastError: Error?
+    @State internal var presentErrorView: Bool = false
+    @State internal var shouldPresentView: Bool = true
     
+    var project: Project
+    @State var text: String
+
     @State var presentSheetView: Bool = false
     
     init(project: Project) {
         self.project = project
         
-        if let url = URL(string: self.project.url!) {
-            do {
-                self.text = try String(contentsOf: url)
-            } catch {
-                LOG(error, level: .error)
-            }
-        } else {
-            LOG("Unable to get URL")
+        do {
+            let url = try DocumentHandling.getProjectURL(for: project)
+            let contents = try String(contentsOf: url)
+            self.text = contents
+        } catch {
+            self.text = "Error Loading Text"
+            handle(error: error)
         }
     }
 
@@ -33,30 +36,43 @@ struct DocumentView: View {
         VStack {
             RunestoneEditor(text: $text)
         }
+        .navigationTitle("Editing")
         .withToolsSheet(isPresented: $presentSheetView)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button {
-                    
-                } label: {
-                    Label(.compile)
-                        .labelStyle(.iconOnly)
-                }
                 Button {
                     presentSheetView.toggle()
                 } label: {
                     Label(.tools)
                         .labelStyle(.iconOnly)
                 }
+                Button {
+                    
+                } label: {
+                    Label("Compile", image: "spaceship.fill")
+                        .labelStyle(.iconOnly)
+                }
             }
         }
-        .navigationTitle("Editing")
+        .alert("An Error Occurred", isPresented: $presentErrorView) {
+            errorMessageButtons()
+        } message: {
+            errorMessageContent()
+        }
+        .onChange(of: text) { newValue in
+            
+        }
+    }
+    
+    private func loadText() {
+        do {
+            let url = try DocumentHandling.getProjectURL(for: project)
+            let contents = try String(contentsOf: url)
+            text = contents
+            print(url, contents, text)
+        } catch {
+            LOG(error, level: .error)
+            handle(error: error)
+        }
     }
 }
-
-//struct DocumentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DocumentView(project: <#Project#>)
-//    }
-//}
-
