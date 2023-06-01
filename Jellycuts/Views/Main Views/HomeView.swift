@@ -11,9 +11,7 @@ import HydrogenReporter
 struct HomeView: View, ErrorHandler {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Project.name, ascending: true)],
-        animation: .default)
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Project.name, ascending: true)], animation: .default)
     private var projects: FetchedResults<Project>
     
     @State internal var lastError: Error?

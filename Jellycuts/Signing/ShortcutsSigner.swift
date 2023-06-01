@@ -54,7 +54,7 @@ struct ShortcutsSigner {
         if Network.reachability.isConnectedToNetwork {
             let boundary = UUID().uuidString
             let fileName = fileURL.lastPathComponent
-            var mimetype = mimeType(for: fileName)
+            let mimetype = mimeType(for: fileName)
 
             let paramName = "upload"
             let fileData = try? Data(contentsOf: fileURL)
@@ -72,19 +72,14 @@ struct ShortcutsSigner {
             request.setValue(String(data.count), forHTTPHeaderField: "Content-Length")
             
             let (responseData, _) = try await URLSession.shared.upload(for: request, from: data)
+
             try deleteFile(fileURL: fileURL)
-                
+            
             if let errorString = String(data: responseData, encoding: .utf8) {
                 throw SigningError.serverError(error: errorString)
             } else {
-                SharedDataStorageManager.defaults.set(responseData, forKey: DefaultsKeys.lastSignedShortcutDataKey)
-                SharedDataStorageManager.defaults.set(fileName, forKey: DefaultsKeys.lastSignedShortcutNameKey)
-                let dict = "{\"action\":\"Import\"}".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-                
-                guard let url = URL(string: "shortcuts://x-callback-url/run-shortcut?name=Jellycuts%20Helper&input=\(dict)") else {
-                    throw SigningError.invalidXCallbackURL
-                }
-                return url
+                try responseData.write(to: fileURL)
+                return fileURL
             }
         } else {
             throw SigningError.networkUnreachable
@@ -97,7 +92,6 @@ struct ShortcutsSigner {
         }
     }
 
-    
     private static func mimeType(for path: String) -> String {
         let pathExtension = URL(fileURLWithPath: path).pathExtension
         guard let uti = UTType(filenameExtension: pathExtension),

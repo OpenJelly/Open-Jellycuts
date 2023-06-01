@@ -12,7 +12,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>GrabJellycutIntent</string>
+				<string>GetShortcutIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

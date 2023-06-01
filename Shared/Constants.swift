@@ -9,7 +9,7 @@ import Foundation
 
 enum Constants {
     static let keychainAccessGroup = "lineman.Jellycuts"
-    static let suiteName = "group.lineman.Jellycuts"
+    static let suiteName = "group.jellycuts"
 }
 
 enum DefaultsKeys {

@@ -11,7 +11,10 @@ enum LabelConfiguration {
     // MARK: Document View
     case compile
     case tools
-    
+    case undo
+    case redo
+    case build
+
     // MARK: Tools Page
     case documentation
     case thirdPartyObjectStorage
@@ -23,7 +26,7 @@ enum LabelConfiguration {
     case copy
     case create
     
-    
+        
     var icon: String {
         switch self {
         case .compile:
@@ -44,6 +47,12 @@ enum LabelConfiguration {
             return "doc.on.doc"
         case .create:
             return "plus"
+        case .undo:
+            return "arrow.uturn.backward.circle"
+        case .redo:
+            return "arrow.uturn.forward.circle"
+        case .build:
+            return "hammer"
         }
     }
     
@@ -67,6 +76,12 @@ enum LabelConfiguration {
             return "Copy"
         case .create:
             return "Create"
+        case .undo:
+            return "Undo Change"
+        case .redo:
+            return "Redo Change"
+        case .build:
+            return "Build"
         }
     }
 }
