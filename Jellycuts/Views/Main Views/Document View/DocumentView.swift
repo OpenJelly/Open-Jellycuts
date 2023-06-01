@@ -99,6 +99,14 @@ struct DocumentView: View, ErrorHandler {
         .onAppear {
             loadText()
         }
+        .onChange(of: viewModel.text) { newValue in
+            do {
+                print("Saving Document")
+                try DocumentHandling.writeContents(for: project, text: viewModel.text)
+            } catch {
+                handle(error: error)
+            }
+        }
     }
     
     private func loadText() {

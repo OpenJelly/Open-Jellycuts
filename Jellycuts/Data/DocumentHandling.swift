@@ -53,7 +53,10 @@ struct DocumentHandling {
     }
     
     static func writeContents(for project: Project, text: String) throws {
+        let url = getDocumentsURL().appendingPathComponent(project.name!, conformingTo: .jellycut)
+        let writeURL = try getProjectURL(for: project)
         
+        try text.write(to: writeURL, atomically: false, encoding: .utf8)
     }
     
     private static func getDocumentsURL() -> URL {
