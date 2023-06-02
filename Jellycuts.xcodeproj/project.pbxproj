@@ -28,6 +28,7 @@
 		DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */; };
 		DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */; };
 		DBC99A152A2866DD00CA742E /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */; };
+		DBD08AFF2A298D8F0068D7B8 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */; };
 		DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */; };
 		DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */; };
 		DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC26362A2853C300676BE0 /* ToolBarView.swift */; };
@@ -118,6 +119,7 @@
 		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
 		DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditorConfig.swift; sourceTree = "<group>"; };
 		DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLook.swift; sourceTree = "<group>"; };
 		DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Convenience.swift"; sourceTree = "<group>"; };
 		DBEC26362A2853C300676BE0 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			children = (
 				DB4680DB2A147AAC003964CC /* DocumentView.swift */,
 				DBEC26362A2853C300676BE0 /* ToolBarView.swift */,
+				DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */,
 			);
 			path = "Document View";
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */,
 				DBF311072A255B540003606E /* ArrayView.swift in Sources */,
 				DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */,
+				DBD08AFF2A298D8F0068D7B8 /* ConsoleView.swift in Sources */,
 				DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */,
 				DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */,
 				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,

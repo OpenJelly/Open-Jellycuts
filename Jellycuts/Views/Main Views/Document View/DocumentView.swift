@@ -26,7 +26,7 @@ struct DocumentView: View, ErrorHandler {
     
     @State var isExporting: Bool = false
     @State var exportedShortcutURL: URL? = nil
-
+    
     init(project: Project) {
         self.project = project
     }
@@ -34,23 +34,26 @@ struct DocumentView: View, ErrorHandler {
     var body: some View {
         ZStack(alignment: .bottom) {
             RunestoneEditor(text: $viewModel.text, config: editorConfig)
-            ToolBarView(recommendations: $viewModel.textRecommendation, canUndo: $editorConfig.canUndo, canRedo: $editorConfig.canRedo, insertText: { selectedText in
-                editorConfig.insertText(text: selectedText)
-            }, undo: {
-                editorConfig.undo()
-            }, redo: {
-                editorConfig.redo()
-            }, openDocumentation: {
-                presentDocumentation.toggle()
-            }, build: {
-                Task {
-                    do {
-                        try await viewModel.build(project)
-                    } catch {
-                        handle(error: error)
+            VStack {
+                ConsoleView(warningCount: $viewModel.warningCount, errorCount: $viewModel.errorCount, consoleText: $viewModel.consoleText)
+                ToolBarView(recommendations: $viewModel.textRecommendation, canUndo: $editorConfig.canUndo, canRedo: $editorConfig.canRedo, insertText: { selectedText in
+                    editorConfig.insertText(text: selectedText)
+                }, undo: {
+                    editorConfig.undo()
+                }, redo: {
+                    editorConfig.redo()
+                }, openDocumentation: {
+                    presentDocumentation.toggle()
+                }, build: {
+                    Task {
+                        do {
+                            try await viewModel.build(project)
+                        } catch {
+                            handle(error: error)
+                        }
                     }
-                }
-            })
+                })
+            }
         }
         .navigationTitle("Editing")
         .withToolsSheet(isPresented: $presentSheetView)

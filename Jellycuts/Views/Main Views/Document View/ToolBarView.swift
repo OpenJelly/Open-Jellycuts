@@ -27,13 +27,11 @@ struct ToolBarView: View {
             topRow()
             bottomRow()
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 5)
+        .padding(10)
         .background(.bar)
         .cornerRadius(10)
         .padding(.horizontal, 15)
-        .padding(.bottom)
-        
+        .padding(.bottom, 5)
     }
     
     @ViewBuilder
