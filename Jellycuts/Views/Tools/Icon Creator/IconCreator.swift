@@ -10,7 +10,7 @@ import Open_Jellycore
 
 struct IconCreator: View {
     @State var selectedGlyph: ShortcutGlyph = .shortcuts
-    @State var selectedColor: ShortcutsColor = .red
+    @State var selectedColor: ShortcutColor = .red
     
     @State var searchText: String = ""
     
@@ -60,7 +60,7 @@ struct IconCreator: View {
             Divider()
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(ShortcutsColor.allCases) { color in
+                    ForEach(ShortcutColor.allCases) { color in
                         Circle()
                             .fill(
                                 LinearGradient(colors: [
@@ -89,7 +89,7 @@ struct IconCreator: View {
 
     
     @ViewBuilder
-    private func shortcutsGlyph(glyph: ShortcutGlyph, color: ShortcutsColor, width: CGFloat = 45, height: CGFloat = 45) -> some View {
+    private func shortcutsGlyph(glyph: ShortcutGlyph, color: ShortcutColor, width: CGFloat = 45, height: CGFloat = 45) -> some View {
         Image("\(glyph.id)")
             .resizable()
             .frame(width: width, height: height)

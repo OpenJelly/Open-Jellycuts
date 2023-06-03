@@ -34,7 +34,7 @@ struct DocumentView: View, ErrorHandler {
     var body: some View {
         ZStack(alignment: .bottom) {
             RunestoneEditor(text: $viewModel.text, config: editorConfig)
-            VStack {
+            VStack(spacing: 5) {
                 ConsoleView(warningCount: $viewModel.warningCount, errorCount: $viewModel.errorCount, consoleText: $viewModel.consoleText)
                 ToolBarView(recommendations: $viewModel.textRecommendation, canUndo: $editorConfig.canUndo, canRedo: $editorConfig.canRedo, insertText: { selectedText in
                     editorConfig.insertText(text: selectedText)
