@@ -11,6 +11,16 @@ import Runestone
 import TreeSitterJellyRunestone
 
 struct RunestoneEditor: UIViewRepresentable {
+    final class EditorCharacterPair: CharacterPair {
+        let leading: String
+        let trailing: String
+
+        init(leading: String, trailing: String) {
+            self.leading = leading
+            self.trailing = trailing
+        }
+    }
+
     @StateObject var config: RunestoneEditorConfig
     @Binding var text: String
     
@@ -71,6 +81,14 @@ struct RunestoneEditor: UIViewRepresentable {
         textView.smartQuotesType = .no
         textView.smartDashesType = .no
         textView.isEditable = true
+        textView.characterPairs = [
+            EditorCharacterPair(leading: "\"", trailing: "\""),
+            EditorCharacterPair(leading: "'", trailing: "'"),
+            EditorCharacterPair(leading: "{", trailing: "}"),
+            EditorCharacterPair(leading: "(", trailing: ")")
+            
+        ]
+        textView.characterPairTrailingComponentDeletionMode = .immediatelyFollowingLeadingComponent
     }
     
     func makeCoordinator() -> Coordinator {

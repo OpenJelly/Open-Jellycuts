@@ -104,7 +104,6 @@ struct DocumentView: View, ErrorHandler {
         }
         .onChange(of: viewModel.text) { newValue in
             do {
-                print("Saving Document")
                 try DocumentHandling.writeContents(for: project, text: viewModel.text)
             } catch {
                 handle(error: error)
