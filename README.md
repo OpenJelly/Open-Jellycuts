@@ -1,5 +1,5 @@
 # Open Jellycuts
- An Open-Source version of Jellycuts
+An Open-Source version of Jellycuts that will allow anyone to add features and improve upon Jellycuts!
 
 ## Packages
 This version of Jellycuts aims to use more modern Open Source packages for everything, improving upon the previous version of Jellycuts. Specifically this version includes [Runestone](https://github.com/simonbs/Runestone) and [Tree-Sitter](https://tree-sitter.github.io/tree-sitter/) as the backend for the text editor and language parsing.
@@ -12,11 +12,11 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 ## Features (Compared to closed Jellycuts)
 | Feature                    | Open Jellycuts                    | Private Jellycuts |
 | -------------------------- | --------------------------------- | ----------------- |
-| Open Jelly Files           | ❌                                | ✅                |
-| Edit Jelly Files           | ❌                                | ✅                |
-| Create Jelly Files         | ❌                                | ✅                |
-| Compile Jell Files         | ❌                                | ✅                |
-| Error Reporting            | ❌                                | ✅                |
+| Open Jelly Files           | ✅                                | ✅                |
+| Edit Jelly Files           | ✅                                | ✅                |
+| Create Jelly Files         | ✅                                | ✅                |
+| Compile Jell Files         | ✅                                | ✅                |
+| Error Reporting            | ✅                                | ✅                |
 | Project Settings           | ❌                                | ✅                |
 | Documentation              | ✅                                | ✅                |
 | Icon Creator               | ✅                                | ✅                |
@@ -28,7 +28,7 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 | Editor Customization       | ❌                                | ✅                |
 | App Icons                  | ❌                                | ✅                |
 | App Tint                   | ❌                                | ✅                |
-| Haptics                    | ❌                                | ✅                |
+| Haptic Feedback            | ❌                                | ✅                |
 | External Safari            | ❌                                | ✅                |
 | Project Sort               | ❌                                | ✅                |
 | Privacy Page               | ❌                                | ✅                |
