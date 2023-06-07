@@ -31,8 +31,8 @@ class DocumentViewModel: ObservableObject {
         let parser = Parser(contents: text)
         try parser.parse()
         
-        let transpiler = Transpiler(parser: parser)
-        let shortcut = try transpiler.compile(named: project.name ?? "Unnamed Jellycut")
+        let compiler = Compiler(parser: parser)
+        let shortcut = try compiler.compile(named: project.name ?? "Unnamed Jellycut")
 
         await updateConsole()
         
