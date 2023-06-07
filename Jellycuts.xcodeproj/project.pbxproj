@@ -122,6 +122,7 @@
 		DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLook.swift; sourceTree = "<group>"; };
 		DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Convenience.swift"; sourceTree = "<group>"; };
+		DBD48ADD2A30F39C002D8A4F /* TreeSitterJellyRunestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TreeSitterJellyRunestone; path = Packages/TreeSitterJellyRunestone; sourceTree = "<group>"; };
 		DBEC26362A2853C300676BE0 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
 		DBED21852A23E7BF00464286 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */,
 				DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */,
 				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
+				DBD48ADD2A30F39C002D8A4F /* TreeSitterJellyRunestone */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
