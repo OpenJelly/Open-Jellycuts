@@ -14,7 +14,7 @@ struct DocumentView: View, ErrorHandler {
     @Environment(\.openURL) private var openURL
     @EnvironmentObject private var appearanceManager: AppearanceManager
 
-    @StateObject var editorConfig = RunestoneEditorConfig()
+    @StateObject var editorConfig: RunestoneEditorConfig
     @StateObject var viewModel = DocumentViewModel()
     
     @State internal var lastError: Error?
@@ -31,6 +31,11 @@ struct DocumentView: View, ErrorHandler {
     
     init(project: Project) {
         self.project = project
+        
+        let config = RunestoneEditorConfig()
+        config.lightTheme = AppearanceManager.shared.lightEditorTheme
+        config.darkTheme = AppearanceManager.shared.darkEditorTheme
+        self._editorConfig = StateObject(wrappedValue: config)
     }
 
     var body: some View {
@@ -57,12 +62,16 @@ struct DocumentView: View, ErrorHandler {
                 })
             }
         }
+        .background(Color(uiColor: editorConfig.currentTheme.backgroundColor))
+        .toolbarBackground(Color(uiColor: editorConfig.currentTheme.backgroundColor))
         .onAppear {
+            editorConfig.lightTheme = appearanceManager.lightEditorTheme
+            editorConfig.darkTheme = appearanceManager.darkEditorTheme
             project.lastOpened = .now
             try? viewContext.save()
+            loadText()
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle(project.name ?? "No Name")
         .withToolsSheet(isPresented: $presentSheetView)
         .sheet(isPresented: $presentDocumentation) {
             NavigationView {
@@ -72,6 +81,11 @@ struct DocumentView: View, ErrorHandler {
         }
         .quicklook($exportedShortcutURL)
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(project.name ?? "No Name")
+                    .font(.headline)
+                    .foregroundColor(Color(uiColor: editorConfig.currentTheme.foregroundColor))
+            }
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button {
                     presentSheetView.toggle()
@@ -106,9 +120,6 @@ struct DocumentView: View, ErrorHandler {
         } message: {
             errorMessageContent()
         }
-        .onAppear {
-            loadText()
-        }
         .onChange(of: viewModel.text) { newValue in
             do {
                 try DocumentHandling.writeContents(for: project, text: viewModel.text)
@@ -116,6 +127,13 @@ struct DocumentView: View, ErrorHandler {
                 handle(error: error)
             }
         }
+        .onChange(of: appearanceManager.lightEditorTheme) { newValue in
+            editorConfig.lightTheme = newValue
+        }
+        .onChange(of: appearanceManager.darkEditorTheme) { newValue in
+            editorConfig.darkTheme = newValue
+        }
+        .environment(\.colorScheme, editorConfig.currentTheme.colorScheme)
     }
     
     private func loadText() {

@@ -94,6 +94,7 @@ struct HomeView: View, ErrorHandler {
         } detail: {
             if let selectedProject {
                 DocumentView(project: selectedProject)
+                    .withEnvironment()
             }
         }
     }

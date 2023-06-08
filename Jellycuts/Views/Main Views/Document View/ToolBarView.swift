@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ToolBarView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @Binding var recommendations: [String]
     var symbols: [String] = ["\"", "$", "{", "}", "(", ")", "=", "//", "!", ">>", ":", ">", "<"]
     
@@ -28,7 +30,7 @@ struct ToolBarView: View {
             bottomRow()
         }
         .padding(10)
-        .background(.bar)
+        .background(.ultraThinMaterial)
         .cornerRadius(10)
         .padding(.horizontal, 15)
         .padding(.bottom, 5)
@@ -103,7 +105,7 @@ struct ToolBarView: View {
         }
         .padding(.vertical, 5)
         .padding(.horizontal, 10)
-        .background(Color(uiColor: .systemGray5))
+        .background(Color(uiColor: colorScheme == .dark ? .systemGray5 : .systemGray2))
         .cornerRadius(10)
     }
 

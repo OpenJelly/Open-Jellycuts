@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HydrogenReporter
+import RunestoneThemes
 
 class AppearanceManager: ObservableObject {
     enum ColorEnvironment: String, CaseIterable, Identifiable {
@@ -31,13 +32,17 @@ class AppearanceManager: ObservableObject {
     @Published var accentColor: AccentColor = .blue
     @Published var colorScheme: ColorEnvironment = .system
     @Published var preferredDynamicTypeSize: DynamicTypeSize = .medium
-    
+    @Published var lightEditorTheme: EditorTheme = .tomorrow
+    @Published var darkEditorTheme: EditorTheme = .tomorrow
+
     public static let shared: AppearanceManager = AppearanceManager()
     
     private init() {
         accentColor = PreferenceManager.getAccentColor()
         colorScheme = PreferenceManager.getColorScheme()
         preferredDynamicTypeSize = PreferenceManager.getPreferredTypeSize()
+        lightEditorTheme = PreferenceManager.getLightEditorTheme()
+        darkEditorTheme = PreferenceManager.getDarkEditorTheme()    
     }
 }
 
@@ -55,5 +60,15 @@ extension AppearanceManager {
 
     func saveDynamicTypeSize(typeSize: DynamicTypeSize) {
         PreferenceManager.savePreferredTypeSize(size: typeSize)
+    }
+    
+    func setEditorLightTheme(theme: EditorTheme) {
+        PreferenceManager.saveLightEditorTheme(theme: theme)
+        self.lightEditorTheme = theme
+    }
+    
+    func setEditorDarkTheme(theme: EditorTheme) {
+        PreferenceManager.saveDarkEditorTheme(theme: theme)
+        self.darkEditorTheme = theme
     }
 }

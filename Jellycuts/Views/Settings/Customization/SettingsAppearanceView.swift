@@ -42,25 +42,50 @@ struct SettingsAppearanceView: View, ErrorHandler {
                 }
             }
             Section("Theme") {
-                NavigationLink("Light Theme") {
+                NavigationLink {
                     SettingsThemeSelector(selectedTheme: $lightTheme)
+                } label: {
+                    HStack {
+                        Text("Light Theme")
+                        Spacer()
+                        Text(appearanceManager.lightEditorTheme.name)
+                            .foregroundColor(.secondary)
+                    }
                 }
-                NavigationLink("Dark Theme") {
+
+                NavigationLink {
                     SettingsThemeSelector(selectedTheme: $darkTheme)
+                } label: {
+                    HStack {
+                        Text("Dark Theme")
+                        Spacer()
+                        Text(appearanceManager.darkEditorTheme.name)
+                            .foregroundColor(.secondary)
+                    }
                 }
+
                 accentColorView()
                 environmentSelector()
             }
             Section("Text Size") {
                 dynamicTextSize()
             }
-
         }
         .navigationTitle("Appearance")
         .alert("An Error Occurred", isPresented: $presentErrorView) {
             errorMessageButtons()
         } message: {
             errorMessageContent()
+        }
+        .onChange(of: lightTheme) { newValue in
+            appearanceManager.setEditorLightTheme(theme: newValue)
+        }
+        .onChange(of: darkTheme) { newValue in
+            appearanceManager.setEditorDarkTheme(theme: newValue)
+        }
+        .onAppear {
+            lightTheme = appearanceManager.lightEditorTheme
+            darkTheme = appearanceManager.darkEditorTheme
         }
     }
     

@@ -29,7 +29,7 @@ struct RunestoneEditor: UIViewRepresentable {
     init(text: Binding<String>, config: RunestoneEditorConfig) {
         self._text = text
         self._config = StateObject(wrappedValue: config)
-        lastTheme = config.theme
+        lastTheme = config.currentTheme
     }
     
     func makeUIView(context: Context) -> TextView {
@@ -45,12 +45,12 @@ struct RunestoneEditor: UIViewRepresentable {
             setState(text: text, textView: uiView)
         }
         
-        if config.theme.id != lastTheme.id {
+        if config.currentTheme.id != lastTheme.id {
             DispatchQueue.main {
-                lastTheme = config.theme
+                lastTheme = config.currentTheme
             }
             setState(text: text, textView: uiView)
-            uiView.backgroundColor = config.theme.backgroundColor
+            uiView.backgroundColor = config.currentTheme.backgroundColor
         }
         
         if config.insertText != nil {
@@ -69,12 +69,16 @@ struct RunestoneEditor: UIViewRepresentable {
     }
     
     private func setState(text: String, textView: TextView) {
-        let state = TextViewState(text: text, theme: config.theme.runestoneTheme, language: .jelly)
+        let state = TextViewState(text: text, theme: config.currentTheme.runestoneTheme, language: .jelly)
         textView.setState(state)
     }
     
     private func setCustomization(textView: TextView) {
-        textView.backgroundColor = config.theme.backgroundColor
+        textView.backgroundColor = config.currentTheme.backgroundColor
+        textView.selectionHighlightColor = config.currentTheme.tintColor.withAlphaComponent(0.2)
+        textView.selectionBarColor = config.currentTheme.tintColor
+        textView.insertionPointColor = config.currentTheme.tintColor
+        
         textView.textContainerInset = UIEdgeInsets(top: 8, left: 5, bottom: 8, right: 5)
         textView.showLineNumbers = true
         textView.lineHeightMultiplier = 1.2
@@ -99,6 +103,7 @@ struct RunestoneEditor: UIViewRepresentable {
             EditorCharacterPair(leading: "(", trailing: ")")
         ]
         textView.characterPairTrailingComponentDeletionMode = .immediatelyFollowingLeadingComponent
+        textView.indentStrategy = .space(length: 4)
     }
     
     func makeCoordinator() -> Coordinator {

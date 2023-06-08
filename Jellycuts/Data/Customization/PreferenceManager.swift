@@ -7,8 +7,29 @@
 
 import SwiftUI
 import HydrogenReporter
+import RunestoneThemes
 
 struct PreferenceManager { }
+
+// MARK: Editor Themes
+extension PreferenceManager {
+    static func getLightEditorTheme() -> EditorTheme {
+        return EditorTheme(rawValue: SharedDataStorageManager.defaults.integer(forKey: PreferenceValues.editorLightTheme.rawValue)) ?? .tomorrow
+    }
+    
+    static func saveLightEditorTheme(theme: EditorTheme) {
+        SharedDataStorageManager.defaults.set(theme.rawValue, forKey: PreferenceValues.editorLightTheme.rawValue)
+    }
+    
+    static func getDarkEditorTheme() -> EditorTheme {
+        return EditorTheme(rawValue: SharedDataStorageManager.defaults.integer(forKey: PreferenceValues.editorDarkTheme.rawValue)) ?? .tomorrow
+    }
+    
+    static func saveDarkEditorTheme(theme: EditorTheme) {
+        SharedDataStorageManager.defaults.set(theme.rawValue, forKey: PreferenceValues.editorDarkTheme.rawValue)
+    }
+
+}
 
 // MARK: Project Sort
 extension PreferenceManager {

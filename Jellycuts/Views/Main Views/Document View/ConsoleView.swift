@@ -66,7 +66,7 @@ struct ConsoleView: View {
             }
         }
         .padding(.horizontal, 10)
-        .background(.thickMaterial)
+        .background(.ultraThinMaterial)
         .cornerRadius(10)
         .padding(.horizontal, 15)
         .padding(.bottom, 5)

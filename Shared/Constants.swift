@@ -44,4 +44,6 @@ enum PreferenceValues: String, CaseIterable {
     case inAppBrowser
     case haptics
     case projectSort
+    case editorLightTheme
+    case editorDarkTheme
 }

@@ -16,8 +16,16 @@ class RunestoneEditorConfig: ObservableObject {
     @Published var canUndo: Bool = false
     @Published var canRedo: Bool = false
     
-    @Published var theme: EditorTheme = .tomorrow
+    var currentTheme: EditorTheme {
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+            return darkTheme
+        }
+        return lightTheme
+    }
     
+    @Published var lightTheme: EditorTheme = .tomorrow
+    @Published var darkTheme: EditorTheme = .tomorrow
+
     init() { }
     
     func undo() {

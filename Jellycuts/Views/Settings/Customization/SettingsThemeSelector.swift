@@ -38,7 +38,8 @@ struct SettingsThemeSelector: View {
                     ForEach(EditorTheme.allCases) { theme in
                         HStack {
                             Button(theme.name) {
-                                editorConfig.theme = theme
+                                editorConfig.lightTheme = theme
+                                editorConfig.darkTheme = theme
                                 selectedTheme = theme
                             }
                             Spacer()
@@ -54,6 +55,10 @@ struct SettingsThemeSelector: View {
         }
         .navigationTitle("Theme Selector")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            editorConfig.lightTheme = selectedTheme
+            editorConfig.darkTheme = selectedTheme
+        }
     }
 }
 
