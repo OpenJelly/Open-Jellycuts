@@ -10,33 +10,40 @@ import HydrogenReporter
 
 struct HomeView: View, ErrorHandler {
     @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject private var appearanceManager: AppearanceManager
 
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Project.name, ascending: true)], animation: .default)
+    @FetchRequest(sortDescriptors: [ getSortKeyPath() ], animation: .default)
     private var projects: FetchedResults<Project>
+    @State private var selectedProject: Project?
     
     @State internal var lastError: Error?
     @State internal var presentErrorView: Bool = false
     @State internal var shouldPresentView: Bool = true
     
-    @State var newJellycutName: String = ""
-    @State var presentCreateJellycut: Bool = false
-    @State var presentCreationConfirmation: Bool = false
-    @State var presentToolsSheet: Bool = false
+    @State private var newJellycutName: String = ""
+    @State private var presentCreateJellycut: Bool = false
+    @State private var presentCreationConfirmation: Bool = false
+    @State private var presentToolsSheet: Bool = false
+    @State private var presentSettingsSheet: Bool = false
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(projects) { project in
-                    NavigationLink {
-                        DocumentView(project: project)
-                    } label: {
-                        Text(project.name ?? "")
-                    }
+        NavigationSplitView {
+            List(projects, selection: $selectedProject) { project in
+                NavigationLink(value: project) {
+                    Text(project.name ?? "")
                 }
-                .onDelete(perform: deleteItems)
             }
             .navigationTitle("Home")
             .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Button {
+                        presentSettingsSheet.toggle()
+                    } label: {
+                        Label(.settings)
+                            .labelStyle(.iconOnly)
+                    }
+
+                }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
                         presentToolsSheet.toggle()
@@ -52,6 +59,7 @@ struct HomeView: View, ErrorHandler {
                 }
             }
             .withToolsSheet(isPresented: $presentToolsSheet)
+            .withSettingsSheet(isPresented: $presentSettingsSheet)
             .confirmationDialog("Create a new Jellycut", isPresented: $presentCreationConfirmation, actions: {
                 Button("Create Jellycut") {
                     presentCreateJellycut.toggle()
@@ -83,6 +91,27 @@ struct HomeView: View, ErrorHandler {
             } message: {
                 errorMessageContent()
             }
+        } detail: {
+            if let selectedProject {
+                DocumentView(project: selectedProject)
+            }
+        }
+    }
+    
+    private static func getSortKeyPath() -> NSSortDescriptor {
+        switch PreferenceManager.getProjectSort() {
+        case .azName:
+            return NSSortDescriptor(keyPath: \Project.name, ascending: true)
+        case .zaName:
+            return NSSortDescriptor(keyPath: \Project.name, ascending: false)
+        case .creationOldestNewest:
+            return NSSortDescriptor(keyPath: \Project.creationDate, ascending: true)
+        case .creationNewestOldest:
+            return NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
+        case .recentlyOpened:
+            return NSSortDescriptor(keyPath: \Project.lastOpened, ascending: false)
+        case .leastRecentlyOpened:
+            return NSSortDescriptor(keyPath: \Project.lastOpened, ascending: true)
         }
     }
     
@@ -111,6 +140,7 @@ struct HomeView: View, ErrorHandler {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 

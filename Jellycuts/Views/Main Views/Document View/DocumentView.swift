@@ -10,7 +10,9 @@ import HydrogenReporter
 import Runestone
 
 struct DocumentView: View, ErrorHandler {
+    @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.openURL) private var openURL
+    @EnvironmentObject private var appearanceManager: AppearanceManager
 
     @StateObject var editorConfig = RunestoneEditorConfig()
     @StateObject var viewModel = DocumentViewModel()
@@ -55,7 +57,12 @@ struct DocumentView: View, ErrorHandler {
                 })
             }
         }
-        .navigationTitle("Editing")
+        .onAppear {
+            project.lastOpened = .now
+            try? viewContext.save()
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(project.name ?? "No Name")
         .withToolsSheet(isPresented: $presentSheetView)
         .sheet(isPresented: $presentDocumentation) {
             NavigationView {
@@ -125,3 +132,11 @@ struct DocumentView: View, ErrorHandler {
         }
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        DocumentView(project: try! PersistenceController.preview.container.viewContext.fetch(Project.fetchRequest()).first!)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}
+

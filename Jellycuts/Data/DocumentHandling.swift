@@ -23,6 +23,7 @@ struct DocumentHandling {
         newProject.name = name
         newProject.urlType = StoreURLType.iCloud.rawValue
         newProject.url = url.lastPathComponent
+        newProject.creationDate = .now
         let writeURL = try getProjectURL(for: newProject)
         
         try text.write(to: writeURL, atomically: false, encoding: .utf8)

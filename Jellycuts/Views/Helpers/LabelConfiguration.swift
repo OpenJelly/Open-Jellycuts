@@ -26,6 +26,26 @@ enum LabelConfiguration {
     case copy
     case create
     
+    // MARK: Settings
+    case settings
+    case appearance
+    case behavior
+    case reportABug
+    case contact
+    case privacy
+    case credits
+    case about
+    
+    // Appearance
+    case environment(isDark: Bool)
+    
+    // Behavior
+    case haptics
+    case browser
+    case projectSort
+    case jellycutsBrowser
+    case safariBrowser
+
         
     var icon: String {
         switch self {
@@ -53,6 +73,34 @@ enum LabelConfiguration {
             return "arrow.uturn.forward.circle"
         case .build:
             return "hammer"
+        case .settings:
+            return "gearshape"
+        case .appearance:
+            return "paintbrush"
+        case .behavior:
+            return "slider.horizontal.3"
+        case .reportABug:
+            return "ant"
+        case .contact:
+            return "paperplane"
+        case .privacy:
+            return "hand.raised"
+        case .credits:
+            return "sparkles"
+        case .about:
+            return "info.circle"
+        case .environment(let isDark):
+            return isDark ? "moon.stars.fill" : "sun.max.fill"
+        case .haptics:
+            return "waveform"
+        case .browser:
+            return "network"
+        case .projectSort:
+            return "line.3.horizontal.decrease.circle"
+        case .jellycutsBrowser:
+            return "app.gift"
+        case .safariBrowser:
+            return "safari"
         }
     }
     
@@ -82,6 +130,34 @@ enum LabelConfiguration {
             return "Redo Change"
         case .build:
             return "Build"
+        case .settings:
+            return "Settings"
+        case .appearance:
+            return "Appearance"
+        case .behavior:
+            return "Behavior"
+        case .reportABug:
+            return "Report a bug"
+        case .contact:
+            return "Contact"
+        case .privacy:
+            return "Privacy"
+        case .credits:
+            return "Credits"
+        case .about:
+            return "About"
+        case .environment(_):
+            return "Environment"
+        case .haptics:
+            return "Haptics"
+        case .browser:
+            return "Browser"
+        case .projectSort:
+            return "Project Sort"
+        case .jellycutsBrowser:
+            return "Jellycuts"
+        case .safariBrowser:
+            return "Safari"
         }
     }
 }

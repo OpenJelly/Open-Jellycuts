@@ -21,6 +21,14 @@
 		DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */; };
 		DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC22A19AB9300B44F4D /* Runestone */; };
 		DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */; };
+		DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66094D2A315C19001431B2 /* SettingsBehaviorView.swift */; };
+		DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66094F2A315F80001431B2 /* ProjectSort.swift */; };
+		DB6609532A316238001431B2 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = DB6609522A316238001431B2 /* BetterSafariView */; };
+		DB6609562A316260001431B2 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6609552A316260001431B2 /* Haptics.swift */; };
+		DB6609582A3165C0001431B2 /* SettingsContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6609572A3165C0001431B2 /* SettingsContactView.swift */; };
+		DB66095A2A3167D0001431B2 /* SettingsAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6609592A3167D0001431B2 /* SettingsAboutView.swift */; };
+		DB66095C2A3168F4001431B2 /* SettingsCreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66095B2A3168F4001431B2 /* SettingsCreditView.swift */; };
+		DB66095E2A316B81001431B2 /* SettingsPrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66095D2A316B81001431B2 /* SettingsPrivacyView.swift */; };
 		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
 		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
@@ -31,6 +39,17 @@
 		DBD08AFF2A298D8F0068D7B8 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */; };
 		DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */; };
 		DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */; };
+		DBD48AE22A313615002D8A4F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48AE12A313615002D8A4F /* SettingsView.swift */; };
+		DBD48B032A3146C4002D8A4F /* SettingsAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B022A3146C4002D8A4F /* SettingsAppearanceView.swift */; };
+		DBD48B052A31473D002D8A4F /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B042A31473D002D8A4F /* AppIconManager.swift */; };
+		DBD48B082A3147A1002D8A4F /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B072A3147A1002D8A4F /* AccentColor.swift */; };
+		DBD48B0A2A3147BF002D8A4F /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B092A3147BF002D8A4F /* PreferenceManager.swift */; };
+		DBD48B0C2A3147DE002D8A4F /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B0B2A3147DE002D8A4F /* Color+Codable.swift */; };
+		DBD48B0F2A31483F002D8A4F /* SettingsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B0E2A31483F002D8A4F /* SettingsIconView.swift */; };
+		DBD48B112A31488F002D8A4F /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B102A31488F002D8A4F /* AppearanceManager.swift */; };
+		DBD48B132A3148D5002D8A4F /* DynamicTypeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */; };
+		DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */; };
+		DBD48B172A314BD0002D8A4F /* RoundedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B162A314BD0002D8A4F /* RoundedFont.swift */; };
 		DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC26362A2853C300676BE0 /* ToolBarView.swift */; };
 		DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED217F2A23E65D00464286 /* LabelConfiguration.swift */; };
 		DBED21862A23E7BF00464286 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21852A23E7BF00464286 /* ToolView.swift */; };
@@ -111,6 +130,13 @@
 		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
+		DB66094D2A315C19001431B2 /* SettingsBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBehaviorView.swift; sourceTree = "<group>"; };
+		DB66094F2A315F80001431B2 /* ProjectSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSort.swift; sourceTree = "<group>"; };
+		DB6609552A316260001431B2 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		DB6609572A3165C0001431B2 /* SettingsContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContactView.swift; sourceTree = "<group>"; };
+		DB6609592A3167D0001431B2 /* SettingsAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAboutView.swift; sourceTree = "<group>"; };
+		DB66095B2A3168F4001431B2 /* SettingsCreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCreditView.swift; sourceTree = "<group>"; };
+		DB66095D2A316B81001431B2 /* SettingsPrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPrivacyView.swift; sourceTree = "<group>"; };
 		DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Jellycuts-Release.xcconfig"; sourceTree = "<group>"; };
 		DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSigner.swift; sourceTree = "<group>"; };
 		DB77396E2A25B63900F883F0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -123,6 +149,17 @@
 		DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLook.swift; sourceTree = "<group>"; };
 		DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Convenience.swift"; sourceTree = "<group>"; };
 		DBD48ADD2A30F39C002D8A4F /* TreeSitterJellyRunestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TreeSitterJellyRunestone; path = Packages/TreeSitterJellyRunestone; sourceTree = "<group>"; };
+		DBD48AE12A313615002D8A4F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DBD48B022A3146C4002D8A4F /* SettingsAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAppearanceView.swift; sourceTree = "<group>"; };
+		DBD48B042A31473D002D8A4F /* AppIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
+		DBD48B072A3147A1002D8A4F /* AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColor.swift; sourceTree = "<group>"; };
+		DBD48B092A3147BF002D8A4F /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		DBD48B0B2A3147DE002D8A4F /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
+		DBD48B0E2A31483F002D8A4F /* SettingsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIconView.swift; sourceTree = "<group>"; };
+		DBD48B102A31488F002D8A4F /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSize.swift; sourceTree = "<group>"; };
+		DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsEnvironment.swift; sourceTree = "<group>"; };
+		DBD48B162A314BD0002D8A4F /* RoundedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFont.swift; sourceTree = "<group>"; };
 		DBEC26362A2853C300676BE0 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
 		DBED21852A23E7BF00464286 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
@@ -154,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */,
+				DB6609532A316238001431B2 /* BetterSafariView in Frameworks */,
 				DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */,
 				DBF310FF2A2540C10003606E /* KeychainSwift in Frameworks */,
 				DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */,
@@ -199,7 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				DB4680D72A147AAC003964CC /* JellycutsApp.swift */,
-				DB77396B2A25B5EE00F883F0 /* Signing */,
+				DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */,
+				DB6609542A316249001431B2 /* Helpers */,
 				DB4681172A148368003964CC /* Protocols */,
 				DB46811B2A1483ED003964CC /* Data */,
 				DBED217D2A23E63100464286 /* Views */,
@@ -235,6 +274,8 @@
 				DB4680D92A147AAC003964CC /* JellycutsDocument.swift */,
 				DBF310F92A2540050003606E /* DictionaryHandler.swift */,
 				DBF216B42A27C7EE0089B889 /* DocumentHandling.swift */,
+				DB66094F2A315F80001431B2 /* ProjectSort.swift */,
+				DBD48B062A314740002D8A4F /* Customization */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -259,6 +300,16 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		DB6609542A316249001431B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB6609552A316260001431B2 /* Haptics.swift */,
+				DB7739702A25B8B600F883F0 /* Dispatch.swift */,
+				DB77396B2A25B5EE00F883F0 /* Signing */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DB7739692A25B3EF00F883F0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,9 +323,8 @@
 		DB77396B2A25B5EE00F883F0 /* Signing */ = {
 			isa = PBXGroup;
 			children = (
-				DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */,
 				DB77396E2A25B63900F883F0 /* Reachability.swift */,
-				DB7739702A25B8B600F883F0 /* Dispatch.swift */,
+				DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */,
 			);
 			path = Signing;
 			sourceTree = "<group>";
@@ -283,7 +333,10 @@
 			isa = PBXGroup;
 			children = (
 				DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */,
+				DBD48B0B2A3147DE002D8A4F /* Color+Codable.swift */,
 				DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */,
+				DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */,
+				DBD48B162A314BD0002D8A4F /* RoundedFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,6 +347,40 @@
 				DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		DBD48ADE2A3135CD002D8A4F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DBD48AE12A313615002D8A4F /* SettingsView.swift */,
+				DB66095D2A316B81001431B2 /* SettingsPrivacyView.swift */,
+				DB66095B2A3168F4001431B2 /* SettingsCreditView.swift */,
+				DB6609572A3165C0001431B2 /* SettingsContactView.swift */,
+				DB6609592A3167D0001431B2 /* SettingsAboutView.swift */,
+				DBD48B0D2A314836002D8A4F /* Customization */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DBD48B062A314740002D8A4F /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				DBD48B102A31488F002D8A4F /* AppearanceManager.swift */,
+				DBD48B042A31473D002D8A4F /* AppIconManager.swift */,
+				DBD48B072A3147A1002D8A4F /* AccentColor.swift */,
+				DBD48B092A3147BF002D8A4F /* PreferenceManager.swift */,
+			);
+			path = Customization;
+			sourceTree = "<group>";
+		};
+		DBD48B0D2A314836002D8A4F /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				DBD48B022A3146C4002D8A4F /* SettingsAppearanceView.swift */,
+				DBD48B0E2A31483F002D8A4F /* SettingsIconView.swift */,
+				DB66094D2A315C19001431B2 /* SettingsBehaviorView.swift */,
+			);
+			path = Customization;
 			sourceTree = "<group>";
 		};
 		DBEC26332A2853A500676BE0 /* Document View */ = {
@@ -314,6 +401,7 @@
 				DB46811F2A14955F003964CC /* Representable */,
 				DBED21822A23E77A00464286 /* Main Views */,
 				DBED218C2A23F7D200464286 /* Tools */,
+				DBD48ADE2A3135CD002D8A4F /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,6 +512,7 @@
 				DB4EAFC22A19AB9300B44F4D /* Runestone */,
 				DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */,
 				DBF310FE2A2540C10003606E /* KeychainSwift */,
+				DB6609522A316238001431B2 /* BetterSafariView */,
 			);
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
@@ -482,6 +571,7 @@
 				DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */,
 				DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */,
 				DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 			);
 			productRefGroup = DB4680D52A147AAC003964CC /* Products */;
 			projectDirPath = "";
@@ -517,14 +607,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD48B0F2A31483F002D8A4F /* SettingsIconView.swift in Sources */,
+				DBD48B052A31473D002D8A4F /* AppIconManager.swift in Sources */,
 				DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */,
+				DB6609582A3165C0001431B2 /* SettingsContactView.swift in Sources */,
 				DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */,
 				DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */,
 				DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */,
+				DBD48B082A3147A1002D8A4F /* AccentColor.swift in Sources */,
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
+				DB66095E2A316B81001431B2 /* SettingsPrivacyView.swift in Sources */,
 				DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
 				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
+				DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */,
+				DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */,
+				DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */,
 				DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */,
 				DBF311072A255B540003606E /* ArrayView.swift in Sources */,
 				DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */,
@@ -534,23 +632,33 @@
 				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,
 				DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */,
 				DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */,
+				DBD48B112A31488F002D8A4F /* AppearanceManager.swift in Sources */,
 				DBF311032A2546F00003606E /* DictionaryView.swift in Sources */,
+				DBD48B0A2A3147BF002D8A4F /* PreferenceManager.swift in Sources */,
 				DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */,
+				DBD48B032A3146C4002D8A4F /* SettingsAppearanceView.swift in Sources */,
 				DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */,
+				DB66095C2A3168F4001431B2 /* SettingsCreditView.swift in Sources */,
 				DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */,
+				DBD48AE22A313615002D8A4F /* SettingsView.swift in Sources */,
 				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
 				DBF311012A2540DA0003606E /* Constants.swift in Sources */,
 				DBC99A152A2866DD00CA742E /* DocumentViewModel.swift in Sources */,
 				DBED21962A2412F800464286 /* IconCreator.swift in Sources */,
+				DB66095A2A3167D0001431B2 /* SettingsAboutView.swift in Sources */,
+				DB6609562A316260001431B2 /* Haptics.swift in Sources */,
 				DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */,
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
 				DBF310FC2A2540AF0003606E /* SharedDataStorageManager.swift in Sources */,
 				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
 				DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */,
+				DBD48B132A3148D5002D8A4F /* DynamicTypeSize.swift in Sources */,
+				DBD48B0C2A3147DE002D8A4F /* Color+Codable.swift in Sources */,
 				DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */,
 				DBF216B52A27C7EE0089B889 /* DocumentHandling.swift in Sources */,
 				DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */,
+				DBD48B172A314BD0002D8A4F /* RoundedFont.swift in Sources */,
 				DB4681142A148131003964CC /* Persistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,6 +1000,14 @@
 				kind = branch;
 			};
 		};
+		DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -919,6 +1035,11 @@
 		DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TreeSitterJellyRunestone;
+		};
+		DB6609522A316238001431B2 /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
 		};
 		DBF310FE2A2540C10003606E /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;

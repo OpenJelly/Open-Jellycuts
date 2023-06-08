@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ToolView: View {
+    @EnvironmentObject private var appearanceManager: AppearanceManager
+
     var body: some View {
         NavigationView {
             List {
@@ -40,6 +42,10 @@ struct ToolView: View {
             }
             .navigationTitle("Tools")
         }
+        .rounded()
+        .tint(appearanceManager.accentColor.color)
+        .preferredColorScheme(appearanceManager.colorScheme == .system ? nil : (appearanceManager.colorScheme == .light ? .light : .dark))
+        .dynamicTypeSize(appearanceManager.preferredDynamicTypeSize)
     }
 }
 

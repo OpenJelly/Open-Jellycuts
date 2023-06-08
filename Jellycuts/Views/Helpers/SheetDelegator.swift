@@ -13,6 +13,15 @@ extension View {
             .sheet(isPresented: isPresented) {
                 ToolView()
                     .presentationDetents([.large, .medium])
+                    .withEnvironment()
+            }
+    }
+    
+    func withSettingsSheet(isPresented: Binding<Bool>) -> some View {
+        return self
+            .sheet(isPresented: isPresented) {
+                SettingsView()
+                    .withEnvironment()
             }
     }
 }

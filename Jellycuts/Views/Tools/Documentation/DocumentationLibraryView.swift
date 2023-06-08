@@ -15,6 +15,7 @@ struct DocumentationLibraryView: View {
         List {
             Section("Information") {
                 Text(library.description)
+                CodeBlock(text: library.importCode)
             }
             Section("Actions") {
                 ForEach(library.actions) { action in

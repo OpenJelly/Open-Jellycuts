@@ -26,12 +26,12 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 | Learning Center            | ❌                                | ✅                |
 | Changelogs                 | ❌                                | ✅                |
 | Editor Customization       | ❌                                | ✅                |
-| App Icons                  | ❌                                | ✅                |
-| App Tint                   | ❌                                | ✅                |
-| Haptic Feedback            | ❌                                | ✅                |
-| External Safari            | ❌                                | ✅                |
-| Project Sort               | ❌                                | ✅                |
-| Privacy Page               | ❌                                | ✅                |
-| Credits Page               | ❌                                | ✅                |
-| About Page                 | ❌                                | ✅                |
-| Contact & Bug Report       | ❌                                | ✅                |
+| App Icons                  | ✅                                | ✅                |
+| App Tint                   | ✅                                | ✅                |
+| Haptic Feedback            | ✅                                | ✅                |
+| External Safari            | ✅                                | ✅                |
+| Project Sort               | ✅                                | ✅                |
+| Privacy Page               | ✅                                | ✅                |
+| Credits Page               | ✅                                | ✅                |
+| About Page                 | ✅                                | ✅                |
+| Contact & Bug Report       | ✅                                | ✅                |

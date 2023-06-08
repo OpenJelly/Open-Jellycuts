@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "BetterSafariView",
+        "repositoryURL": "https://github.com/stleamist/BetterSafariView",
+        "state": {
+          "branch": "main",
+          "revision": "dffd42bc70287e761979bc81dd278db5c80f0deb",
+          "version": null
+        }
+      },
+      {
         "package": "HydrogenReporter",
         "repositoryURL": "https://github.com/ActuallyTaylor/HydrogenReporter",
         "state": {
