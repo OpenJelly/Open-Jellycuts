@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RunestoneThemes
 
 class RunestoneEditorConfig: ObservableObject {
     @Published var undoFlag: Int = 0
@@ -14,7 +15,9 @@ class RunestoneEditorConfig: ObservableObject {
     
     @Published var canUndo: Bool = false
     @Published var canRedo: Bool = false
-
+    
+    @Published var theme: EditorTheme = .tomorrow
+    
     init() { }
     
     func undo() {

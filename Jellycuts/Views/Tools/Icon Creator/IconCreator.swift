@@ -111,17 +111,6 @@ struct IconCreator: View {
     }
 }
 
-fileprivate extension View {
-    func fakeInsetGrouped() -> some View {
-        return self
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color(uiColor: .secondarySystemGroupedBackground))
-            .cornerRadius(10)
-            .padding(.horizontal, 20)
-    }
-}
-
 struct IconCreator_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

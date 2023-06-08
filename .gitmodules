@@ -7,3 +7,6 @@
 [submodule "Packages/Open-Jellycore"]
 	path = Packages/Open-Jellycore
 	url = https://github.com/ActuallyTaylor/Open-Jellycore
+[submodule "Packages/Swift-Themes"]
+	path = Packages/Swift-Themes
+	url = https://github.com/ActuallyTaylor/Swift-Themes

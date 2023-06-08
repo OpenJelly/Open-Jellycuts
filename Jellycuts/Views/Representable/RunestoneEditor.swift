@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 import Runestone
 import TreeSitterJellyRunestone
+import RunestoneThemes
 
 struct RunestoneEditor: UIViewRepresentable {
     final class EditorCharacterPair: CharacterPair {
@@ -23,10 +24,12 @@ struct RunestoneEditor: UIViewRepresentable {
 
     @StateObject var config: RunestoneEditorConfig
     @Binding var text: String
+    @State var lastTheme: EditorTheme
     
     init(text: Binding<String>, config: RunestoneEditorConfig) {
         self._text = text
         self._config = StateObject(wrappedValue: config)
+        lastTheme = config.theme
     }
     
     func makeUIView(context: Context) -> TextView {
@@ -40,6 +43,14 @@ struct RunestoneEditor: UIViewRepresentable {
     func updateUIView(_ uiView: TextView, context: Context) {
         if text != uiView.text {
             setState(text: text, textView: uiView)
+        }
+        
+        if config.theme.id != lastTheme.id {
+            DispatchQueue.main {
+                lastTheme = config.theme
+            }
+            setState(text: text, textView: uiView)
+            uiView.backgroundColor = config.theme.backgroundColor
         }
         
         if config.insertText != nil {
@@ -58,12 +69,12 @@ struct RunestoneEditor: UIViewRepresentable {
     }
     
     private func setState(text: String, textView: TextView) {
-        let state = TextViewState(text: text, language: .jelly)
+        let state = TextViewState(text: text, theme: config.theme.runestoneTheme, language: .jelly)
         textView.setState(state)
     }
     
     private func setCustomization(textView: TextView) {
-        textView.backgroundColor = .systemBackground
+        textView.backgroundColor = config.theme.backgroundColor
         textView.textContainerInset = UIEdgeInsets(top: 8, left: 5, bottom: 8, right: 5)
         textView.showLineNumbers = true
         textView.lineHeightMultiplier = 1.2
@@ -86,7 +97,6 @@ struct RunestoneEditor: UIViewRepresentable {
             EditorCharacterPair(leading: "'", trailing: "'"),
             EditorCharacterPair(leading: "{", trailing: "}"),
             EditorCharacterPair(leading: "(", trailing: ")")
-            
         ]
         textView.characterPairTrailingComponentDeletionMode = .immediatelyFollowingLeadingComponent
     }

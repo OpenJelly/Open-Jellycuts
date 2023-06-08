@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB290B8D2A31AB1D00BEAB7F /* RunestoneThemes in Frameworks */ = {isa = PBXBuildFile; productRef = DB290B8C2A31AB1D00BEAB7F /* RunestoneThemes */; };
 		DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D72A147AAC003964CC /* JellycutsApp.swift */; };
 		DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D92A147AAC003964CC /* JellycutsDocument.swift */; };
 		DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680DB2A147AAC003964CC /* DocumentView.swift */; };
@@ -36,6 +37,8 @@
 		DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */; };
 		DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */; };
 		DBC99A152A2866DD00CA742E /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */; };
+		DBC9E39E2A31975500158E83 /* SettingsThemeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */; };
+		DBC9E3A02A3197B500158E83 /* View+FakeInsetGrouped.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC9E39F2A3197B500158E83 /* View+FakeInsetGrouped.swift */; };
 		DBD08AFF2A298D8F0068D7B8 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */; };
 		DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */; };
 		DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */; };
@@ -114,6 +117,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB290B8B2A31AAC100BEAB7F /* Swift-Themes */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Swift-Themes"; path = "Packages/Swift-Themes"; sourceTree = "<group>"; };
 		DB4680D42A147AAC003964CC /* Jellycuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jellycuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4680D72A147AAC003964CC /* JellycutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsApp.swift; sourceTree = "<group>"; };
 		DB4680D92A147AAC003964CC /* JellycutsDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsDocument.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
 		DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditorConfig.swift; sourceTree = "<group>"; };
 		DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeSelector.swift; sourceTree = "<group>"; };
+		DBC9E39F2A3197B500158E83 /* View+FakeInsetGrouped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+FakeInsetGrouped.swift"; sourceTree = "<group>"; };
 		DBD08AFE2A298D8F0068D7B8 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		DBD216EA2A295FEF003BB5F2 /* QuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLook.swift; sourceTree = "<group>"; };
 		DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Convenience.swift"; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB290B8D2A31AB1D00BEAB7F /* RunestoneThemes in Frameworks */,
 				DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */,
 				DB6609532A316238001431B2 /* BetterSafariView in Frameworks */,
 				DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */,
@@ -296,6 +303,7 @@
 				DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */,
 				DB4EAFBD2A19AA8700B44F4D /* Runestone */,
 				DBD48ADD2A30F39C002D8A4F /* TreeSitterJellyRunestone */,
+				DB290B8B2A31AAC100BEAB7F /* Swift-Themes */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 				DBD216EC2A296019003BB5F2 /* UIDevice+Convenience.swift */,
 				DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */,
 				DBD48B162A314BD0002D8A4F /* RoundedFont.swift */,
+				DBC9E39F2A3197B500158E83 /* View+FakeInsetGrouped.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +388,7 @@
 				DBD48B022A3146C4002D8A4F /* SettingsAppearanceView.swift */,
 				DBD48B0E2A31483F002D8A4F /* SettingsIconView.swift */,
 				DB66094D2A315C19001431B2 /* SettingsBehaviorView.swift */,
+				DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */,
 			);
 			path = Customization;
 			sourceTree = "<group>";
@@ -513,6 +523,7 @@
 				DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */,
 				DBF310FE2A2540C10003606E /* KeychainSwift */,
 				DB6609522A316238001431B2 /* BetterSafariView */,
+				DB290B8C2A31AB1D00BEAB7F /* RunestoneThemes */,
 			);
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
@@ -640,6 +651,7 @@
 				DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */,
 				DB66095C2A3168F4001431B2 /* SettingsCreditView.swift in Sources */,
 				DBED21902A23F99200464286 /* DocumentationLibraryView.swift in Sources */,
+				DBC9E39E2A31975500158E83 /* SettingsThemeSelector.swift in Sources */,
 				DBD48AE22A313615002D8A4F /* SettingsView.swift in Sources */,
 				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
 				DBF311012A2540DA0003606E /* Constants.swift in Sources */,
@@ -651,6 +663,7 @@
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
 				DBF310FC2A2540AF0003606E /* SharedDataStorageManager.swift in Sources */,
 				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
+				DBC9E3A02A3197B500158E83 /* View+FakeInsetGrouped.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
 				DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */,
 				DBD48B132A3148D5002D8A4F /* DynamicTypeSize.swift in Sources */,
@@ -1019,6 +1032,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DB290B8C2A31AB1D00BEAB7F /* RunestoneThemes */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RunestoneThemes;
+		};
 		DB4681192A1483D6003964CC /* HydrogenReporter */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */;

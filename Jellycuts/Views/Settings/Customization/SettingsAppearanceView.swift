@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RunestoneThemes
 
 struct SettingsAppearanceView: View, ErrorHandler {
     @EnvironmentObject private var appearanceManager: AppearanceManager
@@ -15,6 +16,8 @@ struct SettingsAppearanceView: View, ErrorHandler {
     @State internal var shouldPresentView: Bool = false
 
     @State private var customAccentColor: Color = AppearanceManager.shared.accentColor.color
+    @State private var lightTheme: EditorTheme = .gruvboxLight
+    @State private var darkTheme: EditorTheme = .gruvboxLight
 
     var body: some View {
         Form {
@@ -39,6 +42,12 @@ struct SettingsAppearanceView: View, ErrorHandler {
                 }
             }
             Section("Theme") {
+                NavigationLink("Light Theme") {
+                    SettingsThemeSelector(selectedTheme: $lightTheme)
+                }
+                NavigationLink("Dark Theme") {
+                    SettingsThemeSelector(selectedTheme: $darkTheme)
+                }
                 accentColorView()
                 environmentSelector()
             }
@@ -130,5 +139,6 @@ struct SettingsAppearanceView: View, ErrorHandler {
 struct SettingsAppearanceView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsAppearanceView()
+            .withEnvironment()
     }
 }
