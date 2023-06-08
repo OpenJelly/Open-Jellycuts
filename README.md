@@ -4,10 +4,14 @@ An Open-Source version of Jellycuts that will allow anyone to add features and i
 ## Packages
 This version of Jellycuts aims to use more modern Open Source packages for everything, improving upon the previous version of Jellycuts. Specifically this version includes [Runestone](https://github.com/simonbs/Runestone) and [Tree-Sitter](https://tree-sitter.github.io/tree-sitter/) as the backend for the text editor and language parsing.
 
+- [Open Jellycore](https://github.com/ActuallyTaylor/Open-Jellycore)
+    - This package handels the actual compilation of Jellycuts into Shortcuts
 - [Custom Runestone Fork](https://github.com/ActuallyTaylor/Runestone)
     - A custom Runestone fork is being used because the original packages Tree-sitter itself. To allow for neater code, I have pulled out treesitter and moved it to it's own Swift Package.
 - [Tree-Sitter Fork](https://github.com/ActuallyTaylor/tree-sitter-spm)
     - This tree-sitter fork adds support for the Swift Package manager
+- [Tree-Sitter Jelly Grammar](https://github.com/ActuallyTaylor/tree-sitter-jelly)
+    - This package is a SPM distribution of a Tree-Sitter grammar for the Jelly langage. This handles all of the parsing of Jelly done by both Jellycore and Runestone.
 
 ## Features (Compared to closed Jellycuts)
 | Feature                    | Open Jellycuts                    | Private Jellycuts |
