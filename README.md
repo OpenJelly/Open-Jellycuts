@@ -29,7 +29,7 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 | Third-Party Object Storage | ❌                                | ✅                |
 | Learning Center            | ❌                                | ✅                |
 | Changelogs                 | ❌                                | ✅                |
-| Editor Customization       | ❌                                | ✅                |
+| Editor Customization       | ✅                                | ✅                |
 | App Icons                  | ✅                                | ✅                |
 | App Tint                   | ✅                                | ✅                |
 | Haptic Feedback            | ✅                                | ✅                |
