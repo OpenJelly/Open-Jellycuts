@@ -21,8 +21,10 @@ struct PersistenceController {
         for index in 0..<10 {
             let newItem = Project(context: viewContext)
             newItem.name = "Project \(index)"
-            
+            let newServer = BridgeServer(context: viewContext)
+            newServer.name = "Server \(index)"
         }
+        
         do {
             try viewContext.save()
         } catch {

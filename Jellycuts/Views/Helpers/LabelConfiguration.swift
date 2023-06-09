@@ -45,6 +45,9 @@ enum LabelConfiguration {
     case projectSort
     case jellycutsBrowser
     case safariBrowser
+    
+    // MARK: Bridge Page
+    case pullFromServer
 
         
     var icon: String {
@@ -101,13 +104,15 @@ enum LabelConfiguration {
             return "app.gift"
         case .safariBrowser:
             return "safari"
+        case .pullFromServer:
+            return "server.rack"
         }
     }
     
     var title: String {
         switch self {
         case .compile:
-            return "Compile Jellycut"
+            return "Compile"
         case .tools:
             return "Tools"
         case .documentation:
@@ -158,6 +163,8 @@ enum LabelConfiguration {
             return "Jellycuts"
         case .safariBrowser:
             return "Safari"
+        case .pullFromServer:
+            return "Pull Code From Server"
         }
     }
 }

@@ -34,7 +34,7 @@ struct ToolView: View {
                     Label(.iconCreator)
                 }
                 NavigationLink {
-                    Text("Jellycuts Bridge")
+                    BridgeList()
                 } label: {
                     Label(.jellycutsBridge)
                 }

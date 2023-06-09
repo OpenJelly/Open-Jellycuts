@@ -22,6 +22,8 @@
 		DB4EAFC12A19AB9300B44F4D /* Open-Jellycore in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC02A19AB9300B44F4D /* Open-Jellycore */; };
 		DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC22A19AB9300B44F4D /* Runestone */; };
 		DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */ = {isa = PBXBuildFile; productRef = DB4EAFC42A19AB9300B44F4D /* TreeSitterJellyRunestone */; };
+		DB51953B2A33B31A00738A85 /* BridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51953A2A33B31A00738A85 /* BridgeView.swift */; };
+		DB51953D2A33B3CF00738A85 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51953C2A33B3CF00738A85 /* WebSocket.swift */; };
 		DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66094D2A315C19001431B2 /* SettingsBehaviorView.swift */; };
 		DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66094F2A315F80001431B2 /* ProjectSort.swift */; };
 		DB6609532A316238001431B2 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = DB6609522A316238001431B2 /* BetterSafariView */; };
@@ -35,6 +37,9 @@
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
 		DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */; };
 		DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */; };
+		DBC684F42A33ADCC0038D86D /* BridgeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC684F32A33ADCC0038D86D /* BridgeList.swift */; };
+		DBC684F62A33AE0D0038D86D /* BridgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC684F52A33AE0D0038D86D /* BridgeViewModel.swift */; };
+		DBC684FA2A33AEB40038D86D /* v1Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC684F92A33AEB40038D86D /* v1Server.swift */; };
 		DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */; };
 		DBC99A152A2866DD00CA742E /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */; };
 		DBC9E39E2A31975500158E83 /* SettingsThemeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */; };
@@ -134,6 +139,8 @@
 		DB4EAFBD2A19AA8700B44F4D /* Runestone */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Runestone; path = Packages/Runestone; sourceTree = "<group>"; };
 		DB4EAFBE2A19AA9100B44F4D /* tree-sitter-jelly */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tree-sitter-jelly"; path = "Packages/tree-sitter-jelly"; sourceTree = "<group>"; };
 		DB4EAFBF2A19AACA00B44F4D /* Open-Jellycore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Open-Jellycore"; path = "Packages/Open-Jellycore"; sourceTree = "<group>"; };
+		DB51953A2A33B31A00738A85 /* BridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeView.swift; sourceTree = "<group>"; };
+		DB51953C2A33B3CF00738A85 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		DB66094D2A315C19001431B2 /* SettingsBehaviorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBehaviorView.swift; sourceTree = "<group>"; };
 		DB66094F2A315F80001431B2 /* ProjectSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSort.swift; sourceTree = "<group>"; };
 		DB6609552A316260001431B2 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -147,6 +154,9 @@
 		DB7739702A25B8B600F883F0 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Hex.swift"; sourceTree = "<group>"; };
 		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
+		DBC684F32A33ADCC0038D86D /* BridgeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeList.swift; sourceTree = "<group>"; };
+		DBC684F52A33AE0D0038D86D /* BridgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeViewModel.swift; sourceTree = "<group>"; };
+		DBC684F92A33AEB40038D86D /* v1Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v1Server.swift; sourceTree = "<group>"; };
 		DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditorConfig.swift; sourceTree = "<group>"; };
 		DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
 		DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeSelector.swift; sourceTree = "<group>"; };
@@ -282,6 +292,7 @@
 				DBF310F92A2540050003606E /* DictionaryHandler.swift */,
 				DBF216B42A27C7EE0089B889 /* DocumentHandling.swift */,
 				DB66094F2A315F80001431B2 /* ProjectSort.swift */,
+				DBC684F82A33AEA70038D86D /* Bridge */,
 				DBD48B062A314740002D8A4F /* Customization */,
 			);
 			path = Data;
@@ -350,10 +361,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DBC684F02A33AD900038D86D /* Jellycuts Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				DBC684F32A33ADCC0038D86D /* BridgeList.swift */,
+				DB51953A2A33B31A00738A85 /* BridgeView.swift */,
+			);
+			path = "Jellycuts Bridge";
+			sourceTree = "<group>";
+		};
+		DBC684F82A33AEA70038D86D /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				DBC684F92A33AEB40038D86D /* v1Server.swift */,
+				DB51953C2A33B3CF00738A85 /* WebSocket.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 		DBC99A132A2866C400CA742E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */,
+				DBC684F52A33AE0D0038D86D /* BridgeViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -440,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				DBED21852A23E7BF00464286 /* ToolView.swift */,
+				DBC684F02A33AD900038D86D /* Jellycuts Bridge */,
 				DBF310F42A253F580003606E /* Dictionary Builder */,
 				DBED21932A2407C000464286 /* Documentation */,
 				DBED21942A240CB100464286 /* Icon Creator */,
@@ -627,6 +658,7 @@
 				DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */,
 				DBD48B082A3147A1002D8A4F /* AccentColor.swift in Sources */,
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
+				DBC684F62A33AE0D0038D86D /* BridgeViewModel.swift in Sources */,
 				DB66095E2A316B81001431B2 /* SettingsPrivacyView.swift in Sources */,
 				DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
@@ -640,6 +672,7 @@
 				DBD08AFF2A298D8F0068D7B8 /* ConsoleView.swift in Sources */,
 				DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */,
 				DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */,
+				DBC684FA2A33AEB40038D86D /* v1Server.swift in Sources */,
 				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,
 				DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */,
 				DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */,
@@ -661,13 +694,16 @@
 				DB6609562A316260001431B2 /* Haptics.swift in Sources */,
 				DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */,
 				DB4680D82A147AAC003964CC /* JellycutsApp.swift in Sources */,
+				DBC684F42A33ADCC0038D86D /* BridgeList.swift in Sources */,
 				DBF310FC2A2540AF0003606E /* SharedDataStorageManager.swift in Sources */,
 				DBED21882A23EC3900464286 /* SheetDelegator.swift in Sources */,
 				DBC9E3A02A3197B500158E83 /* View+FakeInsetGrouped.swift in Sources */,
+				DB51953D2A33B3CF00738A85 /* WebSocket.swift in Sources */,
 				DB4680F22A1480E5003964CC /* HomeView.swift in Sources */,
 				DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */,
 				DBD48B132A3148D5002D8A4F /* DynamicTypeSize.swift in Sources */,
 				DBD48B0C2A3147DE002D8A4F /* Color+Codable.swift in Sources */,
+				DB51953B2A33B31A00738A85 /* BridgeView.swift in Sources */,
 				DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */,
 				DBF216B52A27C7EE0089B889 /* DocumentHandling.swift in Sources */,
 				DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */,

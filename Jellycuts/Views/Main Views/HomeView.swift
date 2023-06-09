@@ -28,10 +28,13 @@ struct HomeView: View, ErrorHandler {
 
     var body: some View {
         NavigationSplitView {
-            List(projects, selection: $selectedProject) { project in
-                NavigationLink(value: project) {
-                    Text(project.name ?? "")
+            List(selection: $selectedProject) {
+                ForEach(projects) { project in
+                    NavigationLink(value: project) {
+                        Text(project.name ?? "")
+                    }
                 }
+                .onDelete(perform: deleteItems)
             }
             .navigationTitle("Home")
             .toolbar {
