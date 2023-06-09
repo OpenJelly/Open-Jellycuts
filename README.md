@@ -25,7 +25,7 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 | Documentation              | ✅                                | ✅                |
 | Icon Creator               | ✅                                | ✅                |
 | Dictionary Builder         | ✅ (No support for nested arrays) | ✅                |
-| Jellycuts Bridge           | ❌                                | ✅                |
+| Jellycuts Bridge           | ✅                                | ✅                |
 | Third-Party Object Storage | ❌                                | ✅                |
 | Learning Center            | ❌                                | ✅                |
 | Changelogs                 | ❌                                | ✅                |
