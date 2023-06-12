@@ -6,17 +6,9 @@
 //
 
 import Foundation
+import HydrogenReporter
 
 class WebSocket: NSObject, ObservableObject, URLSessionWebSocketDelegate {
-//    struct ReceivedMessage: Codable, Equatable {
-//        enum MessageType: String, Codable, Equatable {
-//            case documentText
-//        }
-//
-//        var type: MessageType
-//        var documentText: String
-//    }
-//
     enum SocketState {
         case closed
         case open
@@ -103,22 +95,15 @@ extension WebSocket {
 
         switch result {
         case .string(let string):
-//            let decoder = JSONDecoder()
-//            print(string)
-//            let message = try decoder.decode(ReceivedMessage.self, from: string.data(using: .utf8)!)
-            
             Dispatch.main {
                 self.receivedMessages.append(string)
             }
         case .data(let data):
-//            let decoder = JSONDecoder()
-//            let message = try decoder.decode(ReceivedMessage.self, from: data)
-            
             Dispatch.main {
                 self.receivedMessages.append(String(data: data, encoding: .utf8) ?? "Invalid Data")
             }
         @unknown default:
-            fatalError("Unkown Value Recieved")
+            LOG("Unknown value received from web socket.", level: .error)
         }
         
         try await receive()

@@ -18,6 +18,7 @@ struct SettingsAppearanceView: View, ErrorHandler {
     @State private var customAccentColor: Color = AppearanceManager.shared.accentColor.color
     @State private var lightTheme: EditorTheme = .gruvboxLight
     @State private var darkTheme: EditorTheme = .gruvboxLight
+    
 
     var body: some View {
         Form {

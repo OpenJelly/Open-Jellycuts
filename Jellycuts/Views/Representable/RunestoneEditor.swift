@@ -25,11 +25,13 @@ struct RunestoneEditor: UIViewRepresentable {
     @StateObject var config: RunestoneEditorConfig
     @Binding var text: String
     @State var lastTheme: EditorTheme
+    var interactionEnabled: Bool = false
     
-    init(text: Binding<String>, config: RunestoneEditorConfig) {
+    init(text: Binding<String>, config: RunestoneEditorConfig, interactionEnabled: Bool = true) {
         self._text = text
         self._config = StateObject(wrappedValue: config)
         lastTheme = config.currentTheme
+        self.interactionEnabled = interactionEnabled
     }
     
     func makeUIView(context: Context) -> TextView {
@@ -37,6 +39,8 @@ struct RunestoneEditor: UIViewRepresentable {
         setState(text: text, textView: textView)
         setCustomization(textView: textView)
         textView.editorDelegate = context.coordinator
+        textView.isUserInteractionEnabled = interactionEnabled
+        
         return textView
     }
     

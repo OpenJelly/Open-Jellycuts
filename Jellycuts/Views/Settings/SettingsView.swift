@@ -15,9 +15,18 @@ struct SettingsView: View, ErrorHandler {
     @State internal var presentErrorView: Bool = false
     @State internal var shouldPresentView: Bool = false
     
+    @State internal var presentProMode: Bool = false
+    
     var body: some View {
         NavigationView {
             List {
+                Section("Support") {
+                    Button {
+                        presentProMode.toggle()
+                    } label: {
+                        Label(.proMode)
+                    }
+                }
                 Section("Learning") {
                     NavigationLink {
                         DocumentationHomeView()
@@ -75,6 +84,7 @@ struct SettingsView: View, ErrorHandler {
             .navigationTitle("Settings")
         }
         .rounded()
+        .withProSheet(isPresented: $presentProMode)
         .tint(appearanceManager.accentColor.color)
         .preferredColorScheme(appearanceManager.colorScheme == .system ? nil : (appearanceManager.colorScheme == .light ? .light : .dark))
         .dynamicTypeSize(appearanceManager.preferredDynamicTypeSize)
@@ -87,7 +97,7 @@ struct SettingsView: View, ErrorHandler {
     
     @discardableResult
     func shareLog() throws -> Bool {
-        guard let source = UIApplication.shared.windows.last?.rootViewController else {
+        guard let source = UIApplication.shared.currentUIWindow()?.rootViewController else {
             return false
         }
         
@@ -107,5 +117,6 @@ struct SettingsView: View, ErrorHandler {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .withEnvironment()
     }
 }

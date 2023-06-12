@@ -19,6 +19,8 @@ struct BridgeList: View, ErrorHandler {
     @State private var newBridgeName: String = ""
     @State private var newBridgeAddress: String = ""
     @State private var presentAddBridge: Bool = false
+    
+    @State private var presentProMode: Bool = false
 
     var body: some View {
         List {
@@ -38,10 +40,15 @@ struct BridgeList: View, ErrorHandler {
             .onDelete(perform: deleteItems)
         }
         .navigationTitle("Bridge Servers")
+        .withProSheet(isPresented: $presentProMode)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button {
-                    presentAddBridge.toggle()
+                    if PurchaseHandler.isProMode {
+                        presentAddBridge.toggle()
+                    } else {
+                        presentProMode.toggle()
+                    }
                 } label: {
                     Image(systemName: "plus")
                 }
@@ -96,7 +103,9 @@ struct BridgeList: View, ErrorHandler {
 
 struct BridgeList_Previews: PreviewProvider {
     static var previews: some View {
-        BridgeList()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        NavigationView {
+            BridgeList()
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        }
     }
 }

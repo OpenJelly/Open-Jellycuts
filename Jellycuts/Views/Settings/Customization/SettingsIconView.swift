@@ -12,6 +12,7 @@ struct SettingsIconView: View {
     @EnvironmentObject private var appearanceManager: AppearanceManager
 
     @State private var selectedIcon: String = UIApplication.shared.alternateIconName ?? "AppIcon"
+    @State private var presentingPremiumView: Bool = false
     
     var body: some View {
         List {
@@ -22,6 +23,7 @@ struct SettingsIconView: View {
             }
         }
         .navigationTitle("Icons")
+        .withProSheet(isPresented: $presentingPremiumView)
     }
     
     @ViewBuilder
@@ -29,11 +31,11 @@ struct SettingsIconView: View {
         HStack {
             Button {
                 if proIcon {
-//                    if PurchaseHandler.isASponsor {
-//                        setIcon(name: rawValue)
-//                    } else {
-//                        presentingSponsorship.toggle()
-//                    }
+                    if PurchaseHandler.isProMode {
+                        setIcon(name: rawValue)
+                    } else {
+                        presentingPremiumView.toggle()
+                    }
                 } else {
                     setIcon(name: rawValue)
                 }
@@ -50,15 +52,15 @@ struct SettingsIconView: View {
                     Spacer()
                 }
             }
-//            if proIcon && !PurchaseHandler.isASponsor {
-//                Spacer()
-//                Image(systemName: "lock.fill")
-//                    .foregroundColor(.accentColor)
-//            } else if selectedIcon == rawValue {
+            if proIcon && !PurchaseHandler.isProMode {
+                Spacer()
+                Image(systemName: "lock.fill")
+                    .foregroundColor(.accentColor)
+            } else if selectedIcon == rawValue {
                 Spacer()
                 Image(systemName: "checkmark")
                     .foregroundColor(.accentColor)
-//            }
+            }
         }
     }
     

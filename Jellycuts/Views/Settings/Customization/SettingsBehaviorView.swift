@@ -18,6 +18,8 @@ struct SettingsBehaviorView: View, ErrorHandler {
     @State private var inAppBrowser: Bool
     @State private var projectSort: ProjectSort
 
+    @State private var presentPremiumView: Bool = false
+    
     init() {
         inAppBrowser = PreferenceManager.getInAppBrowser()
         hapticsIsOn = PreferenceManager.getHapticsEnabled()
@@ -62,8 +64,12 @@ struct SettingsBehaviorView: View, ErrorHandler {
                     Menu {
                         ForEach(ProjectSort.allCases, id: \.rawValue) { sortMode in
                             Button(sortMode.rawValue) {
-                                projectSort = sortMode
-                                PreferenceManager.saveProjectSort(sort: sortMode)
+                                if PurchaseHandler.isProMode {
+                                    projectSort = sortMode
+                                    PreferenceManager.saveProjectSort(sort: sortMode)
+                                } else {
+                                    presentPremiumView.toggle()
+                                }
                             }
                         }
                     } label: {
@@ -78,6 +84,7 @@ struct SettingsBehaviorView: View, ErrorHandler {
                 projectSort = PreferenceManager.getProjectSort()
             }
         }
+        .withProSheet(isPresented: $presentPremiumView)
         .onChange(of: hapticsIsOn, perform: { newValue in
             PreferenceManager.saveHaptics(enabled: newValue)
         })

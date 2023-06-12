@@ -14,8 +14,9 @@ struct DictionaryBuilderView: View, ErrorHandler {
 
     @StateObject var dictionaryHandler: DictionaryHandler = DictionaryHandler()
     
-    @State var presentCreateDictionary: Bool = false
-    @State var newDictionaryName: String = ""
+    @State private var presentCreateDictionary: Bool = false
+    @State private var newDictionaryName: String = ""
+    @State private var presentProMode: Bool = false
     
     var body: some View {
         List {
@@ -27,10 +28,15 @@ struct DictionaryBuilderView: View, ErrorHandler {
             }
         }
         .navigationTitle("Dictionary Builder")
+        .withProSheet(isPresented: $presentProMode)
         .toolbar {
             ToolbarItemGroup {
                 Button {
-                    presentCreateDictionary.toggle()
+                    if PurchaseHandler.isProMode {
+                        presentCreateDictionary.toggle()
+                    } else {
+                        presentProMode.toggle()
+                    }
                 } label: {
                     Label(.create)
                         .labelStyle(.iconOnly)

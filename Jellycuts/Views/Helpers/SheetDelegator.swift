@@ -24,4 +24,13 @@ extension View {
                     .withEnvironment()
             }
     }
+    
+    func withProSheet(isPresented: Binding<Bool>) -> some View {
+        return self
+            .sheet(isPresented: isPresented) {
+                ProPurchaseView()
+                    .withEnvironment()
+            }
+    }
+
 }

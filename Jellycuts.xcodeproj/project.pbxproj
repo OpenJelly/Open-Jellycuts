@@ -35,11 +35,16 @@
 		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
 		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
+		DBB068772A340B54004D522C /* ProPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0686F2A340B54004D522C /* ProPurchaseView.swift */; };
+		DBB0688F2A340CA3004D522C /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */; };
+		DBB068902A340CA3004D522C /* IAPReceiptVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */; };
+		DBB068932A341032004D522C /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DBB068922A341032004D522C /* ConfettiSwiftUI */; };
+		DBB068952A3410F2004D522C /* ProPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB068942A3410F2004D522C /* ProPurchaseViewModel.swift */; };
 		DBB32C412A2413D9003FDD90 /* Colors+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */; };
 		DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */; };
+		DBBE54CA2A36E4ED00D5008F /* CurrentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE54C92A36E4ED00D5008F /* CurrentWindow.swift */; };
 		DBC684F42A33ADCC0038D86D /* BridgeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC684F32A33ADCC0038D86D /* BridgeList.swift */; };
 		DBC684F62A33AE0D0038D86D /* BridgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC684F52A33AE0D0038D86D /* BridgeViewModel.swift */; };
-		DBC684FA2A33AEB40038D86D /* v1Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC684F92A33AEB40038D86D /* v1Server.swift */; };
 		DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */; };
 		DBC99A152A2866DD00CA742E /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */; };
 		DBC9E39E2A31975500158E83 /* SettingsThemeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */; };
@@ -152,11 +157,15 @@
 		DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSigner.swift; sourceTree = "<group>"; };
 		DB77396E2A25B63900F883F0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB7739702A25B8B600F883F0 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		DBB0686F2A340B54004D522C /* ProPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProPurchaseView.swift; sourceTree = "<group>"; };
+		DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandler.swift; sourceTree = "<group>"; };
+		DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPReceiptVerifier.swift; sourceTree = "<group>"; };
+		DBB068942A3410F2004D522C /* ProPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPurchaseViewModel.swift; sourceTree = "<group>"; };
 		DBB32C402A2413D9003FDD90 /* Colors+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Hex.swift"; sourceTree = "<group>"; };
 		DBB32C432A241CFB003FDD90 /* CodeBlockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockStyle.swift; sourceTree = "<group>"; };
+		DBBE54C92A36E4ED00D5008F /* CurrentWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWindow.swift; sourceTree = "<group>"; };
 		DBC684F32A33ADCC0038D86D /* BridgeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeList.swift; sourceTree = "<group>"; };
 		DBC684F52A33AE0D0038D86D /* BridgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeViewModel.swift; sourceTree = "<group>"; };
-		DBC684F92A33AEB40038D86D /* v1Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v1Server.swift; sourceTree = "<group>"; };
 		DBC99A112A285BE400CA742E /* RunestoneEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunestoneEditorConfig.swift; sourceTree = "<group>"; };
 		DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
 		DBC9E39D2A31975500158E83 /* SettingsThemeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeSelector.swift; sourceTree = "<group>"; };
@@ -212,6 +221,7 @@
 				DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */,
 				DBF310FF2A2540C10003606E /* KeychainSwift in Frameworks */,
 				DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */,
+				DBB068932A341032004D522C /* ConfettiSwiftUI in Frameworks */,
 				DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +302,7 @@
 				DBF310F92A2540050003606E /* DictionaryHandler.swift */,
 				DBF216B42A27C7EE0089B889 /* DocumentHandling.swift */,
 				DB66094F2A315F80001431B2 /* ProjectSort.swift */,
-				DBC684F82A33AEA70038D86D /* Bridge */,
+				DB51953C2A33B3CF00738A85 /* WebSocket.swift */,
 				DBD48B062A314740002D8A4F /* Customization */,
 			);
 			path = Data;
@@ -324,6 +334,7 @@
 			children = (
 				DB6609552A316260001431B2 /* Haptics.swift */,
 				DB7739702A25B8B600F883F0 /* Dispatch.swift */,
+				DBB0687E2A340B79004D522C /* App Store Validation */,
 				DB77396B2A25B5EE00F883F0 /* Signing */,
 			);
 			path = Helpers;
@@ -348,6 +359,23 @@
 			path = Signing;
 			sourceTree = "<group>";
 		};
+		DBB0686E2A340B04004D522C /* Pro Mode */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0686F2A340B54004D522C /* ProPurchaseView.swift */,
+			);
+			path = "Pro Mode";
+			sourceTree = "<group>";
+		};
+		DBB0687E2A340B79004D522C /* App Store Validation */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */,
+				DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */,
+			);
+			path = "App Store Validation";
+			sourceTree = "<group>";
+		};
 		DBB32C3F2A2413CB003FDD90 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +385,7 @@
 				DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */,
 				DBD48B162A314BD0002D8A4F /* RoundedFont.swift */,
 				DBC9E39F2A3197B500158E83 /* View+FakeInsetGrouped.swift */,
+				DBBE54C92A36E4ED00D5008F /* CurrentWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,20 +399,12 @@
 			path = "Jellycuts Bridge";
 			sourceTree = "<group>";
 		};
-		DBC684F82A33AEA70038D86D /* Bridge */ = {
-			isa = PBXGroup;
-			children = (
-				DBC684F92A33AEB40038D86D /* v1Server.swift */,
-				DB51953C2A33B3CF00738A85 /* WebSocket.swift */,
-			);
-			path = Bridge;
-			sourceTree = "<group>";
-		};
 		DBC99A132A2866C400CA742E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				DBC99A142A2866DD00CA742E /* DocumentViewModel.swift */,
 				DBC684F52A33AE0D0038D86D /* BridgeViewModel.swift */,
+				DBB068942A3410F2004D522C /* ProPurchaseViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -442,6 +463,7 @@
 				DBED21822A23E77A00464286 /* Main Views */,
 				DBED218C2A23F7D200464286 /* Tools */,
 				DBD48ADE2A3135CD002D8A4F /* Settings */,
+				DBB0686E2A340B04004D522C /* Pro Mode */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -555,6 +577,7 @@
 				DBF310FE2A2540C10003606E /* KeychainSwift */,
 				DB6609522A316238001431B2 /* BetterSafariView */,
 				DB290B8C2A31AB1D00BEAB7F /* RunestoneThemes */,
+				DBB068922A341032004D522C /* ConfettiSwiftUI */,
 			);
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
@@ -614,6 +637,7 @@
 				DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */,
 				DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+				DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = DB4680D52A147AAC003964CC /* Products */;
 			projectDirPath = "";
@@ -654,8 +678,10 @@
 				DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */,
 				DB6609582A3165C0001431B2 /* SettingsContactView.swift in Sources */,
 				DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */,
+				DBBE54CA2A36E4ED00D5008F /* CurrentWindow.swift in Sources */,
 				DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */,
 				DBB32C442A241CFB003FDD90 /* CodeBlockStyle.swift in Sources */,
+				DBB0688F2A340CA3004D522C /* PurchaseHandler.swift in Sources */,
 				DBD48B082A3147A1002D8A4F /* AccentColor.swift in Sources */,
 				DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */,
 				DBC684F62A33AE0D0038D86D /* BridgeViewModel.swift in Sources */,
@@ -663,16 +689,17 @@
 				DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */,
 				DB4681162A14835E003964CC /* ErrorHandler.swift in Sources */,
 				DBED21862A23E7BF00464286 /* ToolView.swift in Sources */,
+				DBB068772A340B54004D522C /* ProPurchaseView.swift in Sources */,
 				DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */,
 				DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */,
 				DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */,
 				DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */,
+				DBB068952A3410F2004D522C /* ProPurchaseViewModel.swift in Sources */,
 				DBF311072A255B540003606E /* ArrayView.swift in Sources */,
 				DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */,
 				DBD08AFF2A298D8F0068D7B8 /* ConsoleView.swift in Sources */,
 				DBC99A122A285BE400CA742E /* RunestoneEditorConfig.swift in Sources */,
 				DBF311052A254F230003606E /* DictionaryAddValueSheet.swift in Sources */,
-				DBC684FA2A33AEB40038D86D /* v1Server.swift in Sources */,
 				DBED21922A23FBF100464286 /* DocumentationActionView.swift in Sources */,
 				DBED218E2A23F7E700464286 /* DocumentationHomeView.swift in Sources */,
 				DBF310F82A253F7A0003606E /* DictionaryBuilderView.swift in Sources */,
@@ -687,6 +714,7 @@
 				DBC9E39E2A31975500158E83 /* SettingsThemeSelector.swift in Sources */,
 				DBD48AE22A313615002D8A4F /* SettingsView.swift in Sources */,
 				DB4681212A149591003964CC /* RunestoneEditor.swift in Sources */,
+				DBB068902A340CA3004D522C /* IAPReceiptVerifier.swift in Sources */,
 				DBF311012A2540DA0003606E /* Constants.swift in Sources */,
 				DBC99A152A2866DD00CA742E /* DocumentViewModel.swift in Sources */,
 				DBED21962A2412F800464286 /* IconCreator.swift in Sources */,
@@ -1057,6 +1085,14 @@
 				kind = branch;
 			};
 		};
+		DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -1093,6 +1129,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
 			productName = BetterSafariView;
+		};
+		DBB068922A341032004D522C /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 		DBF310FE2A2540C10003606E /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -35,6 +35,7 @@ enum LabelConfiguration {
     case privacy
     case credits
     case about
+    case proMode
     
     // Appearance
     case environment(isDark: Bool)
@@ -106,6 +107,8 @@ enum LabelConfiguration {
             return "safari"
         case .pullFromServer:
             return "server.rack"
+        case .proMode:
+            return "key.fill"
         }
     }
     
@@ -165,6 +168,8 @@ enum LabelConfiguration {
             return "Safari"
         case .pullFromServer:
             return "Pull Code From Server"
+        case .proMode:
+            return "Jellycuts Pro"
         }
     }
 }

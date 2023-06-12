@@ -9,45 +9,16 @@ import SwiftUI
 import RunestoneThemes
 
 struct SettingsThemeSelector: View {
-    @StateObject var editorConfig = RunestoneEditorConfig()
-    
-    @State var text: String = """
-    import Shortcuts
-    #Color: red
-    #Icon: shortcuts
-    
-    func hello(name) {
-        text(text: "Hello ${name}!") >> Text
-        quicklook(input: Text)
-    }
-    
-    hello("Taylor")
-    """
+    @State private var presentProMode: Bool = false
     
     @Binding var selectedTheme: EditorTheme
     
     var body: some View {
         VStack {
-            RunestoneEditor(text: $text, config: editorConfig)
-                .frame(height: 150)
-                .cornerRadius(7)
-                .shadow(radius: 7)
-                .padding(20)
             List {
                 Section("Standard Themes") {
                     ForEach(EditorTheme.allCases) { theme in
-                        HStack {
-                            Button(theme.name) {
-                                editorConfig.lightTheme = theme
-                                editorConfig.darkTheme = theme
-                                selectedTheme = theme
-                            }
-                            Spacer()
-                            if selectedTheme == theme {
-                                Image(systemName: "checkmark")
-                                    .foregroundColor(.accentColor)
-                            }
-                        }
+                        AppearanceEditor(theme: theme, selectedTheme: $selectedTheme)
                     }
                 }
             }
@@ -55,9 +26,59 @@ struct SettingsThemeSelector: View {
         }
         .navigationTitle("Theme Selector")
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            editorConfig.lightTheme = selectedTheme
-            editorConfig.darkTheme = selectedTheme
+    }
+    
+    struct AppearanceEditor: View {
+        @StateObject var editorConfig = RunestoneEditorConfig()
+
+        @State var text: String = """
+        import Shortcuts
+        #Color: red #Icon: shortcuts
+        
+        func hello(name) {
+            text(text: "Hello ${name}!") >> Text
+            quicklook(input: Text)
+        }
+        
+        hello("Taylor")
+        """
+        
+        @State var theme: EditorTheme
+        @Binding var selectedTheme: EditorTheme
+        @State private var presentingProView: Bool = false
+
+        init(theme: EditorTheme, selectedTheme: Binding<EditorTheme>) {
+            self.theme = theme
+            self._selectedTheme = selectedTheme
+        }
+        
+        var body: some View {
+            VStack {
+                HStack {
+                    Button(theme.name) {
+                        if PurchaseHandler.isProMode {
+                            selectedTheme = theme
+                        } else {
+                            presentingProView.toggle()
+                        }
+                    }
+                    .font(.headline)
+                    Spacer()
+                    if selectedTheme == theme {
+                        Image(systemName: "checkmark")
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                RunestoneEditor(text: $text, config: editorConfig, interactionEnabled: false)
+                    .frame(height: 150)
+                    .cornerRadius(7)
+                    .shadow(radius: 7)
+            }
+            .onAppear {
+                editorConfig.lightTheme = theme
+                editorConfig.darkTheme = theme
+            }
+            .withProSheet(isPresented: $presentingProView)
         }
     }
 }
@@ -69,3 +90,4 @@ struct SettingsThemeSelector_Previews: PreviewProvider {
         }
     }
 }
+

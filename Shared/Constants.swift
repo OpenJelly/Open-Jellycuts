@@ -47,3 +47,13 @@ enum PreferenceValues: String, CaseIterable {
     case editorLightTheme
     case editorDarkTheme
 }
+
+enum KeychainValues: String, CaseIterable {
+    case hasSubscribed
+}
+
+extension NSNotification.Name {
+    static let purchaseNotification = NSNotification.Name("purchaseNotification")
+    static let purchaseErrorNotification = NSNotification.Name("purchaseErrorNotification")
+    static let finishedPurchasing = NSNotification.Name("finishedPurchasing")
+}

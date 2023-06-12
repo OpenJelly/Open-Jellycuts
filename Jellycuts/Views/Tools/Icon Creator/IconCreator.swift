@@ -9,10 +9,11 @@ import SwiftUI
 import Open_Jellycore
 
 struct IconCreator: View {
-    @State var selectedGlyph: ShortcutGlyph = .shortcuts
-    @State var selectedColor: ShortcutColor = .red
+    @State private var selectedGlyph: ShortcutGlyph = .shortcuts
+    @State private var selectedColor: ShortcutColor = .red
     
-    @State var searchText: String = ""
+    @State private var searchText: String = ""
+    @State private var presentProMode: Bool = false
     
     var body: some View {
         ScrollView {
@@ -21,7 +22,11 @@ struct IconCreator: View {
                     LazyVStack(alignment: .leading) {
                         ForEach(ShortcutGlyph.allCases.filter({ filterGlyph(glyph: $0, search: searchText) })) { glyph in
                             Button {
-                                selectedGlyph = glyph
+                                if PurchaseHandler.isProMode {
+                                    selectedGlyph = glyph
+                                } else {
+                                    presentProMode.toggle()
+                                }
                             } label: {
                                 HStack(spacing: 15) {
                                     shortcutsGlyph(glyph: glyph, color: selectedColor, width: 25, height: 25)
@@ -45,6 +50,7 @@ struct IconCreator: View {
         .background(Color(uiColor: .systemGroupedBackground))
         .searchable(text: $searchText)
         .navigationTitle("Icon Creator")
+        .withProSheet(isPresented: $presentProMode)
     }
     
     @ViewBuilder
@@ -77,7 +83,11 @@ struct IconCreator: View {
                             .frame(width: 30, height: 30)
                             .padding(1)
                             .onTapGesture {
-                                selectedColor = color
+                                if PurchaseHandler.isProMode {
+                                    selectedColor = color
+                                } else {
+                                    presentProMode.toggle()
+                                }
                             }
                     }
                 }
