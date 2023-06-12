@@ -32,6 +32,7 @@ struct ToolBarView: View {
         .padding(10)
         .background(.ultraThinMaterial)
         .cornerRadius(10)
+        .shadow(color: .primary.opacity(0.1), radius: 5)
         .padding(.horizontal, 15)
         .padding(.bottom, 5)
     }
