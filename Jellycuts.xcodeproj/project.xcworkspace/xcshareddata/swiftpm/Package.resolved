@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/ActuallyTaylor/HydrogenReporter",
         "state": {
           "branch": "main",
-          "revision": "23cfaf88a4de05898fef91f8ce6ea271601b1d49",
+          "revision": "acf91cdbb40283e1ca4aa4fd9dfa82fe80eb36bf",
           "version": null
         }
       },
@@ -35,6 +35,15 @@
           "branch": null,
           "revision": "d108a1fa6189e661f91560548ef48651ed8d93b9",
           "version": "20.0.0"
+        }
+      },
+      {
+        "package": "SFSymbols",
+        "repositoryURL": "https://github.com/ActuallyTaylor/SFSymbols/",
+        "state": {
+          "branch": "main",
+          "revision": "adf3c68e01cc1973ccab389fda6f37ac674122a1",
+          "version": null
         }
       },
       {
@@ -60,7 +69,7 @@
         "repositoryURL": "https://github.com/ActuallyTaylor/tree-sitter-spm",
         "state": {
           "branch": "master",
-          "revision": "382a8d5bef3b1f8e99518676c7b86ccd2df5c9e7",
+          "revision": "3860f9e8c683a730a53cd6fd594ff2d8cdc4c222",
           "version": null
         }
       }

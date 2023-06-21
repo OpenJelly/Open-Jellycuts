@@ -35,6 +35,7 @@
 		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
 		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
+		DBA2CDA22A42D0DD00107299 /* SFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = DBA2CDA12A42D0DD00107299 /* SFSymbols */; };
 		DBB068772A340B54004D522C /* ProPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0686F2A340B54004D522C /* ProPurchaseView.swift */; };
 		DBB0688F2A340CA3004D522C /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */; };
 		DBB068902A340CA3004D522C /* IAPReceiptVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */; };
@@ -221,6 +222,7 @@
 				DB4EAFC32A19AB9300B44F4D /* Runestone in Frameworks */,
 				DBF310FF2A2540C10003606E /* KeychainSwift in Frameworks */,
 				DB4EAFC52A19AB9300B44F4D /* TreeSitterJellyRunestone in Frameworks */,
+				DBA2CDA22A42D0DD00107299 /* SFSymbols in Frameworks */,
 				DBB068932A341032004D522C /* ConfettiSwiftUI in Frameworks */,
 				DB46811A2A1483D6003964CC /* HydrogenReporter in Frameworks */,
 			);
@@ -457,8 +459,8 @@
 		DBED217D2A23E63100464286 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DBC99A132A2866C400CA742E /* View Models */,
 				DBED217E2A23E64D00464286 /* Helpers */,
+				DBC99A132A2866C400CA742E /* View Models */,
 				DB46811F2A14955F003964CC /* Representable */,
 				DBED21822A23E77A00464286 /* Main Views */,
 				DBED218C2A23F7D200464286 /* Tools */,
@@ -578,6 +580,7 @@
 				DB6609522A316238001431B2 /* BetterSafariView */,
 				DB290B8C2A31AB1D00BEAB7F /* RunestoneThemes */,
 				DBB068922A341032004D522C /* ConfettiSwiftUI */,
+				DBA2CDA12A42D0DD00107299 /* SFSymbols */,
 			);
 			productName = Jellycuts;
 			productReference = DB4680D42A147AAC003964CC /* Jellycuts.app */;
@@ -638,6 +641,7 @@
 				DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 				DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+				DBA2CDA02A42D0DD00107299 /* XCRemoteSwiftPackageReference "SFSymbols" */,
 			);
 			productRefGroup = DB4680D52A147AAC003964CC /* Products */;
 			projectDirPath = "";
@@ -1085,6 +1089,14 @@
 				kind = branch;
 			};
 		};
+		DBA2CDA02A42D0DD00107299 /* XCRemoteSwiftPackageReference "SFSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ActuallyTaylor/SFSymbols/";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
@@ -1129,6 +1141,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
 			productName = BetterSafariView;
+		};
+		DBA2CDA12A42D0DD00107299 /* SFSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBA2CDA02A42D0DD00107299 /* XCRemoteSwiftPackageReference "SFSymbols" */;
+			productName = SFSymbols;
 		};
 		DBB068922A341032004D522C /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

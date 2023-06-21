@@ -108,7 +108,7 @@ struct DocumentView: View, ErrorHandler {
                     if isExporting {
                         ProgressView()
                     } else {
-                        Label("Compile", image: "spaceship.fill")
+                        Label(.compile)
                             .labelStyle(.iconOnly)
                     }
                 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SFSymbols
 
 enum LabelConfiguration {
     // MARK: Document View
@@ -51,64 +52,64 @@ enum LabelConfiguration {
     case pullFromServer
 
         
-    var icon: String {
+    var icon: SFSymbol {
         switch self {
         case .compile:
-            return "spaceship"
+            return .custom("spaceship.fill")
         case .tools:
-            return "wrench.and.screwdriver.fill"
+            return .wrench_and_screwdriver_fill
         case .documentation:
-            return "doc.richtext"
+            return .doc_richtext
         case .thirdPartyObjectStorage:
-            return "server.rack"
+            return .server_rack
         case .dictionaryBuilder:
-            return "curlybraces.square"
+            return .curlybraces_square
         case .iconCreator:
-            return "app.gift"
+            return .app_gift
         case .jellycutsBridge:
-            return "desktopcomputer"
+            return .desktopcomputer
         case .copy:
-            return "doc.on.doc"
+            return .doc_on_doc
         case .create:
-            return "plus"
+            return .plus
         case .undo:
-            return "arrow.uturn.backward.circle"
+            return .arrow_uturn_backward_circle
         case .redo:
-            return "arrow.uturn.forward.circle"
+            return .arrow_uturn_forward_circle
         case .build:
-            return "hammer"
+            return .hammer
         case .settings:
-            return "gearshape"
+            return .gearshape
         case .appearance:
-            return "paintbrush"
+            return .paintbrush
         case .behavior:
-            return "slider.horizontal.3"
+            return .slider_horizontal_3
         case .reportABug:
-            return "ant"
+            return .ant
         case .contact:
-            return "paperplane"
+            return .paperplane
         case .privacy:
-            return "hand.raised"
+            return .hand_raised
         case .credits:
-            return "sparkles"
+            return .sparkles
         case .about:
-            return "info.circle"
+            return .info_circle
         case .environment(let isDark):
-            return isDark ? "moon.stars.fill" : "sun.max.fill"
+            return isDark ? .moon_stars_fill : .sun_max_fill
         case .haptics:
-            return "waveform"
+            return .waveform
         case .browser:
-            return "network"
+            return .network
         case .projectSort:
-            return "line.3.horizontal.decrease.circle"
+            return .line_3_horizontal_decrease_circle
         case .jellycutsBrowser:
-            return "app.gift"
+            return .app_gift
         case .safariBrowser:
-            return "safari"
+            return .safari
         case .pullFromServer:
-            return "server.rack"
+            return .server_rack
         case .proMode:
-            return "key.fill"
+            return .key_fill
         }
     }
     
@@ -179,7 +180,7 @@ extension Label<Text, Image> {
         self.init {
             Text(config.title)
         } icon: {
-            Image(systemName: config.icon)
+            Image(config.icon)
         }
     }
 }
