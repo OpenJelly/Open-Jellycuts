@@ -21,6 +21,22 @@ struct SettingsIconView: View {
                     iconRow(rawValue: icon.rawValue, name: icon.name)
                 }
             }
+            Section("Pride Icons") {
+                ForEach(AppIconManager.PrideIcons.allCases) { icon in
+                    iconRow(rawValue: icon.rawValue, name: icon.name)
+                }
+            }
+            Section("Pro Icons") {
+                ForEach(AppIconManager.ProIcons.allCases) { icon in
+                    iconRow(rawValue: icon.rawValue, name: icon.name)
+                }
+            }
+            Section("Hidden Icons") {
+                ForEach(AppIconManager.HiddenIcons.allCases) { icon in
+                    iconRow(rawValue: icon.rawValue, name: icon.name)
+                }
+            }
+
         }
         .navigationTitle("Icons")
         .withProSheet(isPresented: $presentingPremiumView)
