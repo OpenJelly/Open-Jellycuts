@@ -158,4 +158,16 @@ struct AppIconManager {
         
         return "Default"
     }
+    
+    static func hiddenIconUnlocked(rawValue: String) -> Bool {
+        if HiddenIcons(rawValue: rawValue) != nil {
+            return SharedDataStorageManager.defaults.bool(forKey: rawValue)
+        }
+
+        return false
+    }
+    
+    static func unlockHiddenIcon(hidden: HiddenIcons) {
+        SharedDataStorageManager.defaults.set(true, forKey: hidden.rawValue)
+    }
 }

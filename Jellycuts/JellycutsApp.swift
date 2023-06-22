@@ -15,6 +15,14 @@ struct JellycutsApp: App {
 
     init() {
         Logger.shared.setLoggerConfig(config: .init(applicationName: "Jellycuts", defaultLevel: .info, defaultComplexity: .simple, leadingEmoji: "🪼"))
+        switch Config.appConfiguration {
+        case .AppStore:
+            break
+        case .Debug:
+            AppIconManager.unlockHiddenIcon(hidden: .dev)
+        case .TestFlight:
+            AppIconManager.unlockHiddenIcon(hidden: .beta)
+        }
     }
 
     var body: some Scene {

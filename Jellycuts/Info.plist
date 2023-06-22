@@ -37,6 +37,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string></string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
