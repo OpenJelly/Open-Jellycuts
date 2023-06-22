@@ -23,7 +23,7 @@ struct AppIconManager {
         case sangria = "AppIcon-Sangria"
         case hope = "AppIcon-Hope"
         case rainbowInTheDark = "AppIcon-Rainbow-In-The-Dark"
-        case outline = "Outline"
+        case outline = "AppIcon-Outline"
         case lightsOut = "AppIcon-Lights-Out"
         case macintosh = "AppIcon-Macintosh"
         case neon = "AppIcon-Neon"
@@ -94,7 +94,7 @@ struct AppIconManager {
        
     enum PrideIcons: String, CaseIterable, Identifiable {
         case pride = "AppIcon-Pride"
-        case progression = "AppIcon-Progressive-Pride"
+        case progression = "AppIcon-Progressive"
         case trans = "AppIcon-Trans-Pride"
         case lesbian = "AppIcon-Lesbian-Pride"
         case bisexual = "AppIcon-Bisexual-Pride"
