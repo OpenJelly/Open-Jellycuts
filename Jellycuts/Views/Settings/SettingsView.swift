@@ -9,6 +9,7 @@ import SwiftUI
 import HydrogenReporter
 
 struct SettingsView: View, ErrorHandler {
+    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var appearanceManager: AppearanceManager
 
     @State internal var lastError: Error?
@@ -82,6 +83,16 @@ struct SettingsView: View, ErrorHandler {
                 }
             }
             .navigationTitle("Settings")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(.xmark_circle)
+                    }
+
+                }
+            }
         }
         .rounded()
         .withProSheet(isPresented: $presentProMode)
