@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="1">
     <entity name="BridgeServer" representedClassName="BridgeServer" syncable="YES" codeGenerationType="class">
         <attribute name="dateCreated" attributeType="Date" defaultDateTimeInterval="708030900" usesScalarValueType="NO"/>
         <attribute name="lastOpenedDate" attributeType="Date" defaultDateTimeInterval="708030900" usesScalarValueType="NO"/>
@@ -7,10 +7,9 @@
         <attribute name="url" attributeType="String" defaultValueString=""/>
     </entity>
     <entity name="Project" representedClassName="Project" syncable="YES" codeGenerationType="class">
-        <attribute name="creationDate" optional="YES" attributeType="Date" defaultDateTimeInterval="708030900" usesScalarValueType="NO"/>
-        <attribute name="lastOpened" optional="YES" attributeType="Date" defaultDateTimeInterval="708030900" usesScalarValueType="NO"/>
-        <attribute name="name" attributeType="String" defaultValueString=""/>
-        <attribute name="url" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="urlType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastOpened" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
 </model>

@@ -59,6 +59,11 @@
 		<string>GetShortcutIntent</string>
 		<string>GrabJellycutIntent</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>

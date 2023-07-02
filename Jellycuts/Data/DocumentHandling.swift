@@ -17,12 +17,9 @@ struct DocumentHandling {
     
     static func createJellyDocument(name: String, viewContext: NSManagedObjectContext) throws {
         let text = "import Shortcuts\n#Color: red, #Icon: shortcuts\n"
-        let url = getDocumentsURL().appendingPathComponent(name, conformingTo: .jellycut)
         
         let newProject = Project(context: viewContext)
         newProject.name = name
-        newProject.urlType = StoreURLType.iCloud.rawValue
-        newProject.url = url.lastPathComponent
         newProject.creationDate = .now
         let writeURL = try getProjectURL(for: newProject)
         
@@ -31,9 +28,9 @@ struct DocumentHandling {
     }
     
     static func deleteProjects(offsets: IndexSet, viewContext: NSManagedObjectContext, projects: FetchedResults<Project>) throws {
-        try offsets.map { projects[$0] }.forEach { project in
+        offsets.map { projects[$0] }.forEach { project in
             let fileManager = FileManager.default
-            try fileManager.removeItem(at: getProjectURL(for: project))
+            try? fileManager.removeItem(at: getProjectURL(for: project))
             
             viewContext.delete(project)
         }
@@ -42,14 +39,15 @@ struct DocumentHandling {
     }
     
     static func getProjectURL(for project: Project) throws -> URL {
-        if project.urlType == StoreURLType.iCloud.rawValue {
-            let documentURL = getDocumentsURL().appendingPathComponent(project.url!)
-            return documentURL
-        } else {
-            guard let url = URL(string: project.url!) else {
+        if let projectURL = project.url {
+            guard let url = URL(string: projectURL) else {
                 throw DocumentHandlingError.invalidFileURL
             }
             return url
+        } else {
+            let newURLBase = getDocumentsURL().appendingPathComponent(project.name ?? "No Name", conformingTo: .jellycut)
+
+            return newURLBase
         }
     }
     

@@ -10,9 +10,11 @@ import HydrogenReporter
 
 @main
 struct JellycutsApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     @StateObject var appearanceManager = AppearanceManager.shared
     let persistenceController = PersistenceController.shared
-
+    
     init() {
         Logger.shared.setLoggerConfig(config: .init(applicationName: "Jellycuts", defaultLevel: .info, defaultComplexity: .simple, leadingEmoji: "🪼"))
         switch Config.appConfiguration {
@@ -24,7 +26,7 @@ struct JellycutsApp: App {
             AppIconManager.unlockHiddenIcon(hidden: .beta)
         }
     }
-
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
@@ -37,4 +39,23 @@ struct JellycutsApp: App {
                 .hydrogenReporter()
         }
     }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        return true
+    }
+    
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        let sceneConfig = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)
+        sceneConfig.delegateClass = SceneDelegate.self
+        
+        return sceneConfig
+    }
+    
+}
+
+class SceneDelegate: NSObject, UIWindowSceneDelegate {
+    
 }

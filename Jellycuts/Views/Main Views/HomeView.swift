@@ -29,7 +29,6 @@ struct HomeView: View, ErrorHandler {
     var body: some View {
         NavigationSplitView {
             List(selection: $selectedProject) {
-                
                 ForEach(projects) { project in
                     NavigationLink(value: project) {
                         Text(project.name ?? "")
