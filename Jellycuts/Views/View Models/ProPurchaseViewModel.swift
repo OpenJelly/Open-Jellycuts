@@ -106,7 +106,6 @@ extension ProPurchaseViewModel {
                     self.presentErrorView = true
                     self.isPurchasing = false
                 }
-
             }
         } else {
             self.errorMessage = "Unable to find the purchase. Please try again."

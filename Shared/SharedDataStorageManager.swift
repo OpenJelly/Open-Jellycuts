@@ -13,7 +13,8 @@ class SharedDataStorageManager {
     static var keychain: KeychainSwift {
         let keychain = KeychainSwift()
         keychain.accessGroup = Constants.keychainAccessGroup
-        keychain.synchronizable = false
+        keychain.synchronizable = true
+        
         return keychain
     }
     

@@ -21,11 +21,13 @@ struct SettingsView: View, ErrorHandler {
     var body: some View {
         NavigationView {
             List {
-                Section("Support") {
-                    Button {
-                        presentProMode.toggle()
-                    } label: {
-                        Label(.proMode)
+                if !PurchaseHandler.isProMode {
+                    Section("Support") {
+                        Button {
+                            presentProMode.toggle()
+                        } label: {
+                            Label(.proMode)
+                        }
                     }
                 }
                 Section("Learning") {

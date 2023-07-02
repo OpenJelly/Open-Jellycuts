@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constants {
-    static let keychainAccessGroup = "lineman.Jellycuts"
+    static let keychainAccessGroup = "825FPALDZ5.com.zlineman.Jellyfish"
     static let suiteName = "group.jellycuts"
 }
 
