@@ -917,7 +917,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-symbol-graph-minimum-access-level private";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlineman.Jellyfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -968,7 +968,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-symbol-graph-minimum-access-level private";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlineman.Jellyfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1000,7 +1000,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlineman.Jellyfish.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1028,7 +1028,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlineman.Jellyfish.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
