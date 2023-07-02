@@ -72,7 +72,10 @@ class ProPurchaseViewModel: ObservableObject {
 extension ProPurchaseViewModel {
     @objc func paymentError(notif: NSNotification) {
         if let error = notif.object as? NSError {
-            if error.code == SKError.paymentCancelled.rawValue { return }
+            if error.code == SKError.paymentCancelled.rawValue {
+                self.isPurchasing = false
+                return
+            }
             self.errorMessage = "Transaction Error: \(error.localizedDescription)"
         } else {
             self.errorMessage = "An unknown error has occurred. Please try again."

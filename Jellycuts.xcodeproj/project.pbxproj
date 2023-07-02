@@ -35,6 +35,8 @@
 		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
 		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
+		DB78F42A2A52129300933314 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78F4292A52129300933314 /* PublicKey.swift */; };
+		DB78F42C2A52132200933314 /* Open-PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78F42B2A52132200933314 /* Open-PublicKey.swift */; };
 		DBA2CDA22A42D0DD00107299 /* SFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = DBA2CDA12A42D0DD00107299 /* SFSymbols */; };
 		DBB068772A340B54004D522C /* ProPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0686F2A340B54004D522C /* ProPurchaseView.swift */; };
 		DBB0688F2A340CA3004D522C /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */; };
@@ -154,10 +156,11 @@
 		DB6609592A3167D0001431B2 /* SettingsAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAboutView.swift; sourceTree = "<group>"; };
 		DB66095B2A3168F4001431B2 /* SettingsCreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCreditView.swift; sourceTree = "<group>"; };
 		DB66095D2A316B81001431B2 /* SettingsPrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPrivacyView.swift; sourceTree = "<group>"; };
-		DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Jellycuts-Release.xcconfig"; sourceTree = "<group>"; };
 		DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSigner.swift; sourceTree = "<group>"; };
 		DB77396E2A25B63900F883F0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB7739702A25B8B600F883F0 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		DB78F4292A52129300933314 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
+		DB78F42B2A52132200933314 /* Open-PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Open-PublicKey.swift"; sourceTree = "<group>"; };
 		DBB0686F2A340B54004D522C /* ProPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProPurchaseView.swift; sourceTree = "<group>"; };
 		DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandler.swift; sourceTree = "<group>"; };
 		DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPReceiptVerifier.swift; sourceTree = "<group>"; };
@@ -347,7 +350,6 @@
 			children = (
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
 				DB4680E22A147AAD003964CC /* Preview Assets.xcassets */,
-				DB77396A2A25B42000F883F0 /* Jellycuts-Release.xcconfig */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -373,6 +375,8 @@
 			isa = PBXGroup;
 			children = (
 				DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */,
+				DB78F4292A52129300933314 /* PublicKey.swift */,
+				DB78F42B2A52132200933314 /* Open-PublicKey.swift */,
 				DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */,
 			);
 			path = "App Store Validation";
@@ -697,7 +701,9 @@
 				DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */,
 				DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */,
 				DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */,
+				DB78F42A2A52129300933314 /* PublicKey.swift in Sources */,
 				DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */,
+				DB78F42C2A52132200933314 /* Open-PublicKey.swift in Sources */,
 				DBB068952A3410F2004D522C /* ProPurchaseViewModel.swift in Sources */,
 				DBF311072A255B540003606E /* ArrayView.swift in Sources */,
 				DBF310FA2A2540050003606E /* DictionaryHandler.swift in Sources */,

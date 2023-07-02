@@ -1,3 +1,4 @@
 .DS_STORE
 Jellycuts/Resources/Jellycuts-Release.xcconfig
 UserInterfaceState.xcuserstate
+/Jellycuts/Helpers/App Store Validation/PublicKey.swift

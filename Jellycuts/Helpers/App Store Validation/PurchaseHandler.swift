@@ -12,7 +12,16 @@ import HydrogenReporter
 public typealias ProductIdentifier = String
 public typealias ProductsRequestCompletionHandler = (_ success: Bool, _ products: [SKProduct]?) -> Void
 
+protocol PublicKeyProvider {
+    static var publicKey: String { get }
+}
+
 class PurchaseHandler: NSObject {
+    enum PurchaseHandlerError: Error {
+        case invalidBundle
+        case invalidKey
+    }
+    
     enum JellycutsProduct: String, CaseIterable {
         static let tips: [JellycutsProduct] = [.Tier1_Tip, Tier2_Tip, Tier3_Tip, Tier4_Tip, Tier5_Tip]
         static let pro: [JellycutsProduct] = [.Tier1_Pro, Tier2_Pro, Tier3_Pro, Tier4_Pro, Tier5_Pro]
@@ -92,8 +101,7 @@ class PurchaseHandler: NSObject {
             
     static func verifyIAP(purchasedID: String) async throws -> VerificationResult {
         let url = URL(string: verificationURL)!
-        let publicKey = ""
-        
+                
         guard let verifier = IAPReceiptVerifier(url: url, base64EncodedPublicKey: publicKey) else {
             throw VerificationResult.invalidSettings
         }
@@ -270,4 +278,3 @@ extension PurchaseHandler: SKPaymentTransactionObserver {
         NotificationCenter.default.post(name: .purchaseNotification, object: identifier)
     }
 }
-
