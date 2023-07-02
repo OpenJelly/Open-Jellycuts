@@ -13,21 +13,9 @@ struct DocumentationActionView: View {
     var action: DocumentationActionEntry
     var currentVersion: ShortcutsHostVersion {
         #if os(macOS)
-        if #available(macOS 11, *) {
-            return .macOS12//"1125.1"
-        }
+        return .macOS12//"1125.1"
         #endif
-        if #available(iOS 16, *) {
-            return .iOS16
-        } else if #available(iOS 15, *) {
-            return .iOS15
-        } else if #available(iOS 14, *) {
-            return .iOS14//"1092.6"
-        } else if #available(iOS 13, *) {
-            return .iOS13// "1050.24"
-        } else {
-            return .iOS13
-        }
+        return .iOS16
     }
     
     
