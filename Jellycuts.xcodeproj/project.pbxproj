@@ -641,7 +641,6 @@
 			mainGroup = DB4680CB2A147AAC003964CC;
 			packageReferences = (
 				DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */,
-				DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */,
 				DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 				DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
@@ -1086,14 +1085,6 @@
 			repositoryURL = "https://github.com/ActuallyTaylor/HydrogenReporter";
 			requirement = {
 				branch = main;
-				kind = branch;
-			};
-		};
-		DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ActuallyTaylor/tree-sitter-spm";
-			requirement = {
-				branch = master;
 				kind = branch;
 			};
 		};
