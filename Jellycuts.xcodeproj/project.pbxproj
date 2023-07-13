@@ -12,7 +12,6 @@
 		DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D92A147AAC003964CC /* JellycutsDocument.swift */; };
 		DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680DB2A147AAC003964CC /* DocumentView.swift */; };
 		DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680DD2A147AAD003964CC /* Assets.xcassets */; };
-		DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680E22A147AAD003964CC /* Preview Assets.xcassets */; };
 		DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */; };
 		DB4680F22A1480E5003964CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680F12A1480E5003964CC /* HomeView.swift */; };
 		DB4681142A148131003964CC /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681132A148131003964CC /* Persistance.swift */; };
@@ -85,7 +84,7 @@
 		DBF311072A255B540003606E /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311062A255B540003606E /* ArrayView.swift */; };
 		DBFC1F102A292DAF00A8EE67 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF216872A27B8F50089B889 /* Intents.framework */; };
 		DBFC1F132A292DAF00A8EE67 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F122A292DAF00A8EE67 /* IntentHandler.swift */; };
-		DBFC1F172A292DAF00A8EE67 /* Actions.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DBFC1F0F2A292DAF00A8EE67 /* Actions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBFC1F172A292DAF00A8EE67 /* Actions.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DBFC1F0F2A292DAF00A8EE67 /* Actions.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBFC1F1C2A292DEE00A8EE67 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F1B2A292DEE00A8EE67 /* Intents.intentdefinition */; };
 		DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F1B2A292DEE00A8EE67 /* Intents.intentdefinition */; };
 		DBFC1F1F2A292E9400A8EE67 /* GetShortcutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F1E2A292E9400A8EE67 /* GetShortcutHandler.swift */; };
@@ -138,7 +137,6 @@
 		DB4680DD2A147AAD003964CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4680DF2A147AAD003964CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB4680E02A147AAD003964CC /* Jellycuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jellycuts.entitlements; sourceTree = "<group>"; };
-		DB4680E22A147AAD003964CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB4680EF2A147FB7003964CC /* Jellycuts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jellycuts.xcdatamodel; sourceTree = "<group>"; };
 		DB4680F12A1480E5003964CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DB4681132A148131003964CC /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
-				DB4680E22A147AAD003964CC /* Preview Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -661,7 +658,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */,
 				DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,6 +762,7 @@
 /* Begin PBXTargetDependency section */
 		DBFC1F162A292DAF00A8EE67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = DBFC1F0E2A292DAF00A8EE67 /* Actions */;
 			targetProxy = DBFC1F152A292DAF00A8EE67 /* PBXContainerItemProxy */;
 		};
@@ -890,12 +887,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = all;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Resources\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -925,7 +923,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -944,12 +942,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = all;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Resources\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -979,7 +978,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -1012,6 +1011,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1040,6 +1040,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
