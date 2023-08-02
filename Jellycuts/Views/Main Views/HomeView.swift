@@ -25,6 +25,8 @@ struct HomeView: View, ErrorHandler {
     @State private var presentCreationConfirmation: Bool = false
     @State private var presentToolsSheet: Bool = false
     @State private var presentSettingsSheet: Bool = false
+    
+    @State private var presentImportFile: Bool = false
 
     var body: some View {
         NavigationSplitView {
@@ -59,26 +61,26 @@ struct HomeView: View, ErrorHandler {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .confirmationDialog("Create a new Jellycut", isPresented: $presentCreationConfirmation, actions: {
+                        Button("Create Jellycut") {
+                            presentCreateJellycut.toggle()
+                        }
+                        Button("Add File") {
+                            presentImportFile.toggle()
+                        }
+                        Button("Import from an iCloud link") {
+                            
+                        }
+                        Button("Import from Shortcuts App") {
+                            
+                        }
+                    }, message: {
+                        Text("Select an option to create a new Jellycut 🪼")
+                    })
                 }
             }
             .withToolsSheet(isPresented: $presentToolsSheet)
             .withSettingsSheet(isPresented: $presentSettingsSheet)
-            .confirmationDialog("Create a new Jellycut", isPresented: $presentCreationConfirmation, actions: {
-                Button("Create Jellycut") {
-                    presentCreateJellycut.toggle()
-                }
-                Button("Add File") {
-                    
-                }
-                Button("Import from an iCloud link") {
-                    
-                }
-                Button("Import from Shortcuts App") {
-                    
-                }
-            }, message: {
-                Text("Select an option to create a new Jellycut 🪼")
-            })
             .alert("Create a new Jellycut", isPresented: $presentCreateJellycut, actions: {
                 TextField("Name", text: $newJellycutName)
 
@@ -94,6 +96,17 @@ struct HomeView: View, ErrorHandler {
             } message: {
                 errorMessageContent()
             }
+            .fileImporter(isPresented: $presentImportFile, allowedContentTypes: [.plainText, .text, .jellycut, .jellycutAlt], allowsMultipleSelection: true) { result in
+                do {
+                    let urls = try result.get()
+                    for url in urls {
+                        addFile(url: url)
+                    }
+                } catch {
+                    handle(error: error)
+                }
+            }
+
         } detail: {
             if let selectedProject {
                 DocumentView(project: selectedProject)
@@ -119,6 +132,16 @@ struct HomeView: View, ErrorHandler {
         }
     }
     
+    private func addFile(url: URL) {
+        withAnimation {
+            do {
+                try DocumentHandling.importJellyDocument(url: url, viewContext: viewContext)
+            } catch {
+                handle(error: error)
+            }
+        }
+    }
+
     private func addItem(name: String) {
         newJellycutName = ""
         withAnimation {
