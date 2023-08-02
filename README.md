@@ -41,6 +41,6 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 | Contact & Bug Report       | ✅                                | ✅                |
 | Version 1 Projects         | ✅                                | ✅                |
 | Version 2 Projects         | ✅                                | ✅                |
-| Add Jellycut File          | ❌                                | ✅                |
+| Add Jellycut File          | ✅                                | ✅                |
 | Import From iCloud         | ❌                                | ✅                |
 | Import from Shortcuts      | ❌                                | ✅                |
