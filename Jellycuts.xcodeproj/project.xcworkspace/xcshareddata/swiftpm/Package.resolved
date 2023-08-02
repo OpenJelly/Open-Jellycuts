@@ -66,10 +66,10 @@
       },
       {
         "package": "TreeSitter",
-        "repositoryURL": "https://github.com/ActuallyTaylor/tree-sitter-spm",
+        "repositoryURL": "https://github.com/tree-sitter/tree-sitter",
         "state": {
           "branch": "master",
-          "revision": "3860f9e8c683a730a53cd6fd594ff2d8cdc4c222",
+          "revision": "0c5a6eb5256decdc4d46f697e763bd7e7de209c5",
           "version": null
         }
       }

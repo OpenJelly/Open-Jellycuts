@@ -12,7 +12,6 @@
 		DB4680DA2A147AAC003964CC /* JellycutsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680D92A147AAC003964CC /* JellycutsDocument.swift */; };
 		DB4680DC2A147AAC003964CC /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680DB2A147AAC003964CC /* DocumentView.swift */; };
 		DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680DD2A147AAD003964CC /* Assets.xcassets */; };
-		DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4680E22A147AAD003964CC /* Preview Assets.xcassets */; };
 		DB4680F02A147FB7003964CC /* Jellycuts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB4680EE2A147FB7003964CC /* Jellycuts.xcdatamodeld */; };
 		DB4680F22A1480E5003964CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4680F12A1480E5003964CC /* HomeView.swift */; };
 		DB4681142A148131003964CC /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4681132A148131003964CC /* Persistance.swift */; };
@@ -35,7 +34,6 @@
 		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
 		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
-		DB78F42A2A52129300933314 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78F4292A52129300933314 /* PublicKey.swift */; };
 		DB78F42C2A52132200933314 /* Open-PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78F42B2A52132200933314 /* Open-PublicKey.swift */; };
 		DBA2CDA22A42D0DD00107299 /* SFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = DBA2CDA12A42D0DD00107299 /* SFSymbols */; };
 		DBB068772A340B54004D522C /* ProPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0686F2A340B54004D522C /* ProPurchaseView.swift */; };
@@ -66,6 +64,7 @@
 		DBD48B132A3148D5002D8A4F /* DynamicTypeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */; };
 		DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */; };
 		DBD48B172A314BD0002D8A4F /* RoundedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B162A314BD0002D8A4F /* RoundedFont.swift */; };
+		DBDFF3862A68C17D00534BA1 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFF3852A68C17D00534BA1 /* PublicKey.swift */; };
 		DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC26362A2853C300676BE0 /* ToolBarView.swift */; };
 		DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED217F2A23E65D00464286 /* LabelConfiguration.swift */; };
 		DBED21862A23E7BF00464286 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21852A23E7BF00464286 /* ToolView.swift */; };
@@ -85,7 +84,7 @@
 		DBF311072A255B540003606E /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF311062A255B540003606E /* ArrayView.swift */; };
 		DBFC1F102A292DAF00A8EE67 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF216872A27B8F50089B889 /* Intents.framework */; };
 		DBFC1F132A292DAF00A8EE67 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F122A292DAF00A8EE67 /* IntentHandler.swift */; };
-		DBFC1F172A292DAF00A8EE67 /* Actions.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DBFC1F0F2A292DAF00A8EE67 /* Actions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBFC1F172A292DAF00A8EE67 /* Actions.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DBFC1F0F2A292DAF00A8EE67 /* Actions.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBFC1F1C2A292DEE00A8EE67 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F1B2A292DEE00A8EE67 /* Intents.intentdefinition */; };
 		DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F1B2A292DEE00A8EE67 /* Intents.intentdefinition */; };
 		DBFC1F1F2A292E9400A8EE67 /* GetShortcutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC1F1E2A292E9400A8EE67 /* GetShortcutHandler.swift */; };
@@ -138,7 +137,6 @@
 		DB4680DD2A147AAD003964CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4680DF2A147AAD003964CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB4680E02A147AAD003964CC /* Jellycuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jellycuts.entitlements; sourceTree = "<group>"; };
-		DB4680E22A147AAD003964CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB4680EF2A147FB7003964CC /* Jellycuts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jellycuts.xcdatamodel; sourceTree = "<group>"; };
 		DB4680F12A1480E5003964CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DB4681132A148131003964CC /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 		DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSigner.swift; sourceTree = "<group>"; };
 		DB77396E2A25B63900F883F0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB7739702A25B8B600F883F0 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
-		DB78F4292A52129300933314 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		DB78F42B2A52132200933314 /* Open-PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Open-PublicKey.swift"; sourceTree = "<group>"; };
 		DBB0686F2A340B54004D522C /* ProPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProPurchaseView.swift; sourceTree = "<group>"; };
 		DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandler.swift; sourceTree = "<group>"; };
@@ -189,6 +186,7 @@
 		DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSize.swift; sourceTree = "<group>"; };
 		DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsEnvironment.swift; sourceTree = "<group>"; };
 		DBD48B162A314BD0002D8A4F /* RoundedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFont.swift; sourceTree = "<group>"; };
+		DBDFF3852A68C17D00534BA1 /* PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		DBEC26362A2853C300676BE0 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
 		DBED21852A23E7BF00464286 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				DB4680DD2A147AAD003964CC /* Assets.xcassets */,
-				DB4680E22A147AAD003964CC /* Preview Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -375,7 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */,
-				DB78F4292A52129300933314 /* PublicKey.swift */,
+				DBDFF3852A68C17D00534BA1 /* PublicKey.swift */,
 				DB78F42B2A52132200933314 /* Open-PublicKey.swift */,
 				DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */,
 			);
@@ -641,7 +638,6 @@
 			mainGroup = DB4680CB2A147AAC003964CC;
 			packageReferences = (
 				DB4681182A1483D6003964CC /* XCRemoteSwiftPackageReference "HydrogenReporter" */,
-				DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */,
 				DBF310FD2A2540C10003606E /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				DB6609512A316238001431B2 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 				DBB068912A341032004D522C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
@@ -662,7 +658,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4680E32A147AAD003964CC /* Preview Assets.xcassets in Resources */,
 				DB4680DE2A147AAD003964CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +680,7 @@
 				DBD48B052A31473D002D8A4F /* AppIconManager.swift in Sources */,
 				DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */,
 				DB6609582A3165C0001431B2 /* SettingsContactView.swift in Sources */,
+				DBDFF3862A68C17D00534BA1 /* PublicKey.swift in Sources */,
 				DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */,
 				DBBE54CA2A36E4ED00D5008F /* CurrentWindow.swift in Sources */,
 				DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */,
@@ -701,7 +697,6 @@
 				DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */,
 				DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */,
 				DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */,
-				DB78F42A2A52129300933314 /* PublicKey.swift in Sources */,
 				DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */,
 				DB78F42C2A52132200933314 /* Open-PublicKey.swift in Sources */,
 				DBB068952A3410F2004D522C /* ProPurchaseViewModel.swift in Sources */,
@@ -767,6 +762,7 @@
 /* Begin PBXTargetDependency section */
 		DBFC1F162A292DAF00A8EE67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = DBFC1F0E2A292DAF00A8EE67 /* Actions */;
 			targetProxy = DBFC1F152A292DAF00A8EE67 /* PBXContainerItemProxy */;
 		};
@@ -806,6 +802,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -864,6 +861,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -889,11 +887,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = all;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Resources\"";
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -922,7 +922,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlineman.Jellyfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -940,11 +942,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = all;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Jellycuts/Resources\"";
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -973,7 +977,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlineman.Jellyfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -988,7 +994,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Actions/Actions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Actions/Info.plist;
@@ -1005,6 +1011,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1016,7 +1023,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Actions/Actions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Actions/Info.plist;
@@ -1033,6 +1040,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1078,14 +1086,6 @@
 			repositoryURL = "https://github.com/ActuallyTaylor/HydrogenReporter";
 			requirement = {
 				branch = main;
-				kind = branch;
-			};
-		};
-		DB4EAFB42A19A00100B44F4D /* XCRemoteSwiftPackageReference "tree-sitter-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ActuallyTaylor/tree-sitter-spm";
-			requirement = {
-				branch = master;
 				kind = branch;
 			};
 		};
