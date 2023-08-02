@@ -15,13 +15,8 @@
         "repositoryURL": "https://github.com/simibac/ConfettiSwiftUI",
         "state": {
           "branch": null,
-<<<<<<< HEAD
-          "revision": "8d3a15d0aa2991e0761749b767ef8d89bca6275a",
-          "version": "1.0.1"
-=======
           "revision": "f45961f97bbae6fff6e2e64546fea0189425ad92",
           "version": "1.1.0"
->>>>>>> 8352b58 (Package changes)
         }
       },
       {
@@ -29,11 +24,7 @@
         "repositoryURL": "https://github.com/ActuallyTaylor/HydrogenReporter",
         "state": {
           "branch": "main",
-<<<<<<< HEAD
-          "revision": "acf91cdbb40283e1ca4aa4fd9dfa82fe80eb36bf",
-=======
           "revision": "3813325c27674e4aec6b1029e9d4df3e03984700",
->>>>>>> 8352b58 (Package changes)
           "version": null
         }
       },
@@ -60,8 +51,8 @@
         "repositoryURL": "https://github.com/apple/swift-docc-plugin",
         "state": {
           "branch": null,
-          "revision": "9b1258905c21fc1b97bf03d1b4ca12c4ec4e5fda",
-          "version": "1.2.0"
+          "revision": "26ac5758409154cc448d7ab82389c520fa8a8247",
+          "version": "1.3.0"
         }
       },
       {
@@ -71,15 +62,6 @@
           "branch": null,
           "revision": "b45d1f2ed151d057b54504d653e0da5552844e34",
           "version": "1.0.0"
-        }
-      },
-      {
-        "package": "TreeSitter",
-        "repositoryURL": "https://github.com/tree-sitter/tree-sitter",
-        "state": {
-          "branch": "master",
-          "revision": "9fd128ed604bb63348281bd4ac0d99705e713147",
-          "version": null
         }
       }
     ]
