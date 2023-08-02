@@ -10,6 +10,7 @@ import Open_Jellycore
 
 struct DocumentationLibraryView: View {
     var library: DocumentationLibraryEntry
+    @State var searchText: String = ""
     
     var body: some View {
         List {
@@ -18,7 +19,7 @@ struct DocumentationLibraryView: View {
                 CodeBlock(text: library.importCode)
             }
             Section("Actions") {
-                ForEach(library.actions) { action in
+                ForEach(filterActions(actions: library.actions, searchText: searchText)) { action in
                     NavigationLink {
                         DocumentationActionView(action: action)
                     } label: {
@@ -27,8 +28,20 @@ struct DocumentationLibraryView: View {
                 }
             }
         }
+        .searchable(text: $searchText, prompt: "Search \(library.name) Actions")
         .navigationTitle(library.name)
     }
+    
+    private func filterActions(actions: [DocumentationActionEntry], searchText: String) -> [DocumentationActionEntry] {
+        guard !searchText.isEmpty else { return actions }
+        return actions.filter { action in
+            action.name.lowercased().contains(searchText.lowercased()) ||
+            action.correctTypedFunction.lowercased().contains(searchText.lowercased()) ||
+            action.syntax.lowercased().contains(searchText.lowercased()) ||
+            action.description.lowercased().contains(searchText.lowercased())
+        }
+    }
+
     
     @ViewBuilder
     func actionCell(action: DocumentationActionEntry) -> some View {

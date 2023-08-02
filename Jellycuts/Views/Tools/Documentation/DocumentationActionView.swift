@@ -18,7 +18,6 @@ struct DocumentationActionView: View {
         return .iOS16
     }
     
-    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 20) {
@@ -69,7 +68,7 @@ struct DocumentationActionView: View {
                             .foregroundColor(Color.white)
                     }
                     .padding(.horizontal, 5)
-                    .background(action.iOSVersion.version < currentVersion.version ? Color.blue : Color.red)
+                    .background(action.iOSVersion.version < currentVersion.version ? Color.accentColor : Color.red)
                     .cornerRadius(7)
                 }
             }

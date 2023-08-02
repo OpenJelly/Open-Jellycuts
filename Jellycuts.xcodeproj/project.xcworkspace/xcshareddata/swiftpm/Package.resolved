@@ -63,15 +63,6 @@
           "revision": "b45d1f2ed151d057b54504d653e0da5552844e34",
           "version": "1.0.0"
         }
-      },
-      {
-        "package": "TreeSitter",
-        "repositoryURL": "https://github.com/tree-sitter/tree-sitter",
-        "state": {
-          "branch": "master",
-          "revision": "0c5a6eb5256decdc4d46f697e763bd7e7de209c5",
-          "version": null
-        }
       }
     ]
   },
