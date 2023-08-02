@@ -15,6 +15,17 @@ struct DocumentHandling {
         case invalidFileURL
     }
     
+    static func importJellyDocument(url: URL, viewContext: NSManagedObjectContext) throws {
+        let name = url.deletingPathExtension().lastPathComponent
+        
+        let newProject = Project(context: viewContext)
+        newProject.name = name
+        newProject.creationDate = .now
+        newProject.url = url.path()
+        
+        try viewContext.save()
+    }
+    
     static func createJellyDocument(name: String, viewContext: NSManagedObjectContext) throws {
         let text = "import Shortcuts\n#Color: red, #Icon: shortcuts\n"
         
@@ -39,11 +50,8 @@ struct DocumentHandling {
     }
     
     static func getProjectURL(for project: Project) throws -> URL {
-        if let projectURL = project.url {
-            guard let url = URL(string: projectURL) else {
-                throw DocumentHandlingError.invalidFileURL
-            }
-            return url
+        if let projectURL = project.url?.removingPercentEncoding {
+            return URL(filePath: projectURL)
         } else {
             let newURLBase = getDocumentsURL().appendingPathComponent(project.name ?? "No Name", conformingTo: .jellycut)
 

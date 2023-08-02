@@ -34,7 +34,6 @@
 		DB77396D2A25B5F600F883F0 /* ShortcutsSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */; };
 		DB77396F2A25B63900F883F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77396E2A25B63900F883F0 /* Reachability.swift */; };
 		DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7739702A25B8B600F883F0 /* Dispatch.swift */; };
-		DB78F42A2A52129300933314 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78F4292A52129300933314 /* PublicKey.swift */; };
 		DB78F42C2A52132200933314 /* Open-PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78F42B2A52132200933314 /* Open-PublicKey.swift */; };
 		DBA2CDA22A42D0DD00107299 /* SFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = DBA2CDA12A42D0DD00107299 /* SFSymbols */; };
 		DBB068772A340B54004D522C /* ProPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0686F2A340B54004D522C /* ProPurchaseView.swift */; };
@@ -65,6 +64,7 @@
 		DBD48B132A3148D5002D8A4F /* DynamicTypeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */; };
 		DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */; };
 		DBD48B172A314BD0002D8A4F /* RoundedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD48B162A314BD0002D8A4F /* RoundedFont.swift */; };
+		DBDFF3862A68C17D00534BA1 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFF3852A68C17D00534BA1 /* PublicKey.swift */; };
 		DBEC26372A2853C300676BE0 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC26362A2853C300676BE0 /* ToolBarView.swift */; };
 		DBED21802A23E65D00464286 /* LabelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED217F2A23E65D00464286 /* LabelConfiguration.swift */; };
 		DBED21862A23E7BF00464286 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED21852A23E7BF00464286 /* ToolView.swift */; };
@@ -157,7 +157,6 @@
 		DB77396C2A25B5F600F883F0 /* ShortcutsSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSigner.swift; sourceTree = "<group>"; };
 		DB77396E2A25B63900F883F0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DB7739702A25B8B600F883F0 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
-		DB78F4292A52129300933314 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		DB78F42B2A52132200933314 /* Open-PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Open-PublicKey.swift"; sourceTree = "<group>"; };
 		DBB0686F2A340B54004D522C /* ProPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProPurchaseView.swift; sourceTree = "<group>"; };
 		DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandler.swift; sourceTree = "<group>"; };
@@ -187,6 +186,7 @@
 		DBD48B122A3148D5002D8A4F /* DynamicTypeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSize.swift; sourceTree = "<group>"; };
 		DBD48B142A31494E002D8A4F /* JellycutsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellycutsEnvironment.swift; sourceTree = "<group>"; };
 		DBD48B162A314BD0002D8A4F /* RoundedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFont.swift; sourceTree = "<group>"; };
+		DBDFF3852A68C17D00534BA1 /* PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		DBEC26362A2853C300676BE0 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		DBED217F2A23E65D00464286 /* LabelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelConfiguration.swift; sourceTree = "<group>"; };
 		DBED21852A23E7BF00464286 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB0688C2A340CA2004D522C /* PurchaseHandler.swift */,
-				DB78F4292A52129300933314 /* PublicKey.swift */,
+				DBDFF3852A68C17D00534BA1 /* PublicKey.swift */,
 				DB78F42B2A52132200933314 /* Open-PublicKey.swift */,
 				DBB0688D2A340CA3004D522C /* IAPReceiptVerifier.swift */,
 			);
@@ -680,6 +680,7 @@
 				DBD48B052A31473D002D8A4F /* AppIconManager.swift in Sources */,
 				DB7739712A25B8B600F883F0 /* Dispatch.swift in Sources */,
 				DB6609582A3165C0001431B2 /* SettingsContactView.swift in Sources */,
+				DBDFF3862A68C17D00534BA1 /* PublicKey.swift in Sources */,
 				DBD216ED2A296019003BB5F2 /* UIDevice+Convenience.swift in Sources */,
 				DBBE54CA2A36E4ED00D5008F /* CurrentWindow.swift in Sources */,
 				DBD216EB2A295FEF003BB5F2 /* QuickLook.swift in Sources */,
@@ -696,7 +697,6 @@
 				DB6609502A315F80001431B2 /* ProjectSort.swift in Sources */,
 				DBD48B152A31494E002D8A4F /* JellycutsEnvironment.swift in Sources */,
 				DB66094E2A315C19001431B2 /* SettingsBehaviorView.swift in Sources */,
-				DB78F42A2A52129300933314 /* PublicKey.swift in Sources */,
 				DBFC1F1D2A292DF500A8EE67 /* Intents.intentdefinition in Sources */,
 				DB78F42C2A52132200933314 /* Open-PublicKey.swift in Sources */,
 				DBB068952A3410F2004D522C /* ProPurchaseViewModel.swift in Sources */,
@@ -891,7 +891,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 825FPALDZ5;
@@ -946,7 +946,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jellycuts/Jellycuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 825FPALDZ5;
@@ -994,7 +994,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Actions/Actions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Actions/Info.plist;
@@ -1023,7 +1023,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Actions/Actions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 825FPALDZ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Actions/Info.plist;

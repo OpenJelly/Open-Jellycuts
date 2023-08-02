@@ -72,7 +72,6 @@ struct ShortcutsSigner {
             request.setValue(String(data.count), forHTTPHeaderField: "Content-Length")
             
             let (responseData, _) = try await URLSession.shared.upload(for: request, from: data)
-
             try deleteFile(fileURL: fileURL)
             
             if let errorString = String(data: responseData, encoding: .utf8) {
