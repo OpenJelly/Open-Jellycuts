@@ -118,7 +118,7 @@ struct ArrayView: View {
             Text("Edit")
         }
     }
-
+    
     
     private func sortValues(lhs: (key: String, value: DictionaryHandler.JellycutsDictionary.Value), rhs: (key: String, value: DictionaryHandler.JellycutsDictionary.Value)) -> Bool {
         return lhs.key > rhs.key
