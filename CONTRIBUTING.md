@@ -128,6 +128,7 @@ To correctly clone the repository it is **VERY** important that you use the `--r
 ```
 git clone --recursive https://github.com/ActuallyTaylor/Open-Jellycuts.git
 ``` 
+
 #### Cloning using a Git Client
 A git client should be able to just take the url `https://github.com/ActuallyTaylor/Open-Jellycuts` and properly clone all of the submodules. If you are missing submodules we recommend that you use the command line to clone instead of a client.
 
@@ -159,8 +160,7 @@ Currently Open-Jellycuts does not have any documentation. If you want to create 
 
 ## Styleguides
 ### Commit Messages
-The style in this project is based on Apple's default Xcode code formatting. You can format your code by selecting code you have written and pressing `ctrl+i`. This will format your code to match the rest of the project.
-> A future improvement could be to add an auto formatter into the build steps.
+Commit messages do not have an particular style. Just make sure they make it clear what you changed.
 
 ## Join The Project Tea
 Currently we are not accepting a new lead maintainers for the project. But we may be in the future!
