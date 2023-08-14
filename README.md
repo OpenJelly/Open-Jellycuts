@@ -8,8 +8,6 @@ This version of Jellycuts aims to use more modern Open Source packages for every
 
 - [Open Jellycore](https://github.com/ActuallyTaylor/Open-Jellycore)
     - This package handels the actual compilation of Jellycuts into Shortcuts
-- [Tree-Sitter Fork](https://github.com/ActuallyTaylor/tree-sitter-spm)
-    - This tree-sitter fork adds support for the Swift Package manager
 - [Tree-Sitter Jelly Grammar](https://github.com/ActuallyTaylor/tree-sitter-jelly)
     - This package is a SPM distribution of a Tree-Sitter grammar for the Jelly language. This handles all of the parsing of Jelly done by both Jellycore and Runestone.
 
