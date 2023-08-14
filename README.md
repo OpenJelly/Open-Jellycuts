@@ -59,7 +59,21 @@ Features with this flag need support to be built into [Open Jellycore](https://g
 See the [Contribution Guidelines](./CONTRIBUTING.md#your-first-code-contribution) for more information on building the app.
 
 ### The Gist
+#### Cloning
 To clone the repository it is critical that you use the `--recursive` flag. This will ensure you properly clone all of the submodules.
 ```
 git clone --recursive https://github.com/ActuallyTaylor/Open-Jellycuts.git
+```
+
+#### Adding a Key Provider
+After you have cloned the repository and set up signing, you will see a build error. This error is caused by the PurchaseHandler not having a provided publicKey. This code is initially commented out because the file is a secondary file to an internal file that provides the App Store validation with a public key for verifying results from the server. 
+
+All you need to do is uncomment the following line in `Open-PublicKey.swift`:
+
+```swift
+extension PurchaseHandler: PublicKeyProvider {
+    static var publicKey: String {
+        "INSERT_PUBLIC_SIGNING_KEY"
+    }
+}
 ```

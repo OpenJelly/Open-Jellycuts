@@ -136,6 +136,19 @@ This project is meant to be used with [Apple's Xcode IDE](https://developer.appl
 
 After you have cloned all of the Swift Packages the next step is too change the team identifier and bundle identifier in the signing page of the project settings. You should set these to your own values otherwise the project will not build on your system.
 
+#### Adding a Key Provider
+After you have cloned the repository and set up Xcode, you will see a build error. This error is caused by the PurchaseHandler not having a provided publicKey. This code is initially commented out because the file is a secondary file to an internal file that provides the App Store validation with a public key for verifying results from the server. 
+
+All you need to do is uncomment the following line in `Open-PublicKey.swift`:
+
+```swift
+extension PurchaseHandler: PublicKeyProvider {
+    static var publicKey: String {
+        "INSERT_PUBLIC_SIGNING_KEY"
+    }
+}
+```
+
 #### Now write your enhancement or fix that bug!
 It is now time to write code! Everything should be compiling and signing correctly if you have followed the above steps.
 
