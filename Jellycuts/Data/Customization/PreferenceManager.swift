@@ -49,7 +49,6 @@ extension PreferenceManager {
     }
     
     static func saveHaptics(enabled: Bool) {
-        print(enabled)
         SharedDataStorageManager.defaults.set(enabled, forKey: PreferenceValues.haptics.rawValue)
     }
 }
