@@ -28,14 +28,15 @@ class BridgeViewModel: ObservableObject {
     }
     
     func build(_ server: BridgeServer) async throws {
-        ErrorReporter.shared.reset()
+        EventReporter.shared.reset()
+        
         try await compile(server)
         await updateConsole()
     }
         
     @discardableResult
     func compile(_ server: BridgeServer) async throws -> URL? {
-        ErrorReporter.shared.reset()
+        EventReporter.shared.reset()
         let parser = Parser(contents: text)
         try parser.parse()
         
@@ -44,9 +45,9 @@ class BridgeViewModel: ObservableObject {
 
         await updateConsole()
         
-        if !ErrorReporter.shared.errors.isEmpty {
-            print("Found \(ErrorReporter.shared.errors.count) errors")
-            for error in ErrorReporter.shared.errors {
+        if EventReporter.shared.numberOfErrors != 0{
+            print("Found \(EventReporter.shared.numberOfErrors) errors")
+            for error in EventReporter.shared.errors {
                 print(error.errorDescription ?? "No Description", error.recoverySuggestion ?? "No Suggestion")
             }
             
@@ -68,9 +69,9 @@ class BridgeViewModel: ObservableObject {
     
     @MainActor
     func updateConsole() {
-        errorCount = ErrorReporter.shared.numberOfErrors
-        warningCount = ErrorReporter.shared.numberOfWarnings
-        consoleText = ErrorReporter.shared.getErrorText()
+        errorCount = EventReporter.shared.numberOfErrors
+        warningCount = EventReporter.shared.numberOfWarnings
+        consoleText = EventReporter.shared.getErrorText()
     }
 
 //    func addServer(name: String, address: URL) {
