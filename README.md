@@ -1,7 +1,7 @@
 # Open Jellycuts
 ![Promotional Jellycuts Image](./Images/header.png)
 
-Jellycuts is an iOS app that allows anyone to write Siri Shortcuts in an easy to use scripting language. The language, Jelly, is based of of Swift, Python and Javascript and focused on being easy to learn and use. 
+Jellycuts is an iOS app that allows anyone to write Siri Shortcuts in an easy to use scripting language. The language, Jelly, is based off of Swift, Python and Javascript and focused on being easy to learn and use. 
 
 ## Packages
 This version of Jellycuts aims to use more modern Open Source packages for everything, improving upon the previous version of Jellycuts. Specifically this version includes [Runestone](https://github.com/simonbs/Runestone) and [Tree-Sitter](https://tree-sitter.github.io/tree-sitter/) as the backend for the text editor and language parsing.
