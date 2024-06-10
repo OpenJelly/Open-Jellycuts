@@ -6,9 +6,9 @@ Jellycuts is an iOS app that allows anyone to write Siri Shortcuts in an easy to
 ## Packages
 This version of Jellycuts aims to use more modern Open Source packages for everything, improving upon the previous version of Jellycuts. Specifically this version includes [Runestone](https://github.com/simonbs/Runestone) and [Tree-Sitter](https://tree-sitter.github.io/tree-sitter/) as the backend for the text editor and language parsing.
 
-- [Open Jellycore](https://github.com/ActuallyTaylor/Open-Jellycore)
+- [Open Jellycore](https://github.com/OpenJelly/Open-Jellycore)
     - This package handels the actual compilation of Jellycuts into Shortcuts
-- [Tree-Sitter Jelly Grammar](https://github.com/ActuallyTaylor/tree-sitter-jelly)
+- [Tree-Sitter Jelly Grammar](https://github.com/OpenJelly/tree-sitter-jelly)
     - This package is a SPM distribution of a Tree-Sitter grammar for the Jelly language. This handles all of the parsing of Jelly done by both Jellycore and Runestone.
 
 ## Features (Compared to closed Jellycuts)
@@ -50,10 +50,10 @@ The following sections talk about all of the limitations that are currently hold
 The dictionaries that are created by Open Jellycuts need to be reworked so they support adding Arrays within Arrays. The datatype `DictionaryHandler.JellycutsDictionary` should be fully capable of supporting this however the UI fails when adding arrays as children of arrays.
 
 #### New Helper & Core Support
-These two features, Import from iCloud and Import from Shortcuts, need a new Jellycuts Helper shortcut to be built. They also require a shortcuts parser -> Jelly language. This is a feature that should be added into [Open Jellycore](https://github.com/ActuallyTaylor/Open-Jellycore) and then interfaced within Open Jellycuts.
+These two features, Import from iCloud and Import from Shortcuts, need a new Jellycuts Helper shortcut to be built. They also require a shortcuts parser -> Jelly language. This is a feature that should be added into [Open Jellycore](https://github.com/OpenJelly/Open-Jellycore) and then interfaced within Open Jellycuts.
 
 #### Needs support in Jellycore
-Features with this flag need support to be built into [Open Jellycore](https://github.com/ActuallyTaylor/Open-Jellycore). The most prominent issue is that the current [Open Jellycore](https://github.com/ActuallyTaylor/Open-Jellycore) does not support Objects. This means that any features that used objects are no longer available as there is no way to use them during compilation.
+Features with this flag need support to be built into [Open Jellycore](https://github.com/OpenJelly/Open-Jellycore). The most prominent issue is that the current [Open Jellycore](https://github.com/OpenJelly/Open-Jellycore) does not support Objects. This means that any features that used objects are no longer available as there is no way to use them during compilation.
 
 ## Building the App Yourself
 See the [Contribution Guidelines](./CONTRIBUTING.md#your-first-code-contribution) for more information on building the app.
@@ -62,7 +62,7 @@ See the [Contribution Guidelines](./CONTRIBUTING.md#your-first-code-contribution
 #### Cloning
 To clone the repository it is critical that you use the `--recursive` flag. This will ensure you properly clone all of the submodules.
 ```
-git clone --recursive https://github.com/ActuallyTaylor/Open-Jellycuts.git
+git clone --recursive https://github.com/OpenJelly/Open-Jellycuts.git
 ```
 
 #### Adding a Key Provider
